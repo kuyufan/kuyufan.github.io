@@ -10,13 +10,37 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Language Switch Button Style -->
+                <style>
+		    #language-switch {
+		      position: absolute;
+		      top: 20px;
+		      right: 20px;
+		      display: flex;
+		      gap: 1rem;
+		      list-style: none;
+		      padding: 0;
+		      margin: 0;
+		    }
+
+		    #language-switch li a {
+		      color: white;
+		      text-decoration: none;
+		      font-weight: bold;
+		    }
+
+		    #language-switch li a:hover {
+		      text-decoration: underline;
+		    }
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<div id="header">
 				<!-- Language Switcher -->
-                                        <ul style="position: absolute; top: 1rem; right: 1rem; list-style: none; display: flex; gap: 1rem;">
+                                        <ul id="language-switch">
                                                 <li><a href="index.html">🇹🇼 中文</a></li>
                                                 <li><a href="en.html">🇬🇧 English</a></li>
                                                 <li><a href="ja.html">🇯🇵 日本語</a></li>
@@ -213,5 +237,6 @@
 	</body>
 
 </html>
+
 
 
