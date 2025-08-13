@@ -13,6 +13,11 @@
 
 		<!-- Language Switch Button Style -->
                 <style>
+#nav ul ul.sub { display: none; margin: 0.25rem 0 0.75rem 2rem; }
+#nav .sub a { font-size: 0.95em; opacity: 0.9; }
+#nav li.has-sub > a::after { content: '▸'; float: right; opacity: .6; transform: translateY(1px); }
+#nav li.has-sub.open > a::after { content: '▾'; }
+#nav li.has-sub.open > ul.sub { display: block; }
 		    #language-switch {
 			  display: flex;
 			  justify-content: center;
@@ -54,14 +59,64 @@
 						</div>
 
 					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+<nav id="nav">
+  <ul>
+    <li><a href="#top" class="scrolly"><span class="icon solid fa-home">首頁</span></a></li>
+
+    <li class="has-sub">
+      <a href="#about" class="scrolly"><span class="icon solid fa-user">關於我</span></a>
+      <ul class="sub">
+        <li><a href="#bio" class="scrolly">簡介</a></li>
+        <li><a href="#education" class="scrolly">學歷</a></li>
+        <li><a href="#cv" class="scrolly">履歷（CV）</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <a href="#pubs" class="scrolly"><span class="icon solid fa-book">著作</span></a>
+      <ul class="sub">
+        <li><a href="#pubs-published" class="scrolly">已刊登</a></li>
+        <li><a href="#pubs-submitted" class="scrolly">已投稿</a></li>
+        <li><a href="#pubs-arxiv" class="scrolly">arXiv / Preprints</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <a href="#talks" class="scrolly"><span class="icon solid fa-chalkboard-teacher">演講 / 研討會</span></a>
+      <ul class="sub">
+        <li><a href="#talks-upcoming" class="scrolly">即將參加</a></li>
+        <li><a href="#talks-past" class="scrolly">已參加</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <a href="#teaching" class="scrolly"><span class="icon solid fa-graduation-cap">教學</span></a>
+      <ul class="sub">
+        <li><a href="#courses" class="scrolly">課程 / 助教</a></li>
+        <li><a href="#materials" class="scrolly">教材 / 講義</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <a href="#projects" class="scrolly"><span class="icon solid fa-code">專案 / 軟體</span></a>
+      <ul class="sub">
+        <li><a href="#software" class="scrolly">程式 / 套件</a></li>
+        <li><a href="#repro" class="scrolly">重現 / 資料</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <a href="#links" class="scrolly"><span class="icon solid fa-link">連結</span></a>
+      <ul class="sub">
+        <li><a href="#people" class="scrolly">相關人士</a></li>
+        <li><a href="#groups" class="scrolly">研究室 / 學會</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#news" class="scrolly"><span class="icon solid fa-stream">近況</span></a></li>
+    <li><a href="#contact" class="scrolly"><span class="icon solid fa-envelope">聯絡</span></a></li>
+  </ul>
+</nav>
 
 				</div>
 
@@ -248,10 +303,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<script>
+  document.querySelectorAll('#nav .has-sub > a').forEach(a => {
+    a.addEventListener('click', function () {
+      this.parentElement.classList.toggle('open');
+    });
+  });
+</script>
 
 	</body>
 
 </html>
+
 
 
 
