@@ -54,6 +54,8 @@
 .news-list { list-style: none; margin: 0.75rem 0 0; padding: 0; }
 .news-list li { margin: 0.4rem 0; }
 .news-list li time { font-weight: 600; margin-right: 0.5rem; white-space: nowrap; }
+/* Hero 訪客計數外觀 */
+.visit { margin-top: 0.8rem; font-size: 1.2rem; opacity: 0.9; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -165,14 +167,10 @@
 					<section id="top" class="one dark cover">
 						<div class="container">
 
-							<header>
-								<h2 class="alt">你好，我是 <strong>范谷瑜</strong></h2>
-								<p>名古屋大學 數學博士生｜研究興趣：多重 ζ 值、代數數論 等</p>
-							</header>
-
-							<footer>
-								<a href="#pubs" class="button scrolly">前往著作</a>
-							</footer>
+<header>
+  <h2 class="alt">歡迎來到<strong>范谷瑜</strong>的個人網頁</h2>
+  <p class="visit">您是第 <span id="visit-count">—</span> 位訪客</p>
+</header>
 
 						</div>
 					</section>
@@ -291,10 +289,35 @@
     });
   });
 </script>
+<script>
+(function () {
+  const el = document.getElementById('visit-count');
+  if (!el) return;
 
+  // 使用 countapi 服務：同一個 domain/key 會共用一個計數
+  const namespace = 'kuyufan.github.io';
+  const key = 'home';
+
+  fetch(`https://countapi.xyz/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`)
+    .then(r => r.json())
+    .then(d => { el.textContent = Number(d.value).toLocaleString(); })
+    .catch(() => {
+      // 失敗備援：僅在本機瀏覽器累計
+      try {
+        const k = 'local_visit_count';
+        const v = (parseInt(localStorage.getItem(k) || '0', 10) + 1);
+        localStorage.setItem(k, v);
+        el.textContent = v.toLocaleString();
+      } catch (_) {
+        el.textContent = '1';
+      }
+    });
+})();
+</script>
 	</body>
 
 </html>
+
 
 
 
