@@ -64,21 +64,24 @@
 
 .muted { opacity:.7; font-size:.95rem; }
 /* 著作 */
-.pub-compact { list-style: none; margin: .5rem 0 0; padding: 0; }
-.pub-compact li { margin: .55rem 0; }
-.pub-compact .pub-title {
-  font-weight: 700; line-height: 1.35;
-}
-.pub-compact .pub-title a {
-  text-decoration: none; /* 乾淨的連結 */
-}
-.pub-compact .pub-title a:hover {
-  text-decoration: underline;
-}
-.pub-compact .pub-meta {
-  opacity: .85; font-size: .95rem;
-}
-/* 可選：投稿中的小徽章 */
+.pub-compact { list-style: none; margin: .6rem 0 0; padding: 0; }
+.pub-compact li { margin: .65rem 0; }
+
+/* 標題直接當連結 */
+.pub-compact .pub-title { font-weight: 700; line-height: 1.35; }
+.pub-compact .pub-title a { text-decoration: none; }
+.pub-compact .pub-title a:hover { text-decoration: underline; }
+
+/* 第二行（作者 + 期刊/年份/卷期頁/DOI/arXiv…） */
+.pub-compact .pub-meta { opacity: .9; font-size: .95rem; line-height: 1.35; }
+
+/* 作者後面的區塊用「·」自動分隔 */
+.pub-compact .rest span::before { content: " · "; opacity: .7; }
+.pub-compact .rest span:first-child::before { content: ""; } /* 第一個不要點 */
+
+/* 常見欄位細節 */
+.pub-compact i { font-style: italic; }          /* 期刊名斜體 */
+.pub-compact .kv { white-space: nowrap; }       /* 避免 DOI/頁碼被換行拆斷 */
 .badge { display:inline-block; margin-left:.4rem; padding:.1rem .5rem;
   border:1px dashed #bdbdbd; border-radius:9999px; font-size:.8rem; opacity:.9; }
 		</style>
@@ -250,42 +253,93 @@
     <!-- 已刊登 -->
     <h3 id="pubs-published">已刊登</h3>
     <ul class="pub-compact">
-      <!-- 範例：將標題直接連到期刊頁或 DOI -->
+	  <!-- 模板
       <li>
         <div class="pub-title">
+          <!-- 標題直接連到期刊或 DOI -->
           <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener">
             〈論文標題（中文或英文）〉
           </a>
         </div>
-        <div class="pub-meta">范谷瑜, 合著者A, 合著者B — Journal Name, 2024</div>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜, 合著者A, 合著者B</span>
+          <span class="rest">
+            <span class="venue"><i>Journal Name</i></span>
+            <span class="year">2024</span>
+            <span class="kv">Vol. XXX, No. X, pp. XX–XX</span>
+            <span class="kv"><a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener">DOI:10.xxxx/xxxxx</a></span>
+            <span class="kv"><a href="https://arxiv.org/abs/2508.xxxxx" target="_blank" rel="noopener">arXiv:2508.xxxxx</a></span>
+            <span class="kv">MSC: 11M32, 14Fxx</span>
+            <span class="kv"><a href="https://mathscinet.ams.org/mathscinet-getitem?mr=XXXXXX" target="_blank" rel="noopener">MRXXXXXX</a></span>
+            <span class="kv"><a href="https://github.com/yourrepo" target="_blank" rel="noopener">Code</a></span>
+            <span class="kv"><a href="https://osf.io/xyz" target="_blank" rel="noopener">Data</a></span>
+            <span class="badge">Open Access</span>
+          </span>
+        </div>
+      </li>
+	  -->
+      <li>
+        <div class="pub-title">
+          <!-- 標題直接連到期刊或 DOI -->
+          <a href="https://www.math.sinica.edu.tw/mathmedia/journals/4658" target="_blank" rel="noopener">
+            〈格子圖形中的格子直線數〉
+          </a>
+        </div>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜、林鳳美</span>
+          <span class="rest">
+            <span class="venue"><i>數學傳播</i></span>
+            <span class="year">2021</span>
+            <span class="kv">Vol. 45, No. 2, pp. 44–53</span>
+            <span class="badge">Open Access</span>
+          </span>
+        </div>
       </li>
     </ul>
 
     <!-- 投稿中 -->
     <h3 id="pubs-submitted">投稿中</h3>
     <ul class="pub-compact">
-      <!-- 若暫時沒有公開連結，就不要加 <a>，保留純文字標題 -->
+	  <!-- 模板
       <li>
         <div class="pub-title">〈論文標題〉</div>
-        <div class="pub-meta">范谷瑜, 合著者C — Submitted to Journal XYZ
-          <span class="badge">Under Review</span>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜, 合著者C</span>
+          <span class="rest">
+            <span class="venue"><i>Submitted to Journal XYZ</i></span>
+            <span class="year">2025</span>
+            <span class="badge">Under Review</span>
+            <!-- 若有投稿號/預審頁就加；沒有就刪掉 -->
+            <span class="kv"><a href="#" target="_blank" rel="noopener">Preprint / Draft</a></span>
+          </span>
         </div>
       </li>
+	  -->
     </ul>
 
     <!-- arXiv / 預印本 -->
     <h3 id="pubs-arxiv">arXiv / 預印本</h3>
     <ul class="pub-compact">
-      <!-- 標題連到 arXiv abs；需要 PDF 可在 abs 頁面再下載 -->
+	  <!-- 模板
       <li>
         <div class="pub-title">
           <a href="https://arxiv.org/abs/2508.xxxxx" target="_blank" rel="noopener">
             〈論文標題〉
           </a>
         </div>
-        <div class="pub-meta">范谷瑜 — arXiv:2508.xxxxx [math.NT], 2025</div>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜</span>
+          <span class="rest">
+            <span class="kv">arXiv:2508.xxxxx [math.NT]</span>
+            <span class="year">2025</span>
+            <span class="kv"><a href="https://arxiv.org/pdf/2508.xxxxx" target="_blank" rel="noopener">PDF</a></span>
+            <span class="kv"><a href="https://inspirehep.net/literature/xxxxxx" target="_blank" rel="noopener">Inspire/zbMATH</a></span>
+          </span>
+        </div>
       </li>
+	  -->
     </ul>
+
   </div>
 </section>
 
@@ -403,6 +457,7 @@
 	</body>
 
 </html>
+
 
 
 
