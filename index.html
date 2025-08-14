@@ -36,6 +36,35 @@
 		    #language-switch li a:hover {
 			 text-decoration: underline;
 		    }
+/* 1) 移除可展開箭頭，避免擠壓文字對齊 */
+#nav li.has-sub > a::after { 
+  content: none !important;  /* 取消產生 */
+  display: none !important;  /* 保險起見，完全不顯示 */
+}
+
+/* 2) 第一層（頂層）選單：字大、按鈕更高、預留右側內距一致 */
+#nav > ul > li > a {
+  font-size: 1.15rem;        /* 調大 */
+  padding-top: 0.9rem;       /* 增加上下內距，按鈕更高 */
+  padding-bottom: 0.9rem;
+  padding-right: 2.2rem;     /* 和沒有箭頭時保持右側留白一致 */
+  line-height: 1.2;
+}
+
+/* 3) 第二層（子選單）：字小一點、按鈕較扁、縮排更明顯 */
+#nav ul ul.sub a {
+  font-size: 0.95rem;        /* 比頂層小 */
+  padding-top: 0.45rem;      /* 上下更貼合文字 */
+  padding-bottom: 0.45rem;
+  padding-left: 3.0rem;      /* 再往內縮，與左側圖示對齊好看 */
+  line-height: 1.25;
+}
+
+/* 4)（可選）展開中的父選單做點強調，沒有箭頭也看得出來 */
+#nav li.has-sub.open > a {
+  font-weight: 600;
+  opacity: 1;
+}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -314,6 +343,7 @@
 	</body>
 
 </html>
+
 
 
 
