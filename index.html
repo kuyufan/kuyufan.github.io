@@ -63,22 +63,24 @@
 .edu-body { line-height:1.6; }
 
 .muted { opacity:.7; font-size:.95rem; }
-/* Publications */
-.pub-list { list-style:none; margin: 1rem 0 0; padding:0; }
-.pub-list li { margin: 0 0 1.15rem; }
-.pub-title { font-weight: 700; line-height: 1.35; }
-.pub-authors, .pub-venue { opacity:.85; }
-.pub-venue { font-style: italic; }
-.btns { margin-top:.4rem; }
-.btns a, .btns button, .badge {
-  display:inline-block; margin:.2rem .35rem .2rem 0; padding:.28rem .6rem;
-  border:1px solid #bdbdbd; border-radius: 9999px; font-size:.9rem; text-decoration:none;
+/* 著作 */
+.pub-compact { list-style: none; margin: .5rem 0 0; padding: 0; }
+.pub-compact li { margin: .55rem 0; }
+.pub-compact .pub-title {
+  font-weight: 700; line-height: 1.35;
 }
-.badge { border-style:dashed; opacity:.8; }
-details.bib { margin-top:.35rem; }
-details.bib summary { cursor:pointer; list-style: none; }
-details.bib pre { margin:.35rem 0 0; padding:.6rem .8rem; background: rgba(0,0,0,.04); border-radius:.5rem; overflow:auto; }
-.year { margin:1.2rem 0 .6rem; opacity:.9; font-weight:700; }
+.pub-compact .pub-title a {
+  text-decoration: none; /* 乾淨的連結 */
+}
+.pub-compact .pub-title a:hover {
+  text-decoration: underline;
+}
+.pub-compact .pub-meta {
+  opacity: .85; font-size: .95rem;
+}
+/* 可選：投稿中的小徽章 */
+.badge { display:inline-block; margin-left:.4rem; padding:.1rem .5rem;
+  border:1px dashed #bdbdbd; border-radius:9999px; font-size:.8rem; opacity:.9; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -247,74 +249,41 @@ details.bib pre { margin:.35rem 0 0; padding:.6rem .8rem; background: rgba(0,0,0
 
     <!-- 已刊登 -->
     <h3 id="pubs-published">已刊登</h3>
-    <ul class="pub-list">
-      <!-- 範例一（有 DOI / PDF / BibTeX） -->
+    <ul class="pub-compact">
+      <!-- 範例：將標題直接連到期刊頁或 DOI -->
       <li>
-        <div class="pub-title">〈論文標題（中文或英文）〉</div>
-        <div class="pub-authors">范谷瑜, 合著者A, 合著者B</div>
-        <div class="pub-venue">Journal Name, 2024, vol(xx): pp–pp</div>
-        <div class="btns">
-          <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener">DOI</a>
-          <a href="files/paper.pdf" target="_blank" rel="noopener">PDF</a>
-          <details class="bib"><summary>BibTeX</summary>
-<pre>@article{Fan2024Example,
-  author  = {Ku-Yu Fan and ...},
-  title   = {Example Title},
-  journal = {Journal Name},
-  year    = {2024},
-  volume  = {xx},
-  pages   = {pp--pp},
-  doi     = {10.xxxx/xxxxx}
-}</pre>
-          </details>
+        <div class="pub-title">
+          <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener">
+            〈論文標題（中文或英文）〉
+          </a>
         </div>
+        <div class="pub-meta">范谷瑜, 合著者A, 合著者B — Journal Name, 2024</div>
       </li>
     </ul>
 
     <!-- 投稿中 -->
     <h3 id="pubs-submitted">投稿中</h3>
-    <ul class="pub-list">
-      <!-- 範例二（投稿中，沒有 DOI，用小徽章） -->
+    <ul class="pub-compact">
+      <!-- 若暫時沒有公開連結，就不要加 <a>，保留純文字標題 -->
       <li>
         <div class="pub-title">〈論文標題〉</div>
-        <div class="pub-authors">范谷瑜, 合著者C</div>
-        <div class="pub-venue">Submitted to Journal XYZ <span class="badge">Under Review</span></div>
-        <div class="btns">
-          <a href="files/submitted_draft.pdf" target="_blank" rel="noopener">Draft PDF</a>
-          <details class="bib"><summary>BibTeX</summary>
-<pre>@unpublished{Fan2025Submitted,
-  author = {Ku-Yu Fan and ...},
-  title  = {Title},
-  note   = {Submitted to Journal XYZ},
-  year   = {2025}
-}</pre>
-          </details>
+        <div class="pub-meta">范谷瑜, 合著者C — Submitted to Journal XYZ
+          <span class="badge">Under Review</span>
         </div>
       </li>
     </ul>
 
     <!-- arXiv / 預印本 -->
     <h3 id="pubs-arxiv">arXiv / 預印本</h3>
-    <ul class="pub-list">
-      <!-- 範例三（arXiv） -->
+    <ul class="pub-compact">
+      <!-- 標題連到 arXiv abs；需要 PDF 可在 abs 頁面再下載 -->
       <li>
-        <div class="pub-title">〈論文標題〉</div>
-        <div class="pub-authors">范谷瑜</div>
-        <div class="pub-venue">arXiv:2508.xxxxx [math.NT], 2025</div>
-        <div class="btns">
-          <a href="https://arxiv.org/abs/2508.xxxxx" target="_blank" rel="noopener">arXiv</a>
-          <a href="https://arxiv.org/pdf/2508.xxxxx" target="_blank" rel="noopener">PDF</a>
-          <details class="bib"><summary>BibTeX</summary>
-<pre>@misc{Fan2025ArXiv,
-  author       = {Ku-Yu Fan},
-  title        = {Title},
-  eprint       = {2508.xxxxx},
-  archivePrefix= {arXiv},
-  primaryClass = {math.NT},
-  year         = {2025}
-}</pre>
-          </details>
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2508.xxxxx" target="_blank" rel="noopener">
+            〈論文標題〉
+          </a>
         </div>
+        <div class="pub-meta">范谷瑜 — arXiv:2508.xxxxx [math.NT], 2025</div>
       </li>
     </ul>
   </div>
@@ -434,6 +403,7 @@ details.bib pre { margin:.35rem 0 0; padding:.6rem .8rem; background: rgba(0,0,0
 	</body>
 
 </html>
+
 
 
 
