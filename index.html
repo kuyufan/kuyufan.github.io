@@ -13,58 +13,43 @@
 
 		<!-- Language Switch Button Style -->
                 <style>
-#nav ul ul.sub { display: none; margin: 0.25rem 0 0.75rem 2rem; }
-#nav .sub a { font-size: 0.95em; opacity: 0.9; }
-#nav li.has-sub > a::after { content: '▸'; float: right; opacity: .6; transform: translateY(1px); }
-#nav li.has-sub.open > a::after { content: '▾'; }
-#nav li.has-sub.open > ul.sub { display: block; }
-		    #language-switch {
-			  display: flex;
-			  justify-content: center;
-			  gap: 1rem;
-			  padding: 0;
-			  margin: 0 0 1rem 0;
-			  list-style: none;
-		    }
+/* 語言切換 */
+#language-switch { display:flex; justify-content:center; gap:1rem; padding:0; margin:0 0 1rem 0; list-style:none; }
+#language-switch li a { color:white; font-size:1.2rem; text-decoration:none; }
+#language-switch li a:hover { text-decoration:underline; }
 
-		    #language-switch li a {
- 			 color: white;
- 			 font-size: 1.2rem;
-			 text-decoration: none;
-		    }
+/* 二層選單：基礎行為 */
+#nav ul ul.sub { display:none; margin:0.25rem 0 0.75rem 2rem; }
+#nav li.has-sub.open > ul.sub { display:block; }
 
-		    #language-switch li a:hover {
-			 text-decoration: underline;
-		    }
-/* 1) 移除可展開箭頭，避免擠壓文字對齊 */
-#nav li.has-sub > a::after { 
-  content: none !important;  /* 取消產生 */
-  display: none !important;  /* 保險起見，完全不顯示 */
-}
+/* 去掉箭頭，避免擠壓對齊 */
+#nav li.has-sub > a::after { content:none !important; display:none !important; }
 
-/* 2) 第一層（頂層）選單：字大、按鈕更高、預留右側內距一致 */
+/* 頂層選單：字體放大、高度增加 */
 #nav > ul > li > a {
-  font-size: 1.6rem;        /* 調大 */
-  padding-top: 0.9rem;       /* 增加上下內距，按鈕更高 */
-  padding-bottom: 0.9rem;
-  padding-right: 2.2rem;     /* 和沒有箭頭時保持右側留白一致 */
-  line-height: 1.2;
+  font-size:1.28rem !important;   /* 你要更大可改 1.4 或回 1.6 */
+  padding-top:0.9rem;
+  padding-bottom:0.9rem;
+  line-height:1.2;
 }
 
-/* 3) 第二層（子選單）：字小一點、按鈕較扁、縮排更明顯 */
+/* 固定左側圖示大小，避免跟著文字變形 */
+#nav > ul > li > a > span.icon:before {
+  font-size:1.0rem !important;
+  top:0.05rem;
+}
+
+/* 次層選單：字小一點、上下更貼合、再縮一點縮排 */
 #nav ul ul.sub a {
-  font-size: 0.95rem;        /* 比頂層小 */
-  padding-top: 0.45rem;      /* 上下更貼合文字 */
-  padding-bottom: 0.45rem;
-  padding-left: 3.0rem;      /* 再往內縮，與左側圖示對齊好看 */
-  line-height: 1.25;
+  font-size:0.95rem !important;
+  padding-top:0.45rem;
+  padding-bottom:0.45rem;
+  line-height:1.25;
+  padding-left:3.0rem;
 }
 
-/* 4)（可選）展開中的父選單做點強調，沒有箭頭也看得出來 */
-#nav li.has-sub.open > a {
-  font-weight: 600;
-  opacity: 1;
-}
+/* 打開中的父選單做點強調（可留可刪） */
+#nav li.has-sub.open > a { font-weight:600; opacity:1; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -343,6 +328,7 @@
 	</body>
 
 </html>
+
 
 
 
