@@ -84,6 +84,21 @@
 .pub-compact .kv { white-space: nowrap; }       /* 避免 DOI/頁碼被換行拆斷 */
 .badge { display:inline-block; margin-left:.4rem; padding:.1rem .5rem;
   border:1px dashed #bdbdbd; border-radius:9999px; font-size:.8rem; opacity:.9; }
+/* Talks – compact two-line layout */
+.talks { list-style:none; margin:.6rem 0 0; padding:0; }
+.talks li { margin:.65rem 0; }
+.talk-title { font-weight:700; line-height:1.35; }
+.talk-title a { text-decoration:none; }
+.talk-title a:hover { text-decoration:underline; }
+.talk-meta { opacity:.9; font-size:.95rem; line-height:1.35; }
+.talk-meta .rest span::before { content:" · "; opacity:.7; }
+.talk-meta .rest span:first-child::before { content:""; } /* 第一個不要分隔點 */
+.talk-meta time, .talk-meta .kv { white-space:nowrap; }   /* 日期/短欄位不換行 */
+
+/* 可選：不同性質的標籤 */
+.badge.invited{ border-color:#6366f1; color:#6366f1; }
+.badge.poster { border-color:#0ea5e9; color:#0ea5e9; }
+.badge.online { border-color:#6b7280; color:#6b7280; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -354,12 +369,96 @@
   </div>
 </section>
 
-<section id="talks" class="two"><div class="container">
-  <header><h2>演講 / 研討會</h2></header>
-  <h3 id="talks-upcoming">即將參加</h3><ul></ul>
-  <h3 id="talks-past">已參加</h3><ul></ul>
-</div></section>
+<section id="talks" class="two">
+  <div class="container">
+    <header><h2>演講 / 研討會</h2></header>
 
+    <!-- 即將參加 -->
+    <h3 id="talks-upcoming">即將參加</h3>
+    <ul class="talks">
+      <!-- 範例 A：有演講 + 投影片可下載（同網域檔案可生效 download） -->
+      <li>
+        <div class="talk-title">
+          <a href="https://example.org/jms2025" target="_blank" rel="noopener">日本數學會 2025 年度總合分科會</a>
+          <span class="badge invited">Invited</span>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-09-10">2025-09-10</time>–<time datetime="2025-09-12">09-12</time></span>
+            <span class="place">京都大學</span>
+            <span class="talk">演講：
+              <a href="files/slides/mzv-arborification-2025-jms.pdf" download>
+                Arborification in Multiple Zeta Values
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
+
+      <!-- 範例 B：有演講（投影片外部連結，改用新分頁） -->
+      <li>
+        <div class="talk-title">
+          <a href="https://www.kurims.kyoto-u.ac.jp/en/" target="_blank" rel="noopener">
+            RIMS 共同研究：多重 ζ 值的諸相（2025）
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-11-20">2025-11-20</time>–<time datetime="2025-11-22">11-22</time></span>
+            <span class="place">京都 · RIMS</span>
+            <span class="talk">演講：
+              <a href="https://example.com/slides/rims-2025.pdf" target="_blank" rel="noopener">
+                Coproduct & Arborification of MZVs
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
+
+      <!-- 範例 C：不演講 -->
+      <!--
+      <li>
+        <div class="talk-title">
+          <a href="https://conf.example.com" target="_blank" rel="noopener">某研討會名稱</a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-12-02">2025-12-02</time>–<time datetime="2025-12-05">12-05</time></span>
+            <span class="place">東京</span>
+            <span class="talk">演講：無</span>
+          </span>
+        </div>
+      </li>
+      -->
+    </ul>
+
+    <!-- 已參加 -->
+    <h3 id="talks-past">已參加</h3>
+    <ul class="talks">
+      <!-- 範例：過往紀錄 -->
+      <li>
+        <div class="talk-title">
+          <a href="https://arxiv.org/abs/2406.08127" target="_blank" rel="noopener">
+            研究工作坊（範例）
+          </a>
+          <span class="badge online">Online</span>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2024-06-18">2024-06-18</time></span>
+            <span class="place">Nagoya</span>
+            <span class="talk">演講：
+              <a href="files/slides/2024-06-workshop.pdf" download>
+                Coproduct Formula for Motivic Yamamoto's Integral
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+				
 <section id="teaching" class="two"><div class="container">
   <header><h2>教學</h2></header>
   <h3 id="courses">課程 / 助教</h3><ul></ul>
@@ -468,6 +567,7 @@
 	</body>
 
 </html>
+
 
 
 
