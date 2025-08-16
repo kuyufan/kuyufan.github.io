@@ -99,6 +99,18 @@
 .badge.invited{ border-color:#6366f1; color:#6366f1; }
 .badge.poster { border-color:#0ea5e9; color:#0ea5e9; }
 .badge.online { border-color:#6b7280; color:#6b7280; }
+
+/* Teaching – unified one-row layout for 課程 / 其他 */
+.teach-compact, .teach-other { list-style:none; margin:.6rem 0 0; padding:0; }
+.teach-compact li, .teach-other li { margin:.55rem 0; }
+
+/* 每筆一行（需要時自動換到第二行） */
+.rowx { display:flex; flex-wrap:wrap; align-items:baseline; line-height:1.45; }
+.rowx .cell + .cell::before { content:" · "; opacity:.65; margin:0 .35rem; }
+.rowx a { text-decoration:none; }
+.rowx a:hover { text-decoration:underline; }
+.rowx .course { font-weight:700; }  /* 課名加粗 */
+.rowx .yt { white-space:nowrap; }   /* 2025 春 不易被拆行 */
 		</style>
 	</head>
 	<body class="is-preload">
@@ -153,13 +165,13 @@
       </ul>
     </li>
 
-    <li class="has-sub">
-      <a href="#teaching" class="scrolly"><span class="icon solid fa-graduation-cap">教學</span></a>
-      <ul class="sub">
-        <li><a href="#courses" class="scrolly">課程 / 助教</a></li>
-        <li><a href="#materials" class="scrolly">教材 / 講義</a></li>
-      </ul>
-    </li>
+<li class="has-sub">
+  <a href="#teaching" class="scrolly"><span class="icon solid fa-graduation-cap">教學</span></a>
+  <ul class="sub">
+    <li><a href="#courses" class="scrolly">課程</a></li>
+    <li><a href="#teaching-others" class="scrolly">其他</a></li>
+  </ul>
+</li>
 
 <li class="has-sub">
   <a href="#misc" class="scrolly"><span class="icon solid fa-code">雜談 / 其他</span></a>
@@ -534,7 +546,7 @@
         </div>
         <div class="talk-meta">
           <span class="rest">
-            <span class="date"><time datetime="2024-12-07">2024-12-07</time></span>
+            <span class="date"><time datetime="2024-12-09">2024-12-09</time></span>
             <span class="place">東北大學</span>
             <span class="talk">演講：無
             </span>
@@ -550,7 +562,7 @@
         </div>
         <div class="talk-meta">
           <span class="rest">
-            <span class="date"><time datetime="2024-12-07">2024-12-07</time></span>
+            <span class="date"><time datetime="2024-12-08">2024-12-08</time></span>
             <span class="place">東北大學</span>
             <span class="talk">演講：無
             </span>
@@ -596,12 +608,77 @@
   </div>
 </section>
 				
-<section id="teaching" class="two"><div class="container">
-  <header><h2>教學</h2></header>
-  <h3 id="courses">課程 / 助教</h3><ul></ul>
-  <h3 id="materials">教材 / 講義</h3><ul></ul>
-</div></section>
+<section id="teaching" class="two">
+  <div class="container">
+    <header><h2>教學</h2></header>
 
+    <!-- 課程 -->
+    <h3 id="courses">課程</h3>
+    <ul class="teach-compact">
+
+      <!-- 範例 1：有課程網站、有教材 -->
+      <li>
+        <div class="rowx">
+          <span class="cell school">名古屋大學</span>
+          <span class="cell yt">2025 春</span>
+          <span class="cell course">
+            <a href="https://example.edu/course/alg-1" target="_blank" rel="noopener">抽象代數（一）</a>
+          </span>
+          <span class="cell teacher">教師：王〇〇</span>
+          <span class="cell ta">助教：范谷瑜</span>
+          <span class="cell material">教材/講義：
+            <a href="files/teaching/alg1/notes.pdf" download>講義</a>
+          </span>
+        </div>
+      </li>
+
+      <!-- 範例 2：沒有教材 -->
+      <li>
+        <div class="rowx">
+          <span class="cell school">國立臺灣大學</span>
+          <span class="cell yt">2023 秋</span>
+          <span class="cell course">微積分（二）</span>
+          <span class="cell teacher">教師：陳〇〇</span>
+          <span class="cell ta">助教：—</span>
+          <span class="cell material">教材/講義：無</span>
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- 其他 -->
+    <h3 id="teaching-others">其他</h3>
+    <ul class="teach-other">
+
+      <!-- 範例 A：工作坊／訓練 -->
+      <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：名古屋大學 數學教學中心</span>
+          <span class="cell date">時間：2025-04-18</span>
+          <span class="cell event">活動名稱：TA 研習</span>
+          <span class="cell topic">講題：如何設計演算作業</span>
+          <span class="cell speaker">講師：范谷瑜</span>
+          <span class="cell material">教材/講義：
+            <a href="files/teaching/workshop/ta-training.pdf" download>講義</a>
+          </span>
+        </div>
+      </li>
+
+      <!-- 範例 B：只有部分欄位 -->
+      <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：國立清華大學</span>
+          <span class="cell date">時間：2022-12-10</span>
+          <span class="cell event">活動名稱：助教座談</span>
+          <span class="cell topic">講題：—</span>
+          <span class="cell speaker">講師：—</span>
+          <span class="cell material">教材/講義：無</span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
 <section id="misc" class="two">
   <div class="container">
     <header><h2>雜談 / 其他</h2></header>
@@ -704,6 +781,7 @@
 	</body>
 
 </html>
+
 
 
 
