@@ -996,14 +996,28 @@
       或使用下列表單。
     </p>
 
-    <form method="post" action="#">
-      <div class="row">
-        <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="姓名" /></div>
-        <div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="電子郵件" /></div>
-        <div class="col-12"><textarea name="message" placeholder="留言內容"></textarea></div>
-        <div class="col-12"><input type="submit" value="送出" /></div>
-      </div>
-    </form>
+<form id="contact-form" action="https://formspree.io/f/xldlkkbbj" method="POST">
+  <div class="row">
+    <div class="col-6 col-12-mobile">
+      <input type="text" name="name" placeholder="姓名" required />
+    </div>
+    <div class="col-6 col-12-mobile">
+      <input type="email" name="email" placeholder="電子郵件" required />
+    </div>
+    <div class="col-12">
+      <textarea name="message" placeholder="留言內容" required></textarea>
+    </div>
+
+    <!-- 下面三行是主旨 / 送出後導回位置 / 蜜罐防垃圾 -->
+    <input type="hidden" name="_subject" value="網站聯絡表單 - kuyufan.github.io">
+    <input type="hidden" name="_redirect" value="https://kuyufan.github.io/#contact?sent=1">
+    <input type="text" name="_gotcha" style="display:none">
+
+    <div class="col-12">
+      <input type="submit" value="送出" />
+    </div>
+  </div>
+</form>
 
   </div>
 </section>
@@ -1062,6 +1076,7 @@
 	</body>
 
 </html>
+
 
 
 
