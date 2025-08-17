@@ -105,32 +105,23 @@
 .teach-compact li, .teach-other li { margin:.55rem 0; }
 
 /* 每筆一行（需要時自動換到第二行） */
-.rowx { display:flex; flex-wrap:wrap; align-items:baseline; line-height:1.45; }
-.rowx a { text-decoration:none; }
-.rowx a:hover { text-decoration:underline; }
-/* --- Teaching：minimal emphasis（只凸顯課名/講題） --- */
-.rowx .cell { font-weight: 400; }  /* 預設全部回歸一般字重 */
+.rowx{display:flex;flex-wrap:wrap;align-items:baseline;line-height:1.5}
+.rowx .cell{display:inline-flex}               /* 讓 ::after 跟著內容 */
+.rowx .cell:not(:last-child)::after{content:" · ";opacity:.55;margin:0 .35rem}
 
-/* 重點只放在「內容」：課名、講題 */
-.rowx .course,
-.rowx .topic { font-weight: 700; }
+/* 重點只放在內容：課名 / 講題 */
+.rowx .course,.rowx .topic{font-weight:700}
 
-/* 其他資訊稍微淡一些（讀得到但不會搶戲） */
-.rowx .school,
-.rowx .yt,        /* 2025 春/秋 */
-.rowx .teacher,
-.rowx .ta,
-.rowx .org,
-.rowx .event,
-.rowx .date,
-.rowx .speaker { opacity: .85; }
-/* 材料/講義再淡一點，並用斜體當輔助訊號 */
-.rowx .material { opacity: .75; font-style: italic; }
-/* 分隔點更輕，降低視覺噪音 */
-.rowx .yt { white-space:nowrap; }   /* 2025 春 不易被拆行 */
-/* ---- Teaching polish ---- */
-.rowx .break { flex-basis:100%; margin-top:.15rem; }  /* 想換行就加 class="break" */
-.rowx .book  { font-style: italic; }                  /* 書名斜體 */
+/* 其他說明低調一些（讀得到但不搶戲） */
+.rowx .school,.rowx .yt,.rowx .teacher,.rowx .ta,
+.rowx .org,.rowx .event,.rowx .date,.rowx .speaker{opacity:.85}
+.rowx .yt{white-space:nowrap}                 /* 2025 春/秋 不拆行 */
+
+/* 材料/講義更淡，並用斜體提示「輔助資訊」 */
+.rowx .material{opacity:.75;font-style:italic}
+
+/* 書名斜體 */
+.book{font-style:italic}
 </style>
 	</head>
 	<body class="is-preload">
