@@ -100,45 +100,50 @@
 .badge.poster { border-color:#0ea5e9; color:#0ea5e9; }
 .badge.online { border-color:#6b7280; color:#6b7280; }
 
-/* 教學 – unified one-row layout for 課程 / 其他 */
+/* 教學 */
 .teach-compact, .teach-other { list-style:none; margin:.6rem 0 0; padding:0; }
 .teach-compact li, .teach-other li { margin:.55rem 0; }
 
-/* 第一行：學校 / 年季 / 課名 / 教師 / 助教 … */
-.teach-compact .rowx{
+/* 第一行：一排顯示（學校/年季/課名/教師/助教… 或 其他的主辦/活動/時間/講題/講師…） */
+.teach-compact .rowx,
+.teach-other  .rowx{
   display:flex;
   flex-wrap:wrap;
   align-items:baseline;
-  gap:.25rem .35rem;            /* 欄位之間留一點距離 */
+  gap:.25rem .35rem;
   line-height:1.5;
-  text-align:left !important;   /* ← 關鍵：關掉主題的左右對齊 */
+  text-align:left !important;     /* 關掉主題裡的左右對齊 */
   word-spacing:normal !important;
   letter-spacing:normal;
 }
 
-/* 只把課名/講題加粗，其他維持一般字重 */
-.teach-compact .rowx .cell{ font-weight:400; }
+/* 只有課名/講題加粗，其他資訊一般字重 */
+.teach-compact .rowx .cell,
+.teach-other  .rowx .cell{ font-weight:400; }
 .teach-compact .rowx .course,
-.teach-compact .rowx .topic{ font-weight:700; }
+.teach-other  .rowx .topic { font-weight:700; }
 
-/* 第一行欄位之間自動加「·」，但不要加在教材那一行 */
-.teach-compact .rowx .cell:not(.material) + .cell:not(.material)::before{
+/* 第一行欄位之間加「·」，但教材那一行不要加 */
+.teach-compact .rowx .cell:not(.material) + .cell:not(.material)::before,
+.teach-other  .rowx .cell:not(.material) + .cell:not(.material)::before{
   content:" · ";
   opacity:.55;
   margin:0 .35rem;
 }
 
-/* 第二行：教材/講義——固定換到下一整行，且永遠靠左（不 justify） */
-.teach-compact .rowx .material{
+/* 第二行：教材/講義——固定換到下一整行、靠左、稍微小一點 */
+.teach-compact .rowx .material,
+.teach-other  .rowx .material{
   flex-basis:100%;
   margin-top:.15rem;
   font-style:italic;
   opacity:.85;
-  text-align:left !important;   /* ← 再保險一次只靠左 */
+  font-size:.95em;                 /* ← 字體稍微小一點；想更小可調 .9em */
+  text-align:left !important;
   word-spacing:normal !important;
 }
 
-/* 書名斜體（你原本的 .book 可保留） */
+/* 書名斜體（保留） */
 .rowx .book{ font-style:italic; }
 </style>
 	</head>
@@ -1059,6 +1064,7 @@
 	</body>
 
 </html>
+
 
 
 
