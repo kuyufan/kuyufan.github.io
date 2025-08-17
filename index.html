@@ -105,7 +105,14 @@
 .teach-compact li, .teach-other li { margin:.55rem 0; }
 
 /* 每筆一行（需要時自動換到第二行） */
-.rowx{display:flex;flex-wrap:wrap;align-items:baseline;line-height:1.5}
+/* 每筆一行（可換行），且整體預設靠左 */
+.rowx{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  line-height:1.45;
+  text-align:left;              /* ← 關鍵：避免繼承到 justify */
+}
 .rowx .cell{display:inline-flex}               /* 讓 ::after 跟著內容 */
 /* 用「前一格的 ::after」當分隔點，且只對兄弟 .cell 生效 */
 .rowx > .cell:not(:last-of-type)::after{
@@ -121,11 +128,15 @@
 .rowx .org,.rowx .event,.rowx .date,.rowx .speaker{opacity:.85}
 .rowx .yt{white-space:nowrap}                 /* 2025 春/秋 不拆行 */
 
-/* 教材/講義：固定換到下一行，並且撐滿整行 */
+/* 教材/講義：固定換到下一行、佔滿整行，並取消左右對齊 */
 .rowx .material{
   flex: 1 1 100%;
+  width: 100%;
   opacity: .75;
   font-style: italic;
+  text-align: left;      /* ← 取消主題的 justify 影響 */
+  text-justify: auto;
+  word-spacing: normal;  /* ← 把被撐大的空白還原 */
 }
 /* 書名斜體 */
 .book{font-style:italic}
@@ -1048,6 +1059,7 @@
 	</body>
 
 </html>
+
 
 
 
