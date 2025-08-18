@@ -5,13 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>文章標題｜范谷瑜</title>
   <link rel="stylesheet" href="../assets/css/main.css" />
-  <link rel="canonical" href="https://kuyufan.github.io/blog/2025-08-18-sample.html" />
   <meta name="description" content="一句話摘要（有助 SEO）" />
-  <!-- MathJax（需要公式時加）-->
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- 需要公式再開啟 -->
+  <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 </head>
 <body class="is-preload">
+
+  <!-- 左側側欄（精簡版）。想完全一樣，就把 index.html 裡 <div id="header">…</div> 整段複製過來。 -->
+  <div id="header">
+    <div class="top">
+      <div id="logo">
+        <span class="image avatar48"><img src="../images/avatar.jpg" alt=""></span>
+        <h1 id="title">范谷瑜</h1>
+        <p>名古屋大學<br>數學博士生</p>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="../index.html#top"><span class="icon solid fa-home">首頁</span></a></li>
+          <li><a href="../index.html#about"><span class="icon solid fa-user">關於我</span></a></li>
+          <li><a href="../index.html#pubs"><span class="icon solid fa-book">著作</span></a></li>
+          <li><a href="../index.html#talks"><span class="icon solid fa-chalkboard-teacher">演講/研討會</span></a></li>
+          <li><a href="../index.html#teaching"><span class="icon solid fa-graduation-cap">教學</span></a></li>
+          <li><a href="../index.html#patents"><span class="icon solid fa-certificate">專利</span></a></li>
+          <li><a href="../index.html#blog"><span class="icon solid fa-book-open">網誌</span></a></li>
+          <li><a href="../index.html#contact"><span class="icon solid fa-envelope">聯絡</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bottom">
+      <ul class="icons">
+        <li><a href="https://www.instagram.com/kuyufan/" target="_blank" rel="noopener" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="https://www.facebook.com/kuyu.fan.7" target="_blank" rel="noopener" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="https://github.com/kuyufan" target="_blank" rel="noopener" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="mailto:abc940605@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 主內容 -->
   <div id="main">
     <section class="two">
       <div class="container">
@@ -26,11 +57,19 @@
           <p>內容內容內容。</p>
         </article>
 
-        <p style="margin-top:1.25rem">
-          <a class="button" href="../index.html#blog">← 返回「網誌」</a>
-        </p>
+        <!-- 若採用左側選單，可拿掉下面的返回按鈕 -->
+        <!-- <p style="margin-top:1.25rem"><a class="button" href="../index.html#blog">← 返回「網誌」</a></p> -->
       </div>
     </section>
   </div>
+
+  <!-- Scripts（注意相對路徑） -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.scrolly.min.js"></script>
+  <script src="../assets/js/jquery.scrollex.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
