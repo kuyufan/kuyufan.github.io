@@ -143,8 +143,22 @@
   word-spacing:normal !important;
 }
 
-/* 書名斜體（保留） */
+/* 書名斜體 */
 .rowx .book{ font-style:italic; }
+/* 專利與網誌 */
+.pat-compact, .blog-compact { list-style:none; margin:.6rem 0 0; padding:0; }
+.pat-compact li, .blog-compact li { margin:.65rem 0; }
+
+.pat-title { font-weight:700; line-height:1.35; }
+.pat-meta  { opacity:.9; font-size:.95rem; line-height:1.35; }
+.pat-meta .rest span::before { content:" · "; opacity:.7; }
+.pat-meta .rest span:first-child::before { content:""; }
+.pat-links a { text-decoration:none; }
+.pat-links a:hover { text-decoration:underline; }
+.pat-compact p { margin:.35rem 0 0; }   /* 摘要與主體距離 */
+
+.badge.pat-approved { border-color:#10b981; color:#10b981; } /* 已核准 */
+.badge.pat-pending  { border-color:#f59e0b; color:#f59e0b; } /* 審中/申請中 */
 </style>
 	</head>
 	<body class="is-preload">
@@ -208,10 +222,20 @@
 </li>
 
 <li class="has-sub">
-  <a href="#misc" class="scrolly"><span class="icon solid fa-code">雜談 / 其他</span></a>
+  <a href="#patents" class="scrolly"><span class="icon solid fa-file-alt">專利</span></a>
   <ul class="sub">
-    <li><a href="#patents" class="scrolly">專利</a></li>
-    <li><a href="#blog" class="scrolly">網誌</a></li>
+    <li><a href="#pat-A" class="scrolly">A</a></li>
+    <li><a href="#pat-B" class="scrolly">B</a></li>
+    <li><a href="#pat-C" class="scrolly">C</a></li>
+  </ul>
+</li>
+
+<li class="has-sub">
+  <a href="#blog" class="scrolly"><span class="icon solid fa-book-open">網誌</span></a>
+  <ul class="sub">
+    <li><a href="#blog-edu" class="scrolly">數學教育</a></li>
+    <li><a href="#blog-contest" class="scrolly">數學競賽</a></li>
+    <li><a href="#blog-games" class="scrolly">數學遊戲</a></li>
   </ul>
 </li>
 
@@ -959,19 +983,109 @@
   </div>
 </section>
 
-
-<section id="misc" class="two">
+<!-- 專利 -->
+<section id="patents" class="two">
   <div class="container">
-    <header><h2>雜談 / 其他</h2></header>
+    <header><h2>專利</h2></header>
 
-    <h3 id="patents">專利</h3>
-    <ul>
-      <!-- 範例：<li>發明名稱 — 申請/核准年份．<a href="#">專利號 / 連結</a></li> -->
+    <ul class="pat-compact">
+      <li>
+        <div class="pat-title">堆砌單位元件結構及多樣式組合之堆砌單體元件結構<span class="badge pat-approved">已核准</span></div>
+        <div class="pat-meta">
+          <span class="rest">
+            <span class="year">2021</span>
+            <span class="inventors">發明人：范谷瑜、洪文良</span>
+            <span class="kv pat-links"><a href="https://tiponet.tipo.gov.tw/twpat1/twpatc/twpatkm?.78a0E5101000103201000005^0000000000000000000001000501800417e" target="_blank" rel="noopener">台灣專利連結</a></span>
+          </span>
+        </div>
+        <p class="muted">摘譯：本新型提供一種堆砌單位元件結構，由截角正八面體切割而成。
+			其堆砌正六邊形面連接堆砌正四邊形面。
+			封閉線形成於截角正八面體之六個正六邊形面，且穿過此六個正六邊形面中相鄰之任二者之連接邊之中點。
+			幾何中心點連接封閉線之封閉點而形成射線，射線組成切割面，堆砌單位元件結構係由截角正八面體依據切割面切割成二個立體結構之其中一者，藉以令堆砌單位元件結構為截角正八面體之一半。
+			藉此，可同時具有組合與堆砌的性質並能多樣式組合出多種相異且具有豐富變化性之結構，且能培養空間幾何之認知、組織結構及創造力以達寓教於樂之效果。</p>
+      </li>
     </ul>
 
-    <h3 id="blog">網誌</h3>
-    <ul>
-      <!-- 範例：<li><a href="#">文章標題</a>（YYYY-MM-DD）</li> -->
+    <ul class="pat-compact">
+      <li>
+        <div class="pat-title">菱形十二面體積木拼圖及多連菱形十二面體積木拼圖<span class="badge pat-pending">已核准</span></div>
+        <div class="pat-meta">
+          <span class="rest">
+            <span class="year">2018</span>
+            <span class="inventors">發明人：范谷瑜、洪文良</span>
+            <span class="kv pat-links"><a href="https://tiponet.tipo.gov.tw/twpat1/twpatc/twpatkm?.f18d081500101000000320000100000050^000000020000001005E0040c1" target="_blank" rel="noopener">台灣專利連結</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US278925344&_cid=JP1-MEGOTH-08213-2" target="_blank" rel="noopener">美國/國際連結一</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US307237972&_cid=JP1-MEGOTH-08213-2" target="_blank" rel="noopener">美國/國際連結二</a></span>
+          </span>
+        </div>
+        <p class="muted">摘要：本新型係一種多連菱形十二面體積木拼圖，其包含複數個積木拼圖，此些積木拼圖拼接排列成一多連菱形十二面體，其等同複數個菱形十二面體彼此連結所形成之立體。
+			各積木拼圖包含二單位元件，此二單位元件彼此相互連接且彼此相同。
+			各單位元件包含複數個表面，各表面呈菱形或三角形，其中相鄰之呈三角形的二表面銜接而形成凹形，且此些表面圍繞而形成一封閉空間。
+			藉此，透過特殊之積木拼圖能夠拼成多種不同的多連菱形十二面體，其適合各年齡層且可提升空間能力與心理旋轉能力，並能增進幾何學之解題策略及訓練多重思路。</p>
+      </li>
+    </ul>
+
+    <ul class="pat-compact">
+      <li>
+        <div class="pat-title">六角柱形之益智拼圖<span class="badge pat-pending">已核准</span></div>
+        <div class="pat-meta">
+          <span class="rest">
+            <span class="year">2017</span>
+            <span class="inventors">發明人：范谷瑜、洪文良</span>
+            <span class="kv pat-links"><a href="https://tiponet.tipo.gov.tw/twpat1/twpatc/twpatkm?.aa6d081E50111000000330000000000050^00001002000000000050040a7" target="_blank" rel="noopener">台灣專利連結</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US233549128&_cid=JP1-MEGOTH-08213-1" target="_blank" rel="noopener">美國/國際連結</a></span>
+          </span>
+        </div>
+        <p class="muted">摘要：本創作揭露一種六角柱形之益智拼圖，其包含18 種不同構型的拼圖，每塊拼圖都由複數個單位元件所組成，複數個積木拼圖排列形成六角柱體。
+			單位元件選自第一單位元件及第二單位元件所構成的群組中，第一單位元件之體積大於第二單位元件之體積。
+			本揭露並不具有唯一解或特定解法，其可培養空間感，增進對幾何圖形的認知，能訓練多重的思路，且在思考過程中達到寓教於樂的效果。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 網誌 -->
+<section id="blog" class="two">
+  <div class="container">
+    <header><h2>網誌</h2></header>
+
+    <h3 id="blog-edu">數學教育</h3>
+    <ul class="blog-compact">
+      <!-- 
+	  <li>
+		<div class="pub-title">
+          <a href="blog/文章檔案.html">文章標題</a>
+        </div>
+		<div class="pub-meta">
+		  <span class="year">
+            <time datetime="2025-07-30">2025-07-30</time>
+	      </span>
+        </div>
+	  </li>
+      
+      -->
+      <li>
+		<div class="pub-title">
+          <a href="blog/sample.html">文章標題</a>
+        </div>
+		<div class="pub-meta">
+		  <span class="year">
+            <time datetime="2025-07-30">2025-07-30</time>
+	      </span>
+        </div>
+	  </li>
+      
+      <li class="muted">（待更新）</li>
+    </ul>
+
+    <h3 id="blog-contest">數學競賽</h3>
+    <ul class="blog-compact">
+      <li class="muted">（待更新）</li>
+    </ul>
+
+    <h3 id="blog-games">數學遊戲</h3>
+    <ul class="blog-compact">
+      <li class="muted">（待更新）</li>
     </ul>
   </div>
 </section>
@@ -1076,6 +1190,7 @@
 	</body>
 
 </html>
+
 
 
 
