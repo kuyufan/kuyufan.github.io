@@ -1156,7 +1156,7 @@
 (function(){
   const el = document.getElementById('visit-count');
   if (!el) return;
-  const GAS_URL = '<<https://script.google.com/macros/s/AKfycbybl_0OftnQJMk8T06idLnuESwD8NSSYnBVBusy9V0NxcM9Z7gVIrKQ46UYrbAIj_o4tw/exec>>';
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbybl_0OftnQJMk8T06idLnuESwD8NSSYnBVBusy9V0NxcM9Z7gVIrKQ46UYrbAIj_o4tw/exec';
   fetch(GAS_URL, { cache: 'no-store' })
     .then(r => r.json())
     .then(d => { el.textContent = Number(d.value).toLocaleString(); })
@@ -1166,6 +1166,7 @@
 	</body>
 
 </html>
+
 
 
 
