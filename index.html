@@ -1156,16 +1156,25 @@
 (function(){
   const el = document.getElementById('visit-count');
   if (!el) return;
-  const GAS_URL = 'https://script.google.com/macros/s/AKfycbybl_0OftnQJMk8T06idLnuESwD8NSSYnBVBusy9V0NxcM9Z7gVIrKQ46UYrbAIj_o4tw/exec';
-  fetch(GAS_URL, { cache: 'no-store' })
-    .then(r => r.json())
+
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbwpArinLwrR1EGLVdlqjvjtoH1EIgjgZvHqgBn0n1Q6guDP38p4Bi7hdpBOLt4GelXX/exec';
+
+  fetch(GAS_URL + '?_=' + Date.now(), { cache: 'no-store' })
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
     .then(d => { el.textContent = Number(d.value).toLocaleString(); })
-    .catch(() => { el.textContent = 'N/A'; });
+    .catch(err => {
+      console.error('counter error:', err);
+      el.textContent = 'N/A';
+    });
 })();
 </script>
 	</body>
 
 </html>
+
 
 
 
