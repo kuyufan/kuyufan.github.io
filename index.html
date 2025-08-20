@@ -1153,42 +1153,20 @@
   });
 </script>
 <script>
-(function () {
+(function(){
   const el = document.getElementById('visit-count');
   if (!el) return;
-
-  // 你要共享的計數名字（同一 NS/KEY 才會共用數字）
-  const NS  = 'kuyufan.github.io';
-  const KEY = 'home';
-
-  // 先打官方 API，失敗再用備援網域，避免某些裝置/網路擋到
-  const endpoints = [
-    `https://api.countapi.xyz/hit/${encodeURIComponent(NS)}/${encodeURIComponent(KEY)}`,
-    `https://countapi.xyz/hit/${encodeURIComponent(NS)}/${encodeURIComponent(KEY)}`
-  ];
-
-  (async () => {
-    for (const url of endpoints) {
-      try {
-        const res = await fetch(url, { cache: 'no-store' });
-        if (!res.ok) continue;
-        const data = await res.json();
-        if (typeof data.value === 'number') {
-          el.textContent = Number(data.value).toLocaleString();
-          return; // 成功就結束，不會重複 +1
-        }
-      } catch (e) {
-        // 換下一個 endpoint
-      }
-    }
-    // 全部失敗才顯示 N/A
-    el.textContent = 'N/A';
-  })();
+  const GAS_URL = '<<https://script.google.com/macros/s/AKfycbybl_0OftnQJMk8T06idLnuESwD8NSSYnBVBusy9V0NxcM9Z7gVIrKQ46UYrbAIj_o4tw/exec>>';
+  fetch(GAS_URL, { cache: 'no-store' })
+    .then(r => r.json())
+    .then(d => { el.textContent = Number(d.value).toLocaleString(); })
+    .catch(() => { el.textContent = 'N/A'; });
 })();
 </script>
 	</body>
 
 </html>
+
 
 
 
