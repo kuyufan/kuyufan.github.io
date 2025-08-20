@@ -1156,29 +1156,29 @@
   const el = document.getElementById('visit-count');
   if (!el) return;
 
-  // 使用 countapi 服務：同一個 domain/key 會共用一個計數
-  const namespace = 'kuyufan.github.io';
-  const key = 'home';
+  const NS  = 'kuyufan.github.io';
+  const KEY = 'home';
+  const BASE = 'https://api.countapi.xyz';
 
-  fetch(`https://countapi.xyz/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`)
+  const COOLDOWN_MS = 30 * 1000; // 30秒
+  const k = 'last_hit_ts';
+  const last = Number(sessionStorage.getItem(k) || 0);
+  const now = Date.now();
+  const endpoint = (now - last > COOLDOWN_MS) ? 'hit' : 'get';
+
+  fetch(`${BASE}/${endpoint}/${encodeURIComponent(NS)}/${encodeURIComponent(KEY)}`, { cache: 'no-store' })
     .then(r => r.json())
-    .then(d => { el.textContent = Number(d.value).toLocaleString(); })
-    .catch(() => {
-      // 失敗備援：僅在本機瀏覽器累計
-      try {
-        const k = 'local_visit_count';
-        const v = (parseInt(localStorage.getItem(k) || '0', 10) + 1);
-        localStorage.setItem(k, v);
-        el.textContent = v.toLocaleString();
-      } catch (_) {
-        el.textContent = '1';
-      }
-    });
+    .then(d => {
+      el.textContent = Number(d.value).toLocaleString();
+      if (endpoint === 'hit') sessionStorage.setItem(k, String(now));
+    })
+    .catch(() => { el.textContent = 'N/A'; });
 })();
 </script>
 	</body>
 
 </html>
+
 
 
 
