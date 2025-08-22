@@ -195,6 +195,33 @@
   background: none !important;
   box-shadow: none !important;
 }
+/* 只調整首頁 hero 的文字可讀性，不動背景圖 */
+#top h2.alt{
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: .02em;
+  line-height: 1.1;
+
+  /* 1) 文字描邊（Chrome/Edge/Safari 支援） */
+  -webkit-text-stroke: calc(.8px + .05vw) rgba(0,0,0,.42);
+
+  /* 2) 多層陰影（所有瀏覽器的後援方案） */
+  text-shadow:
+    0 0 1px rgba(0,0,0,.55),
+    0 2px 6px rgba(0,0,0,.55),
+    0 8px 24px rgba(0,0,0,.35);
+}
+
+/* 副標／訪客數 */
+#top .visit{
+  color: #fff;
+  font-weight: 650;
+
+  -webkit-text-stroke: .6px rgba(0,0,0,.45);
+  text-shadow:
+    0 1px 4px rgba(0,0,0,.65),
+    0 4px 14px rgba(0,0,0,.4);
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -1488,6 +1515,7 @@
 	</body>
 
 </html>
+
 
 
 
