@@ -184,6 +184,17 @@
   }
   .links-compact.two-col li{ margin:.45rem 0; }
 }
+/* 只改首頁 hero (section#top)，直接顯示我的圖片 */
+#top.one.dark.cover {
+  background: url('images/hero.jpg') center center / cover no-repeat !important;
+}
+
+/* 有些主題會用偽元素加暗色/細紋疊層，順手關掉（若沒有則不影響） */
+#top.one.dark.cover::before,
+#top.one.dark.cover::after {
+  background: none !important;
+  box-shadow: none !important;
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -1134,7 +1145,7 @@
       <li>
         <div class="item">
           <a class="name" href="https://www.math.nthu.edu.tw/~ftwei/" target="_blank" rel="noopener">洪文良(Hung, Wen-Liang)</a>
-          <span class="desc">益智玩具共同發明人</span>
+          <span class="desc">專利共同發明人</span>
         </div>
       </li>
 	  <li>
@@ -1477,6 +1488,7 @@
 	</body>
 
 </html>
+
 
 
 
