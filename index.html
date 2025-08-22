@@ -231,6 +231,7 @@
     0 1px 3px rgba(0,0,0,.70),
     0 6px 18px rgba(0,0,0,.45);
 }
+#language-switch a[aria-current="page"]{ text-decoration: underline; opacity:.95; pointer-events:none; }
 </style>
 	</head>
 	<body class="is-preload">
@@ -238,11 +239,11 @@
 		<!-- Header -->
 			<div id="header">
 				<!-- Language Switcher -->
-                                        <ul id="language-switch">
-                                                <li><a href="index.html">中文</a></li>
-                                                <li><a href="en.html">English</a></li>
-                                                <li><a href="ja.html">日本語</a></li>
-                                        </ul>
+<ul id="language-switch">
+  <li><a href="index.html" aria-current="zh-Hant">中文</a></li>
+  <li><a href="en.html" lang="page">English</a></li>
+  <li><a href="ja.html" lang="ja">日本語</a></li>
+</ul>
 
 				<div class="top">
 
@@ -1524,6 +1525,7 @@
 	</body>
 
 </html>
+
 
 
 
