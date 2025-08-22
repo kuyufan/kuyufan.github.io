@@ -159,6 +159,30 @@
 
 .badge.pat-approved { border-color:#10b981; color:#10b981; } /* 已核准 */
 .badge.pat-pending  { border-color:#f59e0b; color:#f59e0b; } /* 審中/申請中 */
+/* Links – compact list (名字 + 說明) */
+.note { margin:.25rem 0 .6rem; opacity:.75; font-size:.95rem; }
+
+.links-compact { list-style:none; margin:.6rem 0 1rem; padding:0; }
+.links-compact li { margin:.55rem 0; }
+
+.links-compact .item{
+  display:flex; flex-wrap:wrap; align-items:baseline;
+  gap:.35rem .5rem; line-height:1.5;
+}
+.links-compact .name{
+  font-weight:700; text-decoration:none;
+}
+.links-compact .name:hover{ text-decoration:underline; }
+.links-compact .desc{ opacity:.9; }
+.links-compact .desc::before{ content:"— "; opacity:.55; }
+
+/* 桌機寬度做兩欄 */
+@media (min-width:980px){
+  .links-compact.two-col{
+    display:grid; grid-template-columns:1fr 1fr; column-gap:1.6rem;
+  }
+  .links-compact.two-col li{ margin:.45rem 0; }
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -239,14 +263,11 @@
   </ul>
 </li>
 -->
-    <li class="has-sub">
-      <a href="#links" class="scrolly"><span class="icon solid fa-link">連結</span></a>
-      <ul class="sub">
-        <li><a href="#people" class="scrolly">相關人士</a></li>
-        <li><a href="#groups" class="scrolly">研究室 / 學會</a></li>
-      </ul>
-    </li>
-
+<ul class="sub">
+  <li><a href="#links-mentors" class="scrolly">師長與夥伴</a></li>
+  <li><a href="#links-inspire" class="scrolly">啟發我的學者</a></li>
+  <li><a href="#links-tools" class="scrolly">好用網站與服務</a></li>
+</ul>
     
     <li><a href="#contact" class="scrolly"><span class="icon solid fa-envelope">聯絡</span></a></li>
   </ul>
@@ -1034,6 +1055,7 @@
             <span class="inventors">發明人：范谷瑜、洪文良</span>
             <span class="kv pat-links"><a href="https://tiponet.tipo.gov.tw/twpat1/twpatc/twpatkm?.aa6d081E50111000000330000000000050^00001002000000000050040a7" target="_blank" rel="noopener">台灣專利連結</a></span>
             <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US233549128&_cid=JP1-MEGOTH-08213-1" target="_blank" rel="noopener">美國/國際連結</a></span>
+			<span class="kv pat-links"><a href="https://www.youtube.com/watch?v=8xMGEM5yY9w" target="_blank" rel="noopener">產品介紹短片</a></span>
           </span>
         </div>
         <p class="muted">摘要：本創作揭露一種六角柱形之益智拼圖，其包含18 種不同構型的拼圖，每塊拼圖都由複數個單位元件所組成，複數個積木拼圖排列形成六角柱體。
@@ -1080,12 +1102,118 @@
 </section>
 </template>
 
-<section id="links" class="two"><div class="container">
-  <header><h2>連結</h2></header>
-  <h3 id="people">相關人士</h3><ul></ul>
-  <h3 id="groups">研究室 / 學會</h3><ul></ul>
-</div></section>
+<section id="links" class="two">
+  <div class="container">
+    <header><h2>連結</h2></header>
 
+    <h3 id="links-mentors">師長與夥伴</h3>
+    <p class="note muted">指導教授、同門與合作者等。依姓氏排序，僅列部分；若有誤歡迎來信告知。</p>
+    <ul class="links-compact two-col">
+      <!-- 範例：把 # 換成對方網址 -->
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/takumi-anzawa-homepage" target="_blank" rel="noopener">安澤拓真(Anzawa, Takumi)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://www.math.nagoya-u.ac.jp/~furusho/" target="_blank" rel="noopener">古庄英和(Furusho, Hidekazu)</a>
+          <span class="desc">博士指導教授（名古屋大學）</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/ryotaroharada/" target="_blank" rel="noopener">原田遼太郎(Harada, Ryotaro)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/taichi-katayama-homepage/" rel="noopener">片山太智(Katayama, Taichi)</a>
+          <span class="desc">古庄研的同學</span>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://https://sites.google.com/site/comyshomepage/" target="_blank" rel="noopener">小見山尚(Komiyama, Nao)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/daichi-matsuzuki-homepage/" target="_blank" rel="noopener">松月大知(Matsuzuki, Daichi)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/keita-nakai-home-page/home" target="_blank" rel="noopener">中井啓太(Nakai, Keita)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://www.math.ntu.edu.tw/entity_people/entity_people/21721" target="_blank" rel="noopener">佐藤信夫(Sato, Nobuo)</a>
+          <span class="desc">碩士指導教授（國立臺灣大學）</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/takeshi-shinoharas-home-page/" target="_blank" rel="noopener">篠原健(Shinohara, Takeshi)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/yuichiro-toma-homepage/" target="_blank" rel="noopener">戸澗勇一郎(Toma, Yuichiro)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/kosei-watanabe-homepage/" rel="noopener">渡邊康聖(Watanabe, Kosei)</a>
+          <span class="desc">古庄研的學弟</span>
+        </div>
+      </li>
+	  
+    </ul>
+
+    <h3 id="links-inspire">啟發我的學者</h3>
+    <p class="note muted">曾閱讀其著作或在研討會上交流，單向關注。依姓氏排序，僅列部分；若有誤歡迎來信告知。</p>
+    <ul class="links-compact two-col">
+      <li>
+        <div class="item">
+          <a class="name" href="#" target="_blank" rel="noopener">（姓名）</a>
+          <span class="desc">（一句說明：研究主題／我關注的原因）</span>
+        </div>
+      </li>
+    </ul>
+
+    <h3 id="links-tools">好用網站與服務</h3>
+    <p class="note muted">研究工具、資料庫、社群與個人常用網站。</p>
+    <ul class="links-compact two-col">
+      <li><div class="item"><a class="name" href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a><span class="desc">預印本平台</span></div></li>
+      <li><div class="item"><a class="name" href="https://mathscinet.ams.org" target="_blank" rel="noopener">MathSciNet</a><span class="desc">數學文獻資料庫</span></div></li>
+      <li><div class="item"><a class="name" href="https://zbmath.org" target="_blank" rel="noopener">zbMATH</a><span class="desc">數學文獻索引</span></div></li>
+      <li><div class="item"><a class="name" href="https://oeis.org" target="_blank" rel="noopener">OEIS</a><span class="desc">整數序列資料庫</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.lmfdb.org" target="_blank" rel="noopener">LMFDB</a><span class="desc">L-函數與模形式資料庫</span></div></li>
+      <li><div class="item"><a class="name" href="https://dlmf.nist.gov/" target="_blank" rel="noopener">DLMF</a><span class="desc">特殊函數與公式（NIST）</span></div></li>
+      <li><div class="item"><a class="name" href="https://functions.wolfram.com/" target="_blank" rel="noopener">Wolfram Functions</a><span class="desc">特殊函數性質查詢</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.findstat.org/" target="_blank" rel="noopener">FindStat</a><span class="desc">組合統計資料庫</span></div></li>
+      <li><div class="item"><a class="name" href="https://ncatlab.org/" target="_blank" rel="noopener">nLab</a><span class="desc">高等數學/範疇論筆記百科</span></div></li>
+      <li><div class="item"><a class="name" href="https://stacks.math.columbia.edu/" target="_blank" rel="noopener">Stacks Project</a><span class="desc">代數幾何百科與教材</span></div></li>
+      <li><div class="item"><a class="name" href="https://tikzcd.yichuanshen.de/" target="_blank" rel="noopener">tikzcd-editor</a><span class="desc">TikZ交換圖</span></div></li>
+      <li><div class="item"><a class="name" href="https://doi2bib.org/" target="_blank" rel="noopener">doi2bib</a><span class="desc">DOI 一鍵產生 BibTeX</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.wolframalpha.com/" target="_blank" rel="noopener">Wolfram|Alpha</a><span class="desc">自然語言計算查詢</span></div></li>
+      <li><div class="item"><a class="name" href="https://sagecell.sagemath.org/" target="_blank" rel="noopener">SageMathCell</a><span class="desc">線上執行 Sage / Python</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos</a><span class="desc">線上圖形計算機</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.geogebra.org/" target="_blank" rel="noopener">GeoGebra</a><span class="desc">互動幾何 / 代數繪圖</span></div></li>
+      <li><div class="item"><a class="name" href="https://sites.google.com/view/monthly-meeting-mzv" target="_blank" rel="noopener">Desmos</a><span class="desc">月例報告會</span></div></li>
+      <li><div class="item"><a class="name" href="https://sites.google.com/site/kmzsince2011/home" target="_blank" rel="noopener">Desmos</a><span class="desc">關西多重 ζ 研究會</span></div></li>
+    </ul>
+  </div>
+</section>
 <!-- 聯絡 -->
 <section id="contact" class="four">
   <div class="container">
@@ -1174,6 +1302,7 @@
 	</body>
 
 </html>
+
 
 
 
