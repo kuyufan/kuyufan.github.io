@@ -232,6 +232,15 @@
     0 6px 18px rgba(0,0,0,.45);
 }
 #language-switch a[aria-current="page"]{ text-decoration: underline; opacity:.95; pointer-events:none; }
+/* 語言切換：先關掉主題在 <a> 上畫的邊框 */
+#language-switch a { border-bottom: 0 !important; }
+
+/* 目前語言：用底線（邊框）強制顯示 */
+#language-switch a[aria-current="page"]{
+  border-bottom: 2px solid currentColor !important;
+  text-decoration: none !important; /* 避免雙底線 */
+  pointer-events: none;
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -1524,6 +1533,7 @@
 	</body>
 
 </html>
+
 
 
 
