@@ -257,7 +257,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="范谷瑜個人頭像" /></span>
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="范谷瑜個人頭像" width="48" height="48" loading="lazy" decoding="async"/></span>
 							<h1 id="title">范谷瑜</h1>
 							<p>名古屋大學<br>數學博士生</p>
 						</div>
@@ -1500,9 +1500,23 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 <script>
+  // Accessible submenus: toggle .open + aria-expanded, support keyboard
   document.querySelectorAll('#nav .has-sub > a').forEach(a => {
-    a.addEventListener('click', function () {
-      this.parentElement.classList.toggle('open');
+    a.setAttribute('aria-expanded', 'false');
+    a.setAttribute('aria-haspopup', 'true');
+
+    a.addEventListener('click', function (e) {
+      e.preventDefault(); // 避免點了就捲動
+      const li = this.parentElement;
+      const open = li.classList.toggle('open');
+      this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    a.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
     });
   });
 </script>
@@ -1528,71 +1542,3 @@
 	</body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
