@@ -4,49 +4,342 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="zh-Hant">
 	<head>
-		<title>Prologue by HTML5 UP</title>
+		<title>范谷瑜 | 個人網頁</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="范谷瑜（名古屋大學數學博士生）。研究主題：多重 ζ 值、動機版山本積分、餘積公式、樹狀化多重 ζ 值、p 進多重多對數與 L 函數等。"/>
+		<!-- Favicon / App icons -->
+        <link rel="icon" type="image/png" sizes="32x32" href="images/avatar.jpg">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/avatar.jpg">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/avatar.jpg">
 		<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="alternate" hreflang="zh-Hant" href="https://kuyufan.github.io/index.html">
+<link rel="alternate" hreflang="en"      href="https://kuyufan.github.io/en.html">
+<link rel="alternate" hreflang="ja"      href="https://kuyufan.github.io/ja.html">
+<link rel="alternate" hreflang="x-default" href="https://kuyufan.github.io/index.html">
+<style>
+/* 語言切換 */
+#language-switch { display:flex; justify-content:center; gap:1rem; padding:0; margin:0 0 1rem 0; list-style:none; }
+#language-switch li a { color:white; font-size:1.2rem; text-decoration:none; }
+#language-switch li a:hover { text-decoration:underline; }
+
+/* 二層選單：基礎行為 */
+#nav ul ul.sub { display:none; margin:0.25rem 0 0.75rem 2rem; }
+#nav li.has-sub.open > ul.sub { display:block; }
+
+/* 去掉箭頭，避免擠壓對齊 */
+#nav li.has-sub > a::after { content:none !important; display:none !important; }
+
+/* 頂層選單：字體放大、高度增加 */
+#nav > ul > li > a {
+  font-size:1.6rem !important;   /* 你要更大可改 1.4 或回 1.6 */
+  padding-top:0.9rem;
+  padding-bottom:0.9rem;
+  line-height:1.2;
+}
+
+/* 固定左側圖示大小，避免跟著文字變形 */
+#nav > ul > li > a > span.icon:before {
+  font-size:1.0rem !important;
+  top:0.05rem;
+}
+
+/* 次層選單：字小一點、上下更貼合、再縮一點縮排 */
+#nav ul ul.sub a {
+  font-size:0.95rem !important;
+  padding-top:0.45rem;
+  padding-bottom:0.45rem;
+  line-height:1.25;
+  padding-left:3.0rem;
+}
+
+/* 打開中的父選單做點強調（可留可刪） */
+#nav li.has-sub.open > a { font-weight:600; opacity:1; }
+/* About > 近況：簡潔列表樣式 */
+.news-list { list-style: none; margin: 0.75rem 0 0; padding: 0; }
+.news-list li { margin: 0.4rem 0; }
+.news-list li time { font-weight: 600; margin-right: 0.5rem; white-space: nowrap; }
+/* Hero 訪客計數外觀 */
+.visit { margin-top: 0.8rem; font-size: 1.2rem; opacity: 0.9; }
+/* 關於我：學歷時間軸、淡字 */
+.edu { list-style:none; margin:0; padding:0; }
+.edu li { display:flex; gap:1rem; margin:.5rem 0; }
+.edu-year { width:6.5rem; font-weight:600; opacity:.8; flex-shrink:0; }
+.edu-body { line-height:1.6; }
+
+.muted { opacity:.7; font-size:.95rem; }
+/* 著作 */
+.pub-compact { list-style: none; margin: .6rem 0 0; padding: 0; }
+.pub-compact li { margin: .65rem 0; }
+
+/* 標題直接當連結 */
+.pub-compact .pub-title { font-weight: 700; line-height: 1.35; }
+.pub-compact .pub-title a { text-decoration: none; }
+.pub-compact .pub-title a:hover { text-decoration: underline; }
+
+/* 第二行（作者 + 期刊/年份/卷期頁/DOI/arXiv…） */
+.pub-compact .pub-meta { opacity: .9; font-size: .95rem; line-height: 1.35; }
+
+/* 作者後面的區塊用「·」自動分隔 */
+.pub-compact .rest span::before { content: " · "; opacity: .7; }
+.pub-compact .rest span:first-child::before { content: ""; } /* 第一個不要點 */
+
+/* 常見欄位細節 */
+.pub-compact i { font-style: italic; }          /* 期刊名斜體 */
+.pub-compact .kv { white-space: nowrap; }       /* 避免 DOI/頁碼被換行拆斷 */
+.badge { display:inline-block; margin-left:.4rem; padding:.1rem .5rem;
+  border:1px dashed #bdbdbd; border-radius:9999px; font-size:.8rem; opacity:.9; }
+/* Talks – compact two-line layout */
+.talks { list-style:none; margin:.6rem 0 0; padding:0; }
+.talks li { margin:.65rem 0; }
+.talk-title { font-weight:700; line-height:1.35; }
+.talk-title a { text-decoration:none; }
+.talk-title a:hover { text-decoration:underline; }
+.talk-meta { opacity:.9; font-size:.95rem; line-height:1.35; }
+.talk-meta .rest span::before { content:" · "; opacity:.7; }
+.talk-meta .rest span:first-child::before { content:""; } /* 第一個不要分隔點 */
+.talk-meta time, .talk-meta .kv { white-space:nowrap; }   /* 日期/短欄位不換行 */
+
+/* 可選：不同性質的標籤 */
+.badge.invited{ border-color:#6366f1; color:#6366f1; }
+.badge.poster { border-color:#0ea5e9; color:#0ea5e9; }
+.badge.online { border-color:#6b7280; color:#6b7280; }
+
+/* 教學 */
+.teach-compact, .teach-other { list-style:none; margin:.6rem 0 0; padding:0; }
+.teach-compact li, .teach-other li { margin:.55rem 0; }
+
+/* 第一行：一排顯示（學校/年季/課名/教師/助教… 或 其他的主辦/活動/時間/講題/講師…） */
+.teach-compact .rowx,
+.teach-other  .rowx{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:.25rem .35rem;
+  line-height:1.5;
+  text-align:left !important;     /* 關掉主題裡的左右對齊 */
+  word-spacing:normal !important;
+  letter-spacing:normal;
+}
+
+/* 只有課名/講題加粗，其他資訊一般字重 */
+.teach-compact .rowx .cell,
+.teach-other  .rowx .cell{ font-weight:400; }
+.teach-compact .rowx .course,
+.teach-other  .rowx .topic { font-weight:700; }
+
+/* 第一行欄位之間加「·」，但教材那一行不要加 */
+.teach-compact .rowx .cell:not(.material) + .cell:not(.material)::before,
+.teach-other  .rowx .cell:not(.material) + .cell:not(.material)::before{
+  content:" · ";
+  opacity:.55;
+  margin:0 .35rem;
+}
+
+/* 第二行：教材/講義——固定換到下一整行、靠左、稍微小一點 */
+.teach-compact .rowx .material,
+.teach-other  .rowx .material{
+  flex-basis:100%;
+  margin-top:.15rem;
+  font-style:italic;
+  opacity:.85;
+  font-size:.95em;                 /* ← 字體稍微小一點；想更小可調 .9em */
+  text-align:left !important;
+  word-spacing:normal !important;
+}
+
+/* 書名斜體 */
+.rowx .book{ font-style:italic; }
+/* 專利與網誌 */
+.pat-compact, .blog-compact { list-style:none; margin:.6rem 0 0; padding:0; }
+.pat-compact li, .blog-compact li { margin:.65rem 0; }
+
+.pat-title { font-weight:700; line-height:1.35; }
+.pat-meta  { opacity:.9; font-size:.95rem; line-height:1.35; }
+.pat-meta .rest span::before { content:" · "; opacity:.7; }
+.pat-meta .rest span:first-child::before { content:""; }
+.pat-links a { text-decoration:none; }
+.pat-links a:hover { text-decoration:underline; }
+.pat-compact p { margin:.35rem 0 0; }   /* 摘要與主體距離 */
+
+.badge.pat-approved { border-color:#10b981; color:#10b981; } /* 已核准 */
+.badge.pat-pending  { border-color:#f59e0b; color:#f59e0b; } /* 審中/申請中 */
+/* Links – compact list (名字 + 說明) */
+.note { margin:.25rem 0 .6rem; opacity:.75; font-size:.95rem; }
+
+.links-compact { list-style:none; margin:.6rem 0 1rem; padding:0; }
+.links-compact li { margin:.55rem 0; }
+
+.links-compact .item{
+  display:flex; flex-wrap:wrap; align-items:baseline;
+  gap:.35rem .5rem; line-height:1.5;
+}
+.links-compact .name{
+  font-weight:700; text-decoration:none;
+}
+.links-compact .name:hover{ text-decoration:underline; }
+.links-compact .desc{ opacity:.9; }
+.links-compact .desc::before{ content:"— "; opacity:.55; }
+
+/* 桌機寬度做兩欄 */
+@media (min-width:980px){
+  .links-compact.two-col{
+    display:grid; grid-template-columns:1fr 1fr; column-gap:1.6rem;
+  }
+  .links-compact.two-col li{ margin:.45rem 0; }
+}
+/* 只改首頁 hero (section#top)，直接顯示我的圖片 */
+#top.one.dark.cover {
+  background: url('images/hero.jpg') center center / cover no-repeat !important;
+}
+
+/* 有些主題會用偽元素加暗色/細紋疊層，順手關掉（若沒有則不影響） */
+#top.one.dark.cover::before,
+#top.one.dark.cover::after {
+  background: none !important;
+  box-shadow: none !important;
+}
+/* HERO 文字：去描邊，靠色彩與柔光提升可讀性 */
+#top h2.alt{
+  color:#f9fafb;
+  font-weight:500;
+  letter-spacing:.015em;
+  line-height:1.12;
+  -webkit-text-stroke:0;
+  text-shadow:
+    0 1px 2px rgba(0,0,0,.70),
+    0 3px 8px rgba(0,0,0,.55),
+    0 12px 28px rgba(0,0,0,.35),
+    0 0 1px rgba(255,255,255,.28),
+    0 0 14px rgba(56,189,248,.25);
+}
+
+/* 讓 <strong>（你的名字）跟其他字同樣粗細 */
+#top h2.alt strong{
+  font-weight:inherit;
+  color:#fff;
+}
+
+/* 訪客數：小一點的暗暈即可 */
+#top .visit{
+  color:#f8fafc;
+  font-weight:650;
+  -webkit-text-stroke:0;
+  text-shadow:
+    0 1px 3px rgba(0,0,0,.70),
+    0 6px 18px rgba(0,0,0,.45);
+}
+#language-switch a[aria-current="page"]{ text-decoration: underline; opacity:.95; pointer-events:none; }
+</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<div id="header">
+				<!-- Language Switcher -->
+<ul id="language-switch">
+  <li><a href="index.html" aria-current="zh-Hant">中文</a></li>
+  <li><a href="en.html" lang="page">English</a></li>
+  <li><a href="ja.html" lang="ja">日本語</a></li>
+</ul>
 
 				<div class="top">
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">ファンクユ</h1>
-							<p>名古屋大学<br>数学博士後期</p>
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="范谷瑜個人頭像" /></span>
+							<h1 id="title">范谷瑜</h1>
+							<p>名古屋大學<br>數學博士生</p>
 						</div>
 
 					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+<nav id="nav">
+  <ul>
+    <li><a href="#top" class="scrolly"><span class="icon solid fa-home">首頁</span></a></li>
+
+    <li class="has-sub">
+      <a href="#about" class="scrolly"><span class="icon solid fa-user">關於我</span></a>
+      <ul class="sub">
+        <li><a href="#bio" class="scrolly">簡介</a></li>
+        <li><a href="#education" class="scrolly">學歷</a></li>
+		<li><a href="#news" class="scrolly">近況</a></li>
+        <!--<li><a href="#cv" class="scrolly">履歷</a></li>-->
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <a href="#pubs" class="scrolly"><span class="icon solid fa-book">著作</span></a>
+      <ul class="sub">
+        <li><a href="#pubs-published" class="scrolly">已刊登</a></li>
+        <li><a href="#pubs-submitted" class="scrolly">投稿中</a></li>
+        <li><a href="#pubs-arxiv" class="scrolly">arXiv / 預印本</a></li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <a href="#talks" class="scrolly"><span class="icon solid fa-chalkboard-teacher">演講 / 研討會</span></a>
+      <ul class="sub">
+        <li><a href="#talks-upcoming" class="scrolly">即將參加</a></li>
+        <li><a href="#talks-past" class="scrolly">已參加</a></li>
+      </ul>
+    </li>
+
+<li class="has-sub">
+  <a href="#teaching" class="scrolly"><span class="icon solid fa-graduation-cap">教學</span></a>
+  <ul class="sub">
+    <li><a href="#courses" class="scrolly">課程</a></li>
+    <li><a href="#teaching-others" class="scrolly">其他</a></li>
+  </ul>
+</li>
+
+<li class="has-sub">
+  <a href="#patents" class="scrolly"><span class="icon solid fa-file-alt">專利</span></a>
+  <ul class="sub">
+    <li><a href="#pat-A" class="scrolly">A</a></li>
+    <li><a href="#pat-B" class="scrolly">B</a></li>
+    <li><a href="#pat-C" class="scrolly">C</a></li>
+  </ul>
+</li>
+<!--
+<li class="has-sub">
+  <a href="#blog" class="scrolly"><span class="icon solid fa-book-open">網誌</span></a>
+  <ul class="sub">
+    <li><a href="#blog-edu" class="scrolly">數學教育</a></li>
+    <li><a href="#blog-contest" class="scrolly">數學競賽</a></li>
+    <li><a href="#blog-games" class="scrolly">數學遊戲</a></li>
+  </ul>
+</li>
+-->
+<li class="has-sub">
+  <a href="#links" class="scrolly"><span class="icon solid fa-link">連結</span></a>
+  <ul class="sub">
+    <li><a href="#links-mentors" class="scrolly">師長與夥伴</a></li>
+    <li><a href="#links-inspire" class="scrolly">啟發我的學者</a></li>
+    <li><a href="#links-tools"   class="scrolly">好用網站與服務</a></li>
+  </ul>
+</li>    
+    <li><a href="#contact" class="scrolly"><span class="icon solid fa-envelope">聯絡</span></a></li>
+  </ul>
+</nav>
 
 				</div>
 
 				<div class="bottom">
 
 					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+					        <!-- <ul id="language-switch">
+						  <li><a href="index.html">🇹🇼</a></li>
+						  <li><a href="en.html">🇬🇧</a></li>
+						  <li><a href="ja.html">🇯🇵</a></li>
+						</ul> -->
+<ul class="icons">
+  <li><a href="https://www.instagram.com/kuyufan/" target="_blank" rel="noopener" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+  <li><a href="https://www.facebook.com/kuyu.fan.7" target="_blank" rel="noopener" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+  <li><a href="https://github.com/kuyufan" target="_blank" rel="noopener" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+  <li><a href="mailto:abc940605@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+</ul>
 
 				</div>
 
@@ -59,130 +352,1130 @@
 					<section id="top" class="one dark cover">
 						<div class="container">
 
-							<header>
-								<h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
-								site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
-								<p>Ligula scelerisque justo sem accumsan diam quis<br />
-								vitae natoque dictum sollicitudin elementum.</p>
-							</header>
-
-							<footer>
-								<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
-							</footer>
+<header>
+  <h2 class="alt">歡迎來到<strong>范谷瑜</strong>的個人網頁</h2>
+  <p class="visit">您是第 <span id="visit-count">—</span> 位訪客</p>
+</header>
 
 						</div>
 					</section>
+<section id="about" class="two">
+  <div class="container">
+    <header><h2>關於我</h2></header>
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
+    <!-- 簡介 -->
+    <h3 id="bio">簡介</h3>
+    <p>
+      我是范谷瑜，現為名古屋大學「大學院多元數理科學研究科」數學博士生，指導教授為古庄英和。
+      我的研究圍繞 <strong>多重 ζ 值</strong> 及其代數／解析結構，包括：動機版山本積分、餘積公式、
+      Schur 多重 ζ 值、樹狀化多重 ζ 值，以及 p 進多重 ζ 值、 多重多對數與 L 函數等主題。歡迎交流與合作。
+    </p>
 
-							<header>
-								<h2>Portfolio</h2>
-							</header>
+    <!-- 學歷 -->
+    <h3 id="education">學歷</h3>
+    <ul class="edu">
+      <li>
+        <div class="edu-year">2024–至今</div>
+        <div class="edu-body">博士（數學），名古屋大學 大學院多元數理科學研究科（指導：古庄英和）</div>
+      </li>
+      <li>
+        <div class="edu-year">2021–2024</div>
+        <div class="edu-body">碩士（數學），國立臺灣大學 數學研究所（指導：佐藤信夫）</div>
+      </li>
+      <li>
+        <div class="edu-year">2017–2021</div>
+        <div class="edu-body">學士（數學），國立清華大學 數學系</div>
+      </li>
+    </ul>
 
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
+    <!-- 近況（你也可持續追加 <li> 條目） -->
+    <h3 id="news">近況</h3>
+    <ul class="news-list">
+      <li> 樹狀化多重 ζ 值之間的映射與誤差項研究將於近期上傳 arXiv；並預計於日本數學會 2025 年度總合分科會與 2025 年度 RIMS 共同研究（公開型）「多重 ζ 值的諸相」發表。</li>
+      <li> 近期研究重點：p 進多重 ζ 值、 p 進多重多對數、p 進 L 函數等。</li>
+    </ul>
 
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
+    <!-- 履歷 
+    <h3 id="cv">履歷（更新中）</h3>
+    <p>
+      <a href="files/CV_KuYuFan.pdf" class="button">下載履歷<br>（更新中）</a>
+    </p>-->
+  </div>
+</section>
+				
+<section id="pubs" class="two">
+  <div class="container">
+    <header><h2>著作</h2></header>
 
-						</div>
-					</section>
+    <!-- 已刊登 -->
+    <h3 id="pubs-published">已刊登</h3>
+    <ul class="pub-compact">
+	  <!-- 模板
+      <li>
+        <div class="pub-title">
+          <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener">
+            〈論文標題（中文或英文）〉
+          </a>
+        </div>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜, 合著者A, 合著者B</span>
+          <span class="rest">
+            <span class="venue"><i>Journal Name</i></span>
+            <span class="year">2024</span>
+            <span class="kv">Vol. XXX, No. X, pp. XX–XX</span>
+            <span class="kv"><a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener">DOI:10.xxxx/xxxxx</a></span>
+            <span class="kv"><a href="https://arxiv.org/abs/2508.xxxxx" target="_blank" rel="noopener">arXiv:2508.xxxxx</a></span>
+            <span class="kv">MSC: 11M32, 14Fxx</span>
+            <span class="kv"><a href="https://mathscinet.ams.org/mathscinet-getitem?mr=XXXXXX" target="_blank" rel="noopener">MRXXXXXX</a></span>
+            <span class="kv"><a href="https://github.com/yourrepo" target="_blank" rel="noopener">Code</a></span>
+            <span class="kv"><a href="https://osf.io/xyz" target="_blank" rel="noopener">Data</a></span>
+            <span class="badge">Open Access</span>
+          </span>
+        </div>
+      </li>
+	  -->
+      <li>
+        <div class="pub-title">
+          <a href="https://www.math.sinica.edu.tw/mathmedia/journals/4658" target="_blank" rel="noopener">
+            〈格子圖形中的格子直線數〉
+          </a>
+        </div>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜、林鳳美</span>
+          <span class="rest">
+            <span class="venue"><i>數學傳播</i></span>
+            <span class="year">2021</span>
+            <span class="kv">Vol. 45, No. 2, pp. 44–53</span>
+            <span class="badge">開放取用</span>
+          </span>
+        </div>
+      </li>
+    </ul>
 
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
+    <!-- 投稿中 -->
+    <h3 id="pubs-submitted">投稿中</h3>
+    <ul class="pub-compact">
+	  <!-- 模板
+      <li>
+        <div class="pub-title">〈論文標題〉</div>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜, 合著者C</span>
+          <span class="rest">
+            <span class="venue"><i>Submitted to Journal XYZ</i></span>
+            <span class="year">2025</span>
+            <span class="badge">Under Review</span>
+            <span class="kv"><a href="#" target="_blank" rel="noopener">Preprint / Draft</a></span>
+          </span>
+        </div>
+      </li>
+	  -->
+    </ul>
 
-							<header>
-								<h2>About Me</h2>
-							</header>
+    <!-- arXiv / 預印本 -->
+    <h3 id="pubs-arxiv">arXiv / 預印本</h3>
+    <ul class="pub-compact">
+	  <!-- 模板
+      <li>
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2508.xxxxx" target="_blank" rel="noopener">
+            〈論文標題〉
+          </a>
+        </div>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜</span>
+          <span class="rest">
+            <span class="kv">arXiv:2508.xxxxx [math.NT]</span>
+            <span class="year">2025</span>
+            <span class="kv"><a href="https://arxiv.org/pdf/2508.xxxxx" target="_blank" rel="noopener">PDF</a></span>
+          </span>
+        </div>
+      </li>
+	  -->
+	  <li>
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2406.08127" target="_blank" rel="noopener">
+            〈Coproduct Formula for Motivic Version of Yamamoto's Integral〉
+          </a>
+        </div>
+        <div class="pub-meta">
+          <span class="authors">范谷瑜</span>
+          <span class="rest">
+            <span class="kv">arXiv:2406.08127 [math.NT]</span>
+            <span class="year">2024</span>
+            <span class="kv"><a href="https://arxiv.org/pdf/2406.08127" target="_blank" rel="noopener">PDF</a></span>
+          </span>
+        </div>
+      </li>
+    </ul>
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+  </div>
+</section>
 
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+<section id="talks" class="two">
+  <div class="container">
+    <header><h2>演講 / 研討會</h2></header>
 
-						</div>
-					</section>
+    <!-- 即將參加 -->
+    <h3 id="talks-upcoming">即將參加</h3>
+    <ul class="talks">
+      <!-- 模板
+      <li>
+        <div class="talk-title">
+          <a href="研討會網站網址" target="_blank" rel="noopener">
+            研討會名稱
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="20xx-xx-xx">20xx-xx-xx</time></span> – <time datetime="20xx-xx-xx">20xx-xx-xx</time></span>
+            <span class="place">地點</span>
+            <span class="talk">演講：
+              <a href="files/slides/檔名.pdf" download>
+                演講標題
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
 
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
+	  -->
+	  <li>
+        <div class="talk-title">
+          <a href="https://sites.google.com/view/rimsmzv2025/home?authuser=0" target="_blank" rel="noopener">
+            2025年度RIMS共同研究（公開型）「多重 ζ 值的諸相」
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-09-29">2025-09-29</time></span> – <time datetime="2025-10-03">2025-10-03</time></span>
+            <span class="place">京都大學</span>
+            <span class="talk">演講：
+              <a href="files/slides/20250930.pdf" download>
+                A map between arborification of multiple zeta values
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
 
-							<header>
-								<h2>Contact</h2>
-							</header>
+	  <li>
+        <div class="talk-title">
+          <a href="https://www.mathsoc.jp/activity/meeting/nagoya25sept/index.html" target="_blank" rel="noopener">
+            日本數學會2025年度秋季總合分科會
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-09-16">2025-09-16</time></span> – <time datetime="2025-09-19">2025-09-19</time></span>
+            <span class="place">名古屋大學</span>
+            <span class="talk">演講：
+              <a href="files/slides/20250919.pdf" download>
+                A map between arborification of multiple zeta values
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
+    </ul>
+		
+    <!-- 已參加 -->
+    <h3 id="talks-past">已參加</h3>
+    <ul class="talks">
+      <!-- 模板
+      <li>
+        <div class="talk-title">
+          <a href="研討會網站網址" target="_blank" rel="noopener">
+            研討會名稱
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="20xx-xx-xx">20xx-xx-xx</time></span> – <time datetime="20xx-xx-xx">20xx-xx-xx</time></span>
+            <span class="place">地點</span>
+            <span class="talk">演講：
+              <a href="files/slides/檔名.pdf" download>
+                演講標題
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
 
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+	  -->
+	  <li>
+        <div class="talk-title">
+          <a href="https://multizetacafe.github.io/shanghai2025/" target="_blank" rel="noopener">
+            第四屆多重 ζ 值及相關領域國際研討會
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-07-12">2025-07-12</time></span> – <time datetime="2025-07-16">2025-07-16</time></span>
+            <span class="place">同濟大學</span>
+            <span class="talk">演講：
+              <a href="files/slides/20250713.pdf" download>
+                A map between arborifications of multiple zeta values
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
 
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
+	  <li>
+        <div class="talk-title">
+          <a href="https://sites.google.com/site/kmzsince2011/home?authuser=0#h.3bytc5qqqf9i" target="_blank" rel="noopener">
+            第68回關西多重 ζ 研究會
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-06-07">2025-06-07</time></span>
+            <span class="place">地點</span>
+            <span class="talk">演講：
+            </span>
+          </span>
+        </div>
+      </li>
 
-						</div>
-					</section>
+	  <li>
+        <div class="talk-title">
+          <a href="https://sites.google.com/view/zetawakate18" target="_blank" rel="noopener">
+            東北-名古屋 ζ 若手研究集會（第18回 ζ 若手研究集會＆第67回關西多重 ζ 研究會（共同舉辦））
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-03-08">2025-03-08</time></span> – <time datetime="2025-03-11">2025-03-11</time></span>
+            <span class="place">東北大學</span>
+            <span class="talk">演講：無
+            </span>
+          </span>
+        </div>
+      </li>
 
+	  <li>
+        <div class="talk-title">
+          <a href="https://sites.google.com/view/the17thmsj-si" target="_blank" rel="noopener">
+            The 17th MSJ-SI Developments of multiple zeta values
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2025-02-10">2025-02-10</time></span> – <time datetime="2025-02-22">2025-02-22</time></span>
+            <span class="place">第一周 九州大學；第二周 近畿大學</span>
+            <span class="talk">演講：無
+            </span>
+          </span>
+        </div>
+      </li>
+
+	  <li>
+        <div class="talk-title">
+          <a href="https://sites.google.com/view/tohoku-number-semiar/2024?authuser=0" target="_blank" rel="noopener">
+            東北大學整數論研討會
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2024-12-09">2024-12-09</time></span>
+            <span class="place">東北大學</span>
+            <span class="talk">演講：無
+            </span>
+          </span>
+        </div>
+      </li>
+
+	  <li>
+        <div class="talk-title">
+          <a href="https://drive.google.com/file/d/1kJEnFlGi3V20mBD8Dvf_8M99_xiDvd_c/view?usp=drive_link" target="_blank" rel="noopener">
+            Sendai seminar on Multiple Eisenstein Series
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2024-12-08">2024-12-08</time></span>
+            <span class="place">東北大學</span>
+            <span class="talk">演講：無
+            </span>
+          </span>
+        </div>
+      </li>
+
+	  <li>
+        <div class="talk-title">
+          <a href="https://sites.google.com/site/kmzsince2011/past/2024?authuser=0#h.njycdaum38bp" target="_blank" rel="noopener">
+            第66回關西多重 ζ 研究會
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2024-12-07">2024-12-07</time></span>
+            <span class="place">東北大學</span>
+            <span class="talk">演講：無
+            </span>
+          </span>
+        </div>
+      </li>
+
+	  <li>
+        <div class="talk-title">
+          <a href="研討會網站網址" target="_blank" rel="noopener">
+            2nd Kindai Workshop Multiple Zeta Values and Modular Forms
+          </a>
+        </div>
+        <div class="talk-meta">
+          <span class="rest">
+            <span class="date"><time datetime="2024-11-08">2024-11-08</time></span> – <time datetime="2024-11-10">2024-11-10</time></span>
+            <span class="place">近畿大學</span>
+            <span class="talk">演講：
+              <a href="files/slides/20241109.pdf" download>
+                Coaction formula for the motivic version of Yamamoto's integral 
+              </a>
+            </span>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+				
+<section id="teaching" class="two">
+  <div class="container">
+    <header><h2>教學</h2></header>
+
+    <!-- 課程 -->
+    <h3 id="courses">課程</h3>
+    <ul class="teach-compact">
+      <!-- 模板
+      <li>
+        <div class="rowx">
+          <span class="cell school">校名</span>
+          <span class="cell yt">年分 春/秋</span>
+          <span class="cell course">
+            <a href="課程網址">課程名稱</a>
+          </span>
+          <span class="cell teacher">任課教師：王〇〇</span>
+          <span class="cell ta">教學助理(TA)：范谷瑜</span>
+          <span class="cell material">教材/講義：
+            <a href="講義連結" download>講義名稱</a>
+          </span>
+        </div>
+      </li>
+
+	  -->
+	  
+      <li>
+        <div class="rowx">
+          <span class="cell school">名古屋大學</span>
+          <span class="cell yt">2025 春</span>
+          <span class="cell course">微積分</span>
+          <span class="cell teacher">教師：粟田英資</span>
+          <span class="cell ta">助教：范谷瑜</span>
+          <span class="cell material">教材/講義：<span class="book">入門微分積分</span>, 三宅敏恒 著</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立臺灣大學</span>
+          <span class="cell yt">2024 春</span>
+          <span class="cell course">微積分</span>
+          <span class="cell teacher">教師：鄭聖賢</span>
+          <span class="cell ta">助教：范谷瑜、吳逸安</span>
+          <span class="cell material">教材/講義：James Stewart, Daniel Clegg, and Saleem Watson, <span class="book">Calculus Early Transcendentals</span>, 9th edition.</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立臺灣大學</span>
+          <span class="cell yt">2023 秋</span>
+          <span class="cell course">微積分</span>
+          <span class="cell teacher">教師：鄭聖賢</span>
+          <span class="cell ta">助教：范谷瑜、吳逸安</span>
+          <span class="cell material">教材/講義：James Stewart, Daniel Clegg, and Saleem Watson, <span class="book">Calculus Early Transcendentals</span>, 9th edition.</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立臺灣大學</span>
+          <span class="cell yt">2023 春</span>
+          <span class="cell course">微積分</span>
+          <span class="cell teacher">教師：佐藤信夫</span>
+          <span class="cell ta">助教：范谷瑜、吳逸安</span>
+          <span class="cell material">教材/講義：James Stewart, Daniel Clegg, and Saleem Watson, <span class="book">Calculus Early Transcendentals</span>, 9th edition.</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立臺灣大學</span>
+          <span class="cell yt">2022 秋</span>
+          <span class="cell course">微積分</span>
+          <span class="cell teacher">教師：佐藤信夫</span>
+          <span class="cell ta">助教：范谷瑜、吳逸安</span>
+          <span class="cell material">教材/講義：James Stewart, Daniel Clegg, and Saleem Watson, <span class="book">Calculus Early Transcendentals</span>, 9th edition.</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立臺灣大學</span>
+          <span class="cell yt">2022 春</span>
+          <span class="cell course">線性代數</span>
+          <span class="cell teacher">教師：莊武諺</span>
+          <span class="cell ta">助教：范谷瑜、盧德倫、張誌麟、徐溍玢</span>
+          <span class="cell material">教材/講義：<span class="book">Linear Algebra</span>, 4th Edition by Stephen Friedberg, Arnold Insel, and Lawrence Spence</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立臺灣大學</span>
+          <span class="cell yt">2021 秋</span>
+          <span class="cell course">線性代數</span>
+          <span class="cell teacher">教師：莊武諺</span>
+          <span class="cell ta">助教：范谷瑜、盧德倫、張誌麟、徐溍玢</span>
+          <span class="cell material">教材/講義：<span class="book">Linear Algebra</span>, 4th Edition by Stephen Friedberg, Arnold Insel, and Lawrence Spence</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立清華大學</span>
+          <span class="cell yt">2021 春</span>
+          <span class="cell course">基礎數論</span>
+          <span class="cell teacher">教師：魏福村</span>
+          <span class="cell ta">助教：范谷瑜、林子閔</span>
+          <span class="cell material">教材/講義：(David M. Burton) <span class="book">Elementary Number Theory</span>.</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立清華大學</span>
+          <span class="cell yt">2021 春</span>
+          <span class="cell course">微積分</span>
+          <span class="cell teacher">教師：陳俊成</span>
+          <span class="cell ta">助教：范谷瑜、梁睿燊、許靖典</span>
+          <span class="cell material">教材/講義：Salas, Hille, Etgen: <span class="book">Calculus - One and Several Variables</span>, John Wiley & Sons, Tenth edition, 2007.</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立清華大學</span>
+          <span class="cell yt">2020 秋</span>
+          <span class="cell course">微積分</span>
+          <span class="cell teacher">教師：陳俊成</span>
+          <span class="cell ta">助教：范谷瑜、梁睿燊、許靖典</span>
+          <span class="cell material">教材/講義：Salas, Hille, Etgen: <span class="book">Calculus - One and Several Variables</span>, John Wiley & Sons, Tenth edition, 2007.</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell school">國立清華大學</span>
+          <span class="cell yt">2020 春</span>
+          <span class="cell course">高等微積分</span>
+          <span class="cell teacher">教師：江金城</span>
+          <span class="cell ta">助教：范谷瑜、陳昭瑋、楊子頤</span>
+          <span class="cell material">教材/講義：<span class="book">Introduction to Analysis</span>, fourth edition by William R. Wade.</span>
+        </div>
+      </li>
+	  
+    </ul>
+
+    <!-- 其他 -->
+    <h3 id="teaching-others">其他</h3>
+    <ul class="teach-other">
+
+      <!-- 模板
+      <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：</span>
+          <span class="cell event">
+		    活動名稱：<a href="活動網址">活動名稱</a>
+          </span>
+          <span class="cell date">時間：20xx-xx-xx</span>
+          <span class="cell topic">講題：</span>
+          <span class="cell speaker">講師：范谷瑜</span>
+          <span class="cell material">教材/講義：
+            <a href="files/lectures/檔名.pdf" download>講義名稱</a>
+          </span>
+        </div>
+      </li>
+	  
+	  -->
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：國立清華大學南大校區</span>
+          <span class="cell event">活動名稱：北區高中科學研究人才培育計畫-數學組</span>
+          <span class="cell date">時間：2019-04-21</span>
+          <span class="cell topic">講題：鴿籠原理和Burnside引理</span>
+          <span class="cell speaker">講師：范谷瑜</span>
+          <span class="cell material">教材/講義：
+            <a href="files/lectures/20190428.pdf" download>鴿籠原理和Burnside引理</a>
+          </span>
+        </div>
+      </li>
+
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：新北市特教資優</span>
+          <span class="cell event">活動名稱：國中學術性向資優教育方案學生充實課程寒假活動《當科學與文藝相遇》</span>
+          <span class="cell date">時間：2019-01-22</span>
+          <span class="cell topic">講題：數學益智遊戲</span>
+          <span class="cell speaker">講師：范谷瑜</span>
+          <span class="cell material">教材/講義：六連菱形十二面體積木拼圖、益智六角柱積木</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：新北市特教資優</span>
+          <span class="cell event">活動名稱：國中教師研習</span>
+          <span class="cell date">時間：2019-01-16</span>
+          <span class="cell topic">講題：益智玩具與數學教學</span>
+          <span class="cell speaker">講師：范谷瑜</span>
+          <span class="cell material">教材/講義：六連菱形十二面體積木拼圖、益智六角柱積木</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：</span>
+          <span class="cell event">
+		    活動名稱：<a href="http://tms2018.math.ntnu.edu.tw/index.php?option=com_content&view=featured&Itemid=104&lang=tw">2018中華民國數學年會-數學普及特展</a>
+          </span>
+          <span class="cell date">時間：2018-12-08 - 2018-12-09</span>
+          <span class="cell topic">主題：師生共創*文創益玩 菱形十二面積木拼圖</span>
+          <span class="cell speaker">講解人員：范谷瑜</span>
+          <span class="cell material">教材/講義：六連菱形十二面體積木拼圖</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：國立清華大學南大校區</span>
+          <span class="cell event">活動名稱：北區高中科學研究人才培育計畫-數學組</span>
+          <span class="cell date">時間：2018-11-11</span>
+          <span class="cell topic">講題：鴿籠原理</span>
+          <span class="cell speaker">講師：范谷瑜</span>
+          <span class="cell material">教材/講義：
+            <a href="files/lectures/20181111.pdf" download>鴿籠原理</a>
+          </span>
+        </div>
+      </li>
+
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：中央研究院數學研究所</span>
+          <span class="cell event">活動名稱：中央研究院(Open House)</span>
+          <span class="cell date">時間：2018-10-27</span>
+          <span class="cell topic">主題：六連菱形十二面體積木拼圖</span>
+          <span class="cell speaker">講解人員：范谷瑜</span>
+          <span class="cell material">教材/講義：六連菱形十二面體積木拼圖</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：國立清華大學南大校區</span>
+          <span class="cell event">活動名稱：原住民高中生數學人才培育計畫</span>
+          <span class="cell date">時間：2018-08-09</span>
+          <span class="cell topic">講題：益智玩具中的數學</span>
+          <span class="cell speaker">講師：洪文良；助講：范谷瑜</span>
+          <span class="cell material">教材/講義：益智六角柱積木、圓積木、百木達三角洲、抓狂四方塊、塞車時間</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：新北市金陵女子高級中學</span>
+          <span class="cell event">活動名稱：數學專題講座</span>
+          <span class="cell date">時間：2018-02-05</span>
+          <span class="cell topic">講題：數學玩具&數學奧林匹亞</span>
+          <span class="cell speaker">講師：洪文良；數學玩具助講：范谷瑜</span>
+          <span class="cell material">教材/講義：益智六角柱積木、圓積木、百木達三角洲、抓狂四方塊、
+            <a href="files/slides/20180205.pdf" download>投影片</a>
+          </span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：國立中央大學</span>
+          <span class="cell event">活動名稱：原住民高中生數學人才培育計畫</span>
+          <span class="cell date">時間：2018-02-01</span>
+          <span class="cell topic">講題：Puzzle</span>
+          <span class="cell speaker">講師：洪文良；助講：范谷瑜</span>
+          <span class="cell material">教材/講義：益智六角柱積木、圓積木、百木達三角洲、抓狂四方塊、塞車時間</span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：新北市立文山國民中學</span>
+          <span class="cell event">活動名稱：小學科學營</span>
+          <span class="cell date">時間：2017-12-16</span>
+          <span class="cell topic">講題：數學遊戲（積木）</span>
+          <span class="cell speaker">講師：范谷瑜</span>
+          <span class="cell material">教材/講義：益智六角柱積木
+          </span>
+        </div>
+      </li>
+	  
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：國立新竹教育大學(現今國立清華大學南大校區)</span>
+          <span class="cell event">活動名稱：北區高中科學研究人才培育計畫-數學組</span>
+          <span class="cell date">時間：2017-11-19</span>
+          <span class="cell topic">講題：packing puzzle 設計理念</span>
+          <span class="cell speaker">講師：范谷瑜</span>
+          <span class="cell material">教材/講義：
+            <a href="files/lectures/20171119.pdf" download>平面packing problem</a>、益智六角柱積木
+          </span>
+        </div>
+      </li>
+
+	  <li>
+        <div class="rowx">
+          <span class="cell org">舉辦單位：中央研究院數學研究所</span>
+          <span class="cell event">活動名稱：中央研究院(Open House)「超越極限-益玩特展」</span>
+          <span class="cell date">時間：2017-10-28</span>
+          <span class="cell topic">主題：六角柱益拼圖</span>
+          <span class="cell speaker">講解人員：范谷瑜</span>
+          <span class="cell material">教材/講義：益智六角柱積木</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 專利 -->
+<section id="patents" class="two">
+  <div class="container">
+    <header><h2>專利</h2></header>
+
+    <ul class="pat-compact">
+      <li>
+        <div class="pat-title">堆砌單位元件結構及多樣式組合之堆砌單體元件結構<span class="badge pat-approved">已核准</span></div>
+        <div class="pat-meta">
+          <span class="rest">
+            <span class="year">2021</span>
+            <span class="inventors">發明人：范谷瑜、洪文良</span>
+            <span class="kv pat-links"><a href="https://tiponet.tipo.gov.tw/twpat1/twpatc/twpatkm?.78a0E5101000103201000005^0000000000000000000001000501800417e" target="_blank" rel="noopener">台灣專利連結</a></span>
+          </span>
+        </div>
+        <p class="muted">摘譯：本新型提供一種堆砌單位元件結構，由截角正八面體切割而成。
+			其堆砌正六邊形面連接堆砌正四邊形面。
+			封閉線形成於截角正八面體之六個正六邊形面，且穿過此六個正六邊形面中相鄰之任二者之連接邊之中點。
+			幾何中心點連接封閉線之封閉點而形成射線，射線組成切割面，堆砌單位元件結構係由截角正八面體依據切割面切割成二個立體結構之其中一者，藉以令堆砌單位元件結構為截角正八面體之一半。
+			藉此，可同時具有組合與堆砌的性質並能多樣式組合出多種相異且具有豐富變化性之結構，且能培養空間幾何之認知、組織結構及創造力以達寓教於樂之效果。</p>
+      </li>
+    </ul>
+
+    <ul class="pat-compact">
+      <li>
+        <div class="pat-title">菱形十二面體積木拼圖及多連菱形十二面體積木拼圖<span class="badge pat-approved">已核准</span></div>
+        <div class="pat-meta">
+          <span class="rest">
+            <span class="year">2018</span>
+            <span class="inventors">發明人：范谷瑜、洪文良</span>
+            <span class="kv pat-links"><a href="https://tiponet.tipo.gov.tw/twpat1/twpatc/twpatkm?.f18d081500101000000320000100000050^000000020000001005E0040c1" target="_blank" rel="noopener">台灣專利連結</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US278925344&_cid=JP1-MEGOTH-08213-2" target="_blank" rel="noopener">美國/國際連結一</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US307237972&_cid=JP1-MEGOTH-08213-2" target="_blank" rel="noopener">美國/國際連結二</a></span>
+          </span>
+        </div>
+        <p class="muted">摘要：本新型係一種多連菱形十二面體積木拼圖，其包含複數個積木拼圖，此些積木拼圖拼接排列成一多連菱形十二面體，其等同複數個菱形十二面體彼此連結所形成之立體。
+			各積木拼圖包含二單位元件，此二單位元件彼此相互連接且彼此相同。
+			各單位元件包含複數個表面，各表面呈菱形或三角形，其中相鄰之呈三角形的二表面銜接而形成凹形，且此些表面圍繞而形成一封閉空間。
+			藉此，透過特殊之積木拼圖能夠拼成多種不同的多連菱形十二面體，其適合各年齡層且可提升空間能力與心理旋轉能力，並能增進幾何學之解題策略及訓練多重思路。</p>
+      </li>
+    </ul>
+
+    <ul class="pat-compact">
+      <li>
+        <div class="pat-title">六角柱形之益智拼圖<span class="badge pat-approved">已核准</span></div>
+        <div class="pat-meta">
+          <span class="rest">
+            <span class="year">2017</span>
+            <span class="inventors">發明人：范谷瑜、洪文良</span>
+            <span class="kv pat-links"><a href="https://tiponet.tipo.gov.tw/twpat1/twpatc/twpatkm?.aa6d081E50111000000330000000000050^00001002000000000050040a7" target="_blank" rel="noopener">台灣專利連結</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US233549128&_cid=JP1-MEGOTH-08213-1" target="_blank" rel="noopener">美國/國際連結</a></span>
+			<span class="kv pat-links"><a href="https://www.youtube.com/watch?v=8xMGEM5yY9w" target="_blank" rel="noopener">產品介紹短片</a></span>
+          </span>
+        </div>
+        <p class="muted">摘要：本創作揭露一種六角柱形之益智拼圖，其包含18 種不同構型的拼圖，每塊拼圖都由複數個單位元件所組成，複數個積木拼圖排列形成六角柱體。
+			單位元件選自第一單位元件及第二單位元件所構成的群組中，第一單位元件之體積大於第二單位元件之體積。
+			本揭露並不具有唯一解或特定解法，其可培養空間感，增進對幾何圖形的認知，能訓練多重的思路，且在思考過程中達到寓教於樂的效果。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<template id="disabled-block">
+<!-- 網誌 -->
+<section id="blog" class="two">
+  <div class="container">
+    <header><h2>網誌</h2></header>
+    <h3 id="blog-edu">數學教育</h3>
+    <ul class="blog-compact">
+      <!-- 
+	  <li>
+		<div class="pub-title">
+          <a href="blog/文章檔案.html">文章標題</a>
+        </div>
+		<div class="pub-meta">
+		  <span class="year">
+            <time datetime="20xx-xx-xx">20xx-xx-xx</time>
+	      </span>
+        </div>
+	  </li>
+
+      -->
+      <li class="muted">（待更新）</li>
+    </ul>
+
+    <h3 id="blog-contest">數學競賽</h3>
+    <ul class="blog-compact">
+      <li class="muted">（待更新）</li>
+    </ul>
+
+    <h3 id="blog-games">數學遊戲</h3>
+    <ul class="blog-compact">
+      <li class="muted">（待更新）</li>
+    </ul>
+  </div>
+</section>
+</template>
+
+<section id="links" class="two">
+  <div class="container">
+    <header><h2>連結</h2></header>
+
+    <h3 id="links-mentors">師長與夥伴</h3>
+    <p class="note muted">指導教授、同門與合作者等。依姓氏排序，僅列部分；若有誤或未列到歡迎來信告知。</p>
+    <ul class="links-compact two-col">
+      <!-- 範例：把 # 換成對方網址 -->
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/takumi-anzawa-homepage" target="_blank" rel="noopener">安澤拓真(Anzawa, Takumi)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://www.math.nagoya-u.ac.jp/~furusho/" target="_blank" rel="noopener">古庄英和(Furusho, Hidekazu)</a>
+          <span class="desc">博士指導教授</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/ryotaroharada/" target="_blank" rel="noopener">原田遼太郎(Harada, Ryotaro)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://www.math.nthu.edu.tw/~ftwei/" target="_blank" rel="noopener">洪文良(Hung, Wen-Liang)</a>
+          <span class="desc">專利共同發明人</span>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/taichi-katayama-homepage/" target="_blank" rel="noopener">片山太智(Katayama, Taichi)</a>
+          <span class="desc">古庄研的同學</span>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/site/comyshomepage/" target="_blank" rel="noopener">小見山尚(Komiyama, Nao)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/daichi-matsuzuki-homepage/" target="_blank" rel="noopener">松月大知(Matsuzuki, Daichi)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/keita-nakai-home-page/home" target="_blank" rel="noopener">中井啓太(Nakai, Keita)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://www.math.ntu.edu.tw/entity_people/entity_people/21721" target="_blank" rel="noopener">佐藤信夫(Sato, Nobuo)</a>
+          <span class="desc">碩士指導教授</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/takeshi-shinoharas-home-page/" target="_blank" rel="noopener">篠原健(Shinohara, Takeshi)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://www.math.nthu.edu.tw/~jyhhaur/" target="_blank" rel="noopener">鄭志豪(Teh, Jyh Haur)</a>
+          <span class="desc">大學時期的導師</span>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/yuichiro-toma-homepage/" target="_blank" rel="noopener">戸澗勇一郎(Toma, Yuichiro)</a>
+          <span class="desc">古庄研的學長</span>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/kosei-watanabe-homepage/" target="_blank" rel="noopener">渡邊康聖(Watanabe, Kosei)</a>
+          <span class="desc">古庄研的學弟</span>
+        </div>
+      </li>
+	  
+    </ul>
+
+    <h3 id="links-inspire">啟發我的學者</h3>
+    <p class="note muted">曾閱讀其著作、在研討會上交流或啟發我的研究者，單向關注。依姓氏排序，僅列部分；若有誤或未列到歡迎來信告知。</p>
+    <ul class="links-compact two-col">
+      <li>
+        <div class="item">
+          <a class="name" href="https://www.henrikbachmann.com/" target="_blank" rel="noopener">Henrik Bachmann</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.ihes.fr/~brown/" target="_blank" rel="noopener">Francis Brown</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/annikaburmester" target="_blank" rel="noopener">Annika Burmester</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/gapp.nthu.edu.tw/cychang/" target="_blank" rel="noopener">張介玉(Chang, Chieh-Yu)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.math.nthu.edu.tw/front/Members/Emeritus_Professor/member.php?ID=1ee38ad8e5a51f51e434a66344cfcc9d4e1109b037ff02fb10e388e422fba545&PID=20" target="_blank" rel="noopener">程守慶(Chen, So-Chin)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.math.ntu.edu.tw/entity_people/entity_people/21530" target="_blank" rel="noopener">齊震宇(Chi, Chen-Yu)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://clavier.perso.math.cnrs.fr/" target="_blank" rel="noopener">Pierre Clavier</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://math.ntnu.edu.tw/~speu/" target="_blank" rel="noopener">游森棚(Eu, Sen-Peng)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="http://loic.foissy.free.fr/pageperso/accueil.html" target="_blank" rel="noopener">Loïc Foissy</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.maths.dur.ac.uk/users/herbert.gangl/" target="_blank" rel="noopener">Herbert Gangl</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://gauss.math.yale.edu/~ag727/" target="_blank" rel="noopener">Alexander Goncharov</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/a/g2.nctu.edu.tw/unimath/%E4%BD%9C%E8%80%85/%E9%83%AD%E5%90%9B%E9%80%B8" target="_blank" rel="noopener">郭君逸(Guo, Jun-Yi)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://edu.tsuda.ac.jp/~t-hara/index.html" target="_blank" rel="noopener">原隆(Hara, Takashi)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/minoru-hirose/" target="_blank" rel="noopener">広瀬稔(Hirose, Minoru)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="http://pisa.math.ntnu.edu.tw/" target="_blank" rel="noopener">許志農(Hsu, Chih-Nung)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www2.math.kyushu-u.ac.jp/~mkaneko/" target="_blank" rel="noopener">金子昌信(Kaneko, Masanobu)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/a/g2.nctu.edu.tw/unimath/%E4%BD%9C%E8%80%85/%E6%9D%8E%E5%9C%8B%E5%81%89" target="_blank" rel="noopener">李國偉(Lee, Ko-Wei)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://lmbp.uca.fr/~manchon/" target="_blank" rel="noopener">Dominique Manchon</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.math.nagoya-u.ac.jp/~kohjimat/" target="_blank" rel="noopener">松本耕二(Matsumoto, Kohji)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/masaminemath/" target="_blank" rel="noopener">峰正博(Mine, Masahiro)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/mathformula.page/hideki-murahara" target="_blank" rel="noopener">村原英樹(Murahara, Hideki)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/zetastars/" target="_blank" rel="noopener">大野泰生(Ohno, Yasuo)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/onomasataka/" target="_blank" rel="noopener">小野雅隆(Ono, Masataka)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.risan.io/" target="_blank" rel="noopener">Risan</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/simonrutard" target="_blank" rel="noopener">Simon Rutard</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/shinichiro-seki/" target="_blank" rel="noopener">関真一朗(Seki, Shin-ichiro)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/kittipong-subwattanachai/" target="_blank" rel="noopener">Kittipong Subwattanachai</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.math.kindai.ac.jp/laboratory/tasaka/" target="_blank" rel="noopener">田坂浩二(Tasaka, Koji)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.math.nthu.edu.tw/~ftwei/" target="_blank" rel="noopener">魏福村(Wei, Fu-Tsun)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://khalefyaddaden.github.io/" target="_blank" rel="noopener">Khalef Yaddaden</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://sites.google.com/view/yujinbo/" target="_blank" rel="noopener">余锦波(Yu, Jinbo)</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://people.mpim-bonn.mpg.de/zagier/" target="_blank" rel="noopener">Don Zagier</a>
+        </div>
+      </li>
+	  <li>
+        <div class="item">
+          <a class="name" href="https://www.math.ru.nl/~zudilin/" target="_blank" rel="noopener">Wadim Zudilin</a>
+        </div>
+      </li>
+	  
+    </ul>
+
+    <h3 id="links-tools">好用網站與服務</h3>
+    <p class="note muted">研究工具、資料庫、社群與個人常用網站。</p>
+    <ul class="links-compact two-col">
+      <li><div class="item"><a class="name" href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a><span class="desc">預印本平台</span></div></li>
+      <li><div class="item"><a class="name" href="https://mathscinet.ams.org" target="_blank" rel="noopener">MathSciNet</a><span class="desc">數學文獻資料庫</span></div></li>
+      <li><div class="item"><a class="name" href="https://zbmath.org" target="_blank" rel="noopener">zbMATH</a><span class="desc">數學文獻索引</span></div></li>
+      <li><div class="item"><a class="name" href="https://oeis.org" target="_blank" rel="noopener">OEIS</a><span class="desc">整數序列資料庫</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.lmfdb.org" target="_blank" rel="noopener">LMFDB</a><span class="desc">L-函數與模形式資料庫</span></div></li>
+      <li><div class="item"><a class="name" href="https://dlmf.nist.gov/" target="_blank" rel="noopener">DLMF</a><span class="desc">特殊函數與公式</span></div></li>
+      <li><div class="item"><a class="name" href="https://functions.wolfram.com/" target="_blank" rel="noopener">Wolfram Functions</a><span class="desc">特殊函數性質查詢</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.findstat.org/" target="_blank" rel="noopener">FindStat</a><span class="desc">組合統計資料庫</span></div></li>
+      <li><div class="item"><a class="name" href="https://ncatlab.org/" target="_blank" rel="noopener">nLab</a><span class="desc">高等數學/範疇論筆記百科</span></div></li>
+      <li><div class="item"><a class="name" href="https://stacks.math.columbia.edu/" target="_blank" rel="noopener">Stacks Project</a><span class="desc">代數幾何百科與教材</span></div></li>
+      <li><div class="item"><a class="name" href="https://tikzcd.yichuanshen.de/" target="_blank" rel="noopener">tikzcd-editor</a><span class="desc">TikZ交換圖</span></div></li>
+      <li><div class="item"><a class="name" href="https://doi2bib.org/" target="_blank" rel="noopener">doi2bib</a><span class="desc">DOI 一鍵產生 BibTeX</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.wolframalpha.com/" target="_blank" rel="noopener">Wolfram|Alpha</a><span class="desc">自然語言計算查詢</span></div></li>
+      <li><div class="item"><a class="name" href="https://sagecell.sagemath.org/" target="_blank" rel="noopener">SageMathCell</a><span class="desc">線上執行 Sage / Python</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos</a><span class="desc">線上圖形計算機</span></div></li>
+      <li><div class="item"><a class="name" href="https://www.geogebra.org/" target="_blank" rel="noopener">GeoGebra</a><span class="desc">互動幾何 / 代數繪圖</span></div></li>
+      <li><div class="item"><a class="name" href="https://sites.google.com/view/monthly-meeting-mzv" target="_blank" rel="noopener">月例報告會</a><span class="desc">多重 ζ 值社群活動</span></div></li>
+      <li><div class="item"><a class="name" href="https://sites.google.com/site/kmzsince2011/home" target="_blank" rel="noopener">關西多重 ζ 研究會</a><span class="desc">多重 ζ 值系列研討會</span></div></li>
+    </ul>
+  </div>
+</section>
+<!-- 聯絡 -->
+<section id="contact" class="four">
+  <div class="container">
+
+    <header>
+      <h2>聯絡</h2>
+    </header>
+
+    <p>
+      合作或演講邀請，請寄信至
+      <a href="mailto:ku-yu.fan.d2@math.nagoya-u.ac.jp">ku-yu.fan.d2@math.nagoya-u.ac.jp</a>，
+      或使用下列表單。
+    </p>
+
+<form id="contact-form" action="https://formspree.io/f/xldlkbbj" method="POST">
+  <div class="row">
+    <div class="col-6 col-12-mobile">
+      <input type="text" name="name" placeholder="姓名" required />
+    </div>
+    <div class="col-6 col-12-mobile">
+      <input type="email" name="email" placeholder="電子郵件" required />
+    </div>
+    <div class="col-12">
+      <textarea name="message" placeholder="留言內容" required></textarea>
+    </div>
+
+    <!-- 下面三行是主旨 / 送出後導回位置 / 蜜罐防垃圾 -->
+    <input type="hidden" name="_subject" value="網站聯絡表單 - kuyufan.github.io">
+    <input type="hidden" name="_redirect" value="https://kuyufan.github.io/#contact?sent=1">
+    <input type="text" name="_gotcha" style="display:none">
+
+    <div class="col-12">
+      <input type="submit" value="送出" />
+    </div>
+  </div>
+</form>
+
+  </div>
+</section>
 			</div>
 
 		<!-- Footer -->
@@ -190,7 +1483,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Ku-Yu Fan. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</div>
@@ -203,7 +1496,90 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<script>
+  document.querySelectorAll('#nav .has-sub > a').forEach(a => {
+    a.addEventListener('click', function () {
+      this.parentElement.classList.toggle('open');
+    });
+  });
+</script>
+<script>
+(function(){
+  const el = document.getElementById('visit-count');
+  if (!el) return;
 
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbwpArinLwrR1EGLVdlqjvjtoH1EIgjgZvHqgBn0n1Q6guDP38p4Bi7hdpBOLt4GelXX/exec';
+
+  fetch(GAS_URL + '?_=' + Date.now(), { cache: 'no-store' })
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(d => { el.textContent = Number(d.value).toLocaleString(); })
+    .catch(err => {
+      console.error('counter error:', err);
+      el.textContent = 'N/A';
+    });
+})();
+</script>
 	</body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
