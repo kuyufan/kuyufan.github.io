@@ -1646,25 +1646,49 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 <script>
-  // Accessible submenus: toggle .open + aria-expanded, support keyboard
-  document.querySelectorAll('#nav .has-sub > a').forEach(a => {
+(() => {
+  const triggers = document.querySelectorAll('#nav .has-sub > a');
+
+  function closeAll(except) {
+    document.querySelectorAll('#nav .has-sub.open').forEach(li => {
+      if (li !== except) {
+        li.classList.remove('open');
+        const a = li.querySelector(':scope > a');
+        if (a) a.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  triggers.forEach(a => {
     a.setAttribute('aria-expanded', 'false');
     a.setAttribute('aria-haspopup', 'true');
+    const li = a.parentElement;
 
-    a.addEventListener('click', function (e) {
-      e.preventDefault(); // 避免點了就捲動
-      const li = this.parentElement;
-      const open = li.classList.toggle('open');
-      this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const willOpen = !li.classList.contains('open');
+      closeAll(willOpen ? li : null);
+      li.classList.toggle('open', willOpen);
+      a.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
     });
 
-    a.addEventListener('keydown', function (e) {
+    a.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        this.click();
+        a.click();
+      } else if (e.key === 'Escape') {
+        li.classList.remove('open');
+        a.setAttribute('aria-expanded', 'false');
+        a.focus();
       }
     });
   });
+
+  // 點擊外部收合
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#nav')) closeAll();
+  });
+})();
 </script>
 <script>
 (function(){
