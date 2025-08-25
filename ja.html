@@ -9,7 +9,7 @@
 		<title>范谷瑜 | 個人サイト</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="范谷瑜（名古屋大学・数学博士課程）。研究テーマ：多重 ζ 値、モチビックな山本積分、余積公式、樹形化多重 ζ 値、p 進多重ポリログと L 関数など。"/>
+		<meta name="description" content="范谷瑜（名古屋大学・数学博士課程）。研究テーマ：多重 ζ 値、モチーフ的山本積分、余積公式、樹形化多重 ζ 値、p 進多重ポリログ関数と L-関数など。"/>
 		<!-- Favicon / App icons -->
         <link rel="icon" type="image/png" sizes="32x32" href="images/avatar.jpg">
         <link rel="icon" type="image/png" sizes="16x16" href="images/avatar.jpg">
@@ -23,7 +23,7 @@
 <link rel="canonical" href="https://kuyufan.github.io/ja.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="范谷瑜 | 個人サイト">
-<meta property="og:description" content="范谷瑜（名古屋大学・数学博士課程）。研究テーマ：多重 ζ 値、モチビックな山本積分、余積公式、樹形化多重 ζ 値、p 進多重ポリログと L 関数など。">
+<meta property="og:description" content="范谷瑜（名古屋大学・数学博士課程）。研究テーマ：多重 ζ 値、モチーフ的山本積分、余積公式、樹形化多重 ζ 値、p 進多重ポリログ関数と L-関数など。">
 <meta property="og:image" content="https://kuyufan.github.io/images/avatar.jpg">
 <meta property="og:url" content="https://kuyufan.github.io/ja.html">
 <meta property="og:locale" content="ja_JP">
@@ -242,7 +242,6 @@
     0 1px 3px rgba(0,0,0,.70),
     0 6px 18px rgba(0,0,0,.45);
 }
-#language-switch a[aria-current="page"]{ text-decoration: underline; opacity:.95; pointer-events:none; }
 /* 語言切換：先關掉主題在 <a> 上畫的邊框 */
 #language-switch a { border-bottom: 0 !important; }
 
@@ -277,7 +276,7 @@
 						</div>
 
 					<!-- Nav -->
-<nav id="nav">
+<nav id="nav" role="navigation" aria-label="Primary">
   <ul>
     <li><a href="#top" class="scrolly"><span class="icon solid fa-home">ホーム</span></a></li>
 
@@ -295,13 +294,13 @@
       <a href="#pubs" class="scrolly"><span class="icon solid fa-book">著作物</span></a>
       <ul class="sub">
         <li><a href="#pubs-published" class="scrolly">出版済み</a></li>
-        <li><a href="#pubs-submitted" class="scrolly">出版予定</a></li>
-        <li><a href="#pubs-arxiv" class="scrolly">arXiv / プレプリント</a></li>
+        <li><a href="#pubs-submitted" class="scrolly">査読中</a></li>
+        <li><a href="#pubs-arxiv" class="scrolly">arXiv・プレプリント</a></li>
       </ul>
     </li>
 
     <li class="has-sub">
-      <a href="#talks" class="scrolly"><span class="icon solid fa-chalkboard-teacher">講演 / 研究集会</span></a>
+      <a href="#talks" class="scrolly"><span class="icon solid fa-chalkboard-teacher">講演・研究集会</span></a>
       <ul class="sub">
         <li><a href="#talks-upcoming" class="scrolly">参加予定</a></li>
         <li><a href="#talks-past" class="scrolly">参加済み</a></li>
@@ -347,9 +346,9 @@
 
 					<!-- Social Icons -->
 <ul class="icons">
-  <li><a href="https://www.instagram.com/kuyufan/" target="_blank" rel="noopener" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-  <li><a href="https://www.facebook.com/kuyu.fan.7" target="_blank" rel="noopener" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-  <li><a href="https://github.com/kuyufan" target="_blank" rel="noopener" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+  <li><a href="https://www.instagram.com/kuyufan/" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+  <li><a href="https://www.facebook.com/kuyu.fan.7" target="_blank" rel="noopener noreferrer" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+  <li><a href="https://github.com/kuyufan" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
   <li><a href="mailto:abc940605@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 </ul>
 
@@ -379,8 +378,8 @@
     <h3 id="bio">自己紹介</h3>
 <p>
   私は范谷瑜です。名古屋大学「大学院多元数理科学研究科」数学博士後期課程に在籍し、古庄英和教授の指導を受けています。
-  研究は<strong>多重 ζ 値</strong>とその代数的／解析的構造を中心に、モチビックな山本積分、余積公式、
-  Schur 多重 ζ 値、樹形化多重 ζ 値、さらに p 進多重 ζ 値、多重ポリログとL 関数などに関心があります。共同研究・交流を歓迎します。
+  研究は<strong>多重 ζ 値</strong>とその代数的／解析的構造を中心に、モチーフ的山本積分、余積公式、
+  Schur 多重 ζ 値、樹形化多重 ζ 値、さらに p 進多重 ζ 値、多重ポリログ関数とL-関数などに関心があります。共同研究・交流を歓迎します。
 </p>
 
     <!-- 學歷 -->
@@ -404,7 +403,7 @@
     <h3 id="news">近況</h3>
     <ul class="news-list">
       <li> 多重 ζ 値の樹形化間の写像と誤差項に関する研究を近日中に arXiv に乗せる予定。日本数学会 2025 年度秋季総合分科会および 2025 年度 RIMS 共同研究（公開型）「多重 ζ 値の諸相」で発表予定。</li>
-      <li> 最近の研究の焦点：p 進多重 ζ 値、p 進多重ポリログ関数、p 進 L 関数など。</li>
+      <li> 最近の研究の焦点：p 進多重 ζ 値、p 進多重ポリログ関数、p 進 L-関数など。</li>
     </ul>
 
     <!-- 履歷 
@@ -424,7 +423,7 @@
     <ul class="pub-compact">
       <li>
         <div class="pub-title">
-          <a href="https://www.math.sinica.edu.tw/mathmedia/journals/4658" target="_blank" rel="noopener">
+          <a href="https://www.math.sinica.edu.tw/mathmedia/journals/4658" target="_blank" rel="noopener noreferrer">
             〈格子圖形中的格子直線數〉
           </a>
         </div>
@@ -441,17 +440,17 @@
     </ul>
 
     <!-- 投稿中 -->
-    <h3 id="pubs-submitted">出版予定</h3>
+    <h3 id="pubs-submitted">査読中</h3>
     <ul class="pub-compact">
       <!-- （掲載準備中） -->
     </ul>
 
     <!-- arXiv / 預印本 -->
-    <h3 id="pubs-arxiv">arXiv / プレプリント</h3>
+    <h3 id="pubs-arxiv">arXiv・プレプリント</h3>
     <ul class="pub-compact">
 	  <li>
         <div class="pub-title">
-          <a href="https://arxiv.org/abs/2406.08127" target="_blank" rel="noopener">
+          <a href="https://arxiv.org/abs/2406.08127" target="_blank" rel="noopener noreferrer">
             〈Coproduct Formula for Motivic Version of Yamamoto's Integral〉
           </a>
         </div>
@@ -460,7 +459,7 @@
           <span class="rest">
             <span class="kv">arXiv:2406.08127 [math.NT]</span>
             <span class="year">2024</span>
-            <span class="kv"><a href="https://arxiv.org/pdf/2406.08127" target="_blank" rel="noopener">PDF</a></span>
+            <span class="kv"><a href="https://arxiv.org/pdf/2406.08127" target="_blank" rel="noopener noreferrer">PDF</a></span>
           </span>
         </div>
       </li>
@@ -471,14 +470,14 @@
 
 <section id="talks" class="two">
   <div class="container">
-    <header><h2>講演 / 研究集会</h2></header>
+    <header><h2>講演・研究集会</h2></header>
 
     <!-- 即將參加 -->
     <h3 id="talks-upcoming">参加予定</h3>
     <ul class="talks">
       <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/view/rimsmzv2025/home?authuser=0" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/view/rimsmzv2025/home?authuser=0" target="_blank" rel="noopener noreferrer">
             2025 年度 RIMS 共同研究（公開型）「多重 ζ 値の諸相」
           </a>
         </div>
@@ -497,7 +496,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://www.mathsoc.jp/activity/meeting/nagoya25sept/index.html" target="_blank" rel="noopener">
+          <a href="https://www.mathsoc.jp/activity/meeting/nagoya25sept/index.html" target="_blank" rel="noopener noreferrer">
             日本数学会 2025 年度秋季総合分科会
           </a>
         </div>
@@ -520,7 +519,7 @@
     <ul class="talks">
 	  <li>
         <div class="talk-title">
-          <a href="https://multizetacafe.github.io/shanghai2025/" target="_blank" rel="noopener">
+          <a href="https://multizetacafe.github.io/shanghai2025/" target="_blank" rel="noopener noreferrer">
             第4回中国多重 ζ 値と関連分野国際会議
           </a>
         </div>
@@ -539,7 +538,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/site/kmzsince2011/home?authuser=0#h.3bytc5qqqf9i" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/site/kmzsince2011/home?authuser=0#h.3bytc5qqqf9i" target="_blank" rel="noopener noreferrer">
             第 68 回 関西多重 ζ 研究会
           </a>
         </div>
@@ -555,7 +554,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/view/zetawakate18" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/view/zetawakate18" target="_blank" rel="noopener noreferrer">
             東北-名古屋 ζ 若手研究集会（第 18 回 ζ 若手研究集会＆第 67 回 関西多重 ζ 研究会（共同開催））
           </a>
         </div>
@@ -571,7 +570,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/view/the17thmsj-si" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/view/the17thmsj-si" target="_blank" rel="noopener noreferrer">
             The 17th MSJ-SI Developments of multiple zeta values
           </a>
         </div>
@@ -587,7 +586,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/view/tohoku-number-semiar/2024?authuser=0" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/view/tohoku-number-semiar/2024?authuser=0" target="_blank" rel="noopener noreferrer">
             東北大学整数論セミナー
           </a>
         </div>
@@ -603,7 +602,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://drive.google.com/file/d/1kJEnFlGi3V20mBD8Dvf_8M99_xiDvd_c/view?usp=drive_link" target="_blank" rel="noopener">
+          <a href="https://drive.google.com/file/d/1kJEnFlGi3V20mBD8Dvf_8M99_xiDvd_c/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
             Sendai seminar on Multiple Eisenstein Series
           </a>
         </div>
@@ -619,7 +618,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/site/kmzsince2011/past/2024?authuser=0#h.njycdaum38bp" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/site/kmzsince2011/past/2024?authuser=0#h.njycdaum38bp" target="_blank" rel="noopener noreferrer">
             第 66 回 関西多重 ζ 研究会
           </a>
         </div>
@@ -635,7 +634,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://www.math.kindai.ac.jp/laboratory/tasaka/2ndKindaiWS/" target="_blank" rel="noopener">
+          <a href="https://www.math.kindai.ac.jp/laboratory/tasaka/2ndKindaiWS/" target="_blank" rel="noopener noreferrer">
             2nd Kindai Workshop Multiple Zeta Values and Modular Forms
           </a>
         </div>
@@ -654,7 +653,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://ncts.ntu.edu.tw/events_3_detail.php?nid=350" target="_blank" rel="noopener">
+          <a href="https://ncts.ntu.edu.tw/events_3_detail.php?nid=350" target="_blank" rel="noopener noreferrer">
             Summer Schools on Combinatorics
           </a>
         </div>
@@ -669,7 +668,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/site/kkmzvworkshop/home/%E7%AC%AC17%E5%9B%9E%E5%A4%9A%E9%87%8D%E3%82%BC%E3%83%BC%E3%82%BF%E7%A0%94%E7%A9%B6%E9%9B%86%E4%BC%9A%E7%AC%AC61%E5%9B%9E%E9%96%A2%E8%A5%BF%E5%A4%9A%E9%87%8D%E3%82%BC%E3%83%BC%E3%82%BF%E7%A0%94%E7%A9%B6%E4%BC%9A%E5%85%B1%E5%90%8C%E9%96%8B%E5%82%AC" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/site/kkmzvworkshop/home/%E7%AC%AC17%E5%9B%9E%E5%A4%9A%E9%87%8D%E3%82%BC%E3%83%BC%E3%82%BF%E7%A0%94%E7%A9%B6%E9%9B%86%E4%BC%9A%E7%AC%AC61%E5%9B%9E%E9%96%A2%E8%A5%BF%E5%A4%9A%E9%87%8D%E3%82%BC%E3%83%BC%E3%82%BF%E7%A0%94%E7%A9%B6%E4%BC%9A%E5%85%B1%E5%90%8C%E9%96%8B%E5%82%AC" target="_blank" rel="noopener noreferrer">
             第17回多重ゼータ研究集会＆第61回関西多重ゼータ研究会（共同開催）
           </a>
         </div>
@@ -684,7 +683,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/view/zetawakate16/" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/view/zetawakate16/" target="_blank" rel="noopener noreferrer">
             第16回ゼータ若手研究集会
           </a>
         </div>
@@ -699,7 +698,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://sites.google.com/view/lectureqmzv/" target="_blank" rel="noopener">
+          <a href="https://sites.google.com/view/lectureqmzv/" target="_blank" rel="noopener noreferrer">
             Lecture series: An algebraic approach to multiple q-zeta values
           </a>
         </div>
@@ -714,7 +713,7 @@
 
       <li>
         <div class="talk-title">
-          <a href="https://www.math.nthu.edu.tw/~2022TMS/home.html" target="_blank" rel="noopener">
+          <a href="https://www.math.nthu.edu.tw/~2022TMS/home.html" target="_blank" rel="noopener noreferrer">
             2022中華民国数学年会
           </a>
         </div>
@@ -729,7 +728,7 @@
 
 	  <li>
         <div class="talk-title">
-          <a href="https://idv.sinica.edu.tw/mathcomp/2021TMS/index.html" target="_blank" rel="noopener">
+          <a href="https://idv.sinica.edu.tw/mathcomp/2021TMS/index.html" target="_blank" rel="noopener noreferrer">
             2021中華民国数学年会
           </a>
         </div>
@@ -1056,7 +1055,7 @@
           <span class="rest">
             <span class="year">2021</span>
             <span class="inventors">発明者：范谷瑜・洪文良</span>
-            <span class="kv pat-links"><a href="https://patents.google.com/patent/TWM612210U/" target="_blank" rel="noopener">台湾特許リンク</a></span>
+            <span class="kv pat-links"><a href="https://patents.google.com/patent/TWM612210U/" target="_blank" rel="noopener noreferrer">台湾特許リンク</a></span>
           </span>
         </div>
         <p class="muted">要約：本発明は、切頂正八面体（truncated regular octahedron）を切断して得られる単元に関する。
@@ -1074,9 +1073,9 @@
           <span class="rest">
             <span class="year">2018</span>
             <span class="inventors">発明者：范谷瑜・洪文良</span>
-            <span class="kv pat-links"><a href="https://patents.google.com/patent/TWM566100U" target="_blank" rel="noopener">台湾特許リンク</a></span>
-            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US278925344&_cid=JP1-MEGOTH-08213-2" target="_blank" rel="noopener">米国／国際リンク 1</a></span>
-            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US307237972&_cid=JP1-MEGOTH-08213-2" target="_blank" rel="noopener">米国／国際リンク 2</a></span>
+            <span class="kv pat-links"><a href="https://patents.google.com/patent/TWM566100U" target="_blank" rel="noopener noreferrer">台湾特許リンク</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US278925344&_cid=JP1-MEGOTH-08213-2" target="_blank" rel="noopener noreferrer">米国／国際リンク 1</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US307237972&_cid=JP1-MEGOTH-08213-2" target="_blank" rel="noopener noreferrer">米国／国際リンク 2</a></span>
           </span>
         </div>
         <p class="muted">要約：本発明は、菱形十二面体パズルおよびその多連体に関する。
@@ -1093,9 +1092,9 @@
           <span class="rest">
             <span class="year">2017</span>
             <span class="inventors">発明者：范谷瑜・洪文良</span>
-            <span class="kv pat-links"><a href="https://patents.google.com/patent/TWM548578U" target="_blank" rel="noopener">台湾特許リンク</a></span>
-            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US233549128&_cid=JP1-MEGOTH-08213-1" target="_blank" rel="noopener">米国／国際リンク</a></span>
-            <span class="kv pat-links"><a href="https://www.youtube.com/watch?v=8xMGEM5yY9w" target="_blank" rel="noopener">紹介動画</a></span>
+            <span class="kv pat-links"><a href="https://patents.google.com/patent/TWM548578U" target="_blank" rel="noopener noreferrer">台湾特許リンク</a></span>
+            <span class="kv pat-links"><a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=US233549128&_cid=JP1-MEGOTH-08213-1" target="_blank" rel="noopener noreferrer">米国／国際リンク</a></span>
+            <span class="kv pat-links"><a href="https://www.youtube.com/watch?v=8xMGEM5yY9w" target="_blank" rel="noopener noreferrer">紹介動画</a></span>
           </span>
         </div>
         <p class="muted">要約：本考案は、18 種の異なる構形から成るパーツを用いて六角柱体を構成する知育パズルに関する。
@@ -1138,79 +1137,79 @@
     <ul class="links-compact two-col">
       <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/takumi-anzawa-homepage" target="_blank" rel="noopener">安澤拓真 (Anzawa, Takumi)</a>
+          <a class="name" href="https://sites.google.com/view/takumi-anzawa-homepage" target="_blank" rel="noopener noreferrer">安澤拓真 (Anzawa, Takumi)</a>
           <span class="desc">古庄研の先輩</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://www.math.nagoya-u.ac.jp/~furusho/" target="_blank" rel="noopener">古庄英和 (Furusho, Hidekazu)</a>
+          <a class="name" href="https://www.math.nagoya-u.ac.jp/~furusho/" target="_blank" rel="noopener noreferrer">古庄英和 (Furusho, Hidekazu)</a>
           <span class="desc">博士指導教員</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/ryotaroharada/" target="_blank" rel="noopener">原田遼太郎 (Harada, Ryotaro)</a>
+          <a class="name" href="https://sites.google.com/view/ryotaroharada/" target="_blank" rel="noopener noreferrer">原田遼太郎 (Harada, Ryotaro)</a>
           <span class="desc">古庄研の先輩</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://www.math.nthu.edu.tw/~ftwei/" target="_blank" rel="noopener">洪文良 (Hung, Wen-Liang)</a>
+          <a class="name" href="https://www.math.nthu.edu.tw/~ftwei/" target="_blank" rel="noopener noreferrer">洪文良 (Hung, Wen-Liang)</a>
           <span class="desc">特許の共同発明者</span>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/taichi-katayama-homepage/" target="_blank" rel="noopener">片山太智 (Katayama, Taichi)</a>
+          <a class="name" href="https://sites.google.com/view/taichi-katayama-homepage/" target="_blank" rel="noopener noreferrer">片山太智 (Katayama, Taichi)</a>
           <span class="desc">古庄研の同級生</span>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/site/comyshomepage/" target="_blank" rel="noopener">小見山尚 (Komiyama, Nao)</a>
+          <a class="name" href="https://sites.google.com/site/comyshomepage/" target="_blank" rel="noopener noreferrer">小見山尚 (Komiyama, Nao)</a>
           <span class="desc">古庄研の先輩</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/daichi-matsuzuki-homepage/" target="_blank" rel="noopener">松月大知 (Matsuzuki, Daichi)</a>
+          <a class="name" href="https://sites.google.com/view/daichi-matsuzuki-homepage/" target="_blank" rel="noopener noreferrer">松月大知 (Matsuzuki, Daichi)</a>
           <span class="desc">古庄研の先輩</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/keita-nakai-home-page/home" target="_blank" rel="noopener">中井啓太 (Nakai, Keita)</a>
+          <a class="name" href="https://sites.google.com/view/keita-nakai-home-page/home" target="_blank" rel="noopener noreferrer">中井啓太 (Nakai, Keita)</a>
           <span class="desc">古庄研の先輩</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://www.math.ntu.edu.tw/entity_people/entity_people/21721" target="_blank" rel="noopener">佐藤信夫 (Sato, Nobuo)</a>
+          <a class="name" href="https://www.math.ntu.edu.tw/entity_people/entity_people/21721" target="_blank" rel="noopener noreferrer">佐藤信夫 (Sato, Nobuo)</a>
           <span class="desc">修士指導教員</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/takeshi-shinoharas-home-page/" target="_blank" rel="noopener">篠原健 (Shinohara, Takeshi)</a>
+          <a class="name" href="https://sites.google.com/view/takeshi-shinoharas-home-page/" target="_blank" rel="noopener noreferrer">篠原健 (Shinohara, Takeshi)</a>
           <span class="desc">古庄研の先輩</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://www.math.nthu.edu.tw/~jyhhaur/" target="_blank" rel="noopener">鄭志豪 (Teh, Jyh Haur)</a>
+          <a class="name" href="https://www.math.nthu.edu.tw/~jyhhaur/" target="_blank" rel="noopener noreferrer">鄭志豪 (Teh, Jyh Haur)</a>
           <span class="desc">学部時代の担任の先生</span>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/yuichiro-toma-homepage/" target="_blank" rel="noopener">戸澗勇一郎 (Toma, Yuichiro)</a>
+          <a class="name" href="https://sites.google.com/view/yuichiro-toma-homepage/" target="_blank" rel="noopener noreferrer">戸澗勇一郎 (Toma, Yuichiro)</a>
           <span class="desc">古庄研の先輩</span>
         </div>
       </li>
       <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/kosei-watanabe-homepage/" target="_blank" rel="noopener">渡邊康聖 (Watanabe, Kosei)</a>
+          <a class="name" href="https://sites.google.com/view/kosei-watanabe-homepage/" target="_blank" rel="noopener noreferrer">渡邊康聖 (Watanabe, Kosei)</a>
           <span class="desc">古庄研の後輩</span>
         </div>
       </li>
@@ -1221,172 +1220,172 @@
     <ul class="links-compact two-col">
       <li>
         <div class="item">
-          <a class="name" href="https://www.henrikbachmann.com/" target="_blank" rel="noopener">Henrik Bachmann</a>
+          <a class="name" href="https://www.henrikbachmann.com/" target="_blank" rel="noopener noreferrer">Henrik Bachmann</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.ihes.fr/~brown/" target="_blank" rel="noopener">Francis Brown</a>
+          <a class="name" href="https://www.ihes.fr/~brown/" target="_blank" rel="noopener noreferrer">Francis Brown</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/annikaburmester" target="_blank" rel="noopener">Annika Burmester</a>
+          <a class="name" href="https://sites.google.com/view/annikaburmester" target="_blank" rel="noopener noreferrer">Annika Burmester</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/gapp.nthu.edu.tw/cychang/" target="_blank" rel="noopener">張介玉(Chang, Chieh-Yu)</a>
+          <a class="name" href="https://sites.google.com/gapp.nthu.edu.tw/cychang/" target="_blank" rel="noopener noreferrer">張介玉(Chang, Chieh-Yu)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.math.nthu.edu.tw/front/Members/Emeritus_Professor/member.php?ID=1ee38ad8e5a51f51e434a66344cfcc9d4e1109b037ff02fb10e388e422fba545&PID=20" target="_blank" rel="noopener">程守慶(Chen, So-Chin)</a>
+          <a class="name" href="https://www.math.nthu.edu.tw/front/Members/Emeritus_Professor/member.php?ID=1ee38ad8e5a51f51e434a66344cfcc9d4e1109b037ff02fb10e388e422fba545&PID=20" target="_blank" rel="noopener noreferrer">程守慶(Chen, So-Chin)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.math.ntu.edu.tw/entity_people/entity_people/21530" target="_blank" rel="noopener">齊震宇(Chi, Chen-Yu)</a>
+          <a class="name" href="https://www.math.ntu.edu.tw/entity_people/entity_people/21530" target="_blank" rel="noopener noreferrer">齊震宇(Chi, Chen-Yu)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://clavier.perso.math.cnrs.fr/" target="_blank" rel="noopener">Pierre Clavier</a>
+          <a class="name" href="https://clavier.perso.math.cnrs.fr/" target="_blank" rel="noopener noreferrer">Pierre Clavier</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://math.ntnu.edu.tw/~speu/" target="_blank" rel="noopener">游森棚(Eu, Sen-Peng)</a>
+          <a class="name" href="https://math.ntnu.edu.tw/~speu/" target="_blank" rel="noopener noreferrer">游森棚(Eu, Sen-Peng)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="http://loic.foissy.free.fr/pageperso/accueil.html" target="_blank" rel="noopener">Loïc Foissy</a>
+          <a class="name" href="http://loic.foissy.free.fr/pageperso/accueil.html" target="_blank" rel="noopener noreferrer">Loïc Foissy</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.maths.dur.ac.uk/users/herbert.gangl/" target="_blank" rel="noopener">Herbert Gangl</a>
+          <a class="name" href="https://www.maths.dur.ac.uk/users/herbert.gangl/" target="_blank" rel="noopener noreferrer">Herbert Gangl</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://gauss.math.yale.edu/~ag727/" target="_blank" rel="noopener">Alexander Goncharov</a>
+          <a class="name" href="https://gauss.math.yale.edu/~ag727/" target="_blank" rel="noopener noreferrer">Alexander Goncharov</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/a/g2.nctu.edu.tw/unimath/%E4%BD%9C%E8%80%85/%E9%83%AD%E5%90%9B%E9%80%B8" target="_blank" rel="noopener">郭君逸(Guo, Jun-Yi)</a>
+          <a class="name" href="https://sites.google.com/a/g2.nctu.edu.tw/unimath/%E4%BD%9C%E8%80%85/%E9%83%AD%E5%90%9B%E9%80%B8" target="_blank" rel="noopener noreferrer">郭君逸(Guo, Jun-Yi)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://edu.tsuda.ac.jp/~t-hara/index.html" target="_blank" rel="noopener">原隆(Hara, Takashi)</a>
+          <a class="name" href="https://edu.tsuda.ac.jp/~t-hara/index.html" target="_blank" rel="noopener noreferrer">原隆(Hara, Takashi)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/minoru-hirose/" target="_blank" rel="noopener">広瀬稔(Hirose, Minoru)</a>
+          <a class="name" href="https://sites.google.com/view/minoru-hirose/" target="_blank" rel="noopener noreferrer">広瀬稔(Hirose, Minoru)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="http://pisa.math.ntnu.edu.tw/" target="_blank" rel="noopener">許志農(Hsu, Chih-Nung)</a>
+          <a class="name" href="http://pisa.math.ntnu.edu.tw/" target="_blank" rel="noopener noreferrer">許志農(Hsu, Chih-Nung)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/sealmath" target="_blank" rel="noopener">池田香凜(Ikeda, Karin)</a>
+          <a class="name" href="https://sites.google.com/view/sealmath" target="_blank" rel="noopener noreferrer">池田香凜(Ikeda, Karin)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www2.math.kyushu-u.ac.jp/~mkaneko/" target="_blank" rel="noopener">金子昌信(Kaneko, Masanobu)</a>
+          <a class="name" href="https://www2.math.kyushu-u.ac.jp/~mkaneko/" target="_blank" rel="noopener noreferrer">金子昌信(Kaneko, Masanobu)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/a/g2.nctu.edu.tw/unimath/%E4%BD%9C%E8%80%85/%E6%9D%8E%E5%9C%8B%E5%81%89" target="_blank" rel="noopener">李國偉(Lee, Ko-Wei)</a>
+          <a class="name" href="https://sites.google.com/a/g2.nctu.edu.tw/unimath/%E4%BD%9C%E8%80%85/%E6%9D%8E%E5%9C%8B%E5%81%89" target="_blank" rel="noopener noreferrer">李國偉(Lee, Ko-Wei)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://lmbp.uca.fr/~manchon/" target="_blank" rel="noopener">Dominique Manchon</a>
+          <a class="name" href="https://lmbp.uca.fr/~manchon/" target="_blank" rel="noopener noreferrer">Dominique Manchon</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.math.nagoya-u.ac.jp/~kohjimat/" target="_blank" rel="noopener">松本耕二(Matsumoto, Kohji)</a>
+          <a class="name" href="https://www.math.nagoya-u.ac.jp/~kohjimat/" target="_blank" rel="noopener noreferrer">松本耕二(Matsumoto, Kohji)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/masaminemath/" target="_blank" rel="noopener">峰正博(Mine, Masahiro)</a>
+          <a class="name" href="https://sites.google.com/view/masaminemath/" target="_blank" rel="noopener noreferrer">峰正博(Mine, Masahiro)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/mathformula.page/hideki-murahara" target="_blank" rel="noopener">村原英樹(Murahara, Hideki)</a>
+          <a class="name" href="https://sites.google.com/mathformula.page/hideki-murahara" target="_blank" rel="noopener noreferrer">村原英樹(Murahara, Hideki)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/zetastars/" target="_blank" rel="noopener">大野泰生(Ohno, Yasuo)</a>
+          <a class="name" href="https://sites.google.com/view/zetastars/" target="_blank" rel="noopener noreferrer">大野泰生(Ohno, Yasuo)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/onomasataka/" target="_blank" rel="noopener">小野雅隆(Ono, Masataka)</a>
+          <a class="name" href="https://sites.google.com/view/onomasataka/" target="_blank" rel="noopener noreferrer">小野雅隆(Ono, Masataka)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.risan.io/" target="_blank" rel="noopener">Risan</a>
+          <a class="name" href="https://www.risan.io/" target="_blank" rel="noopener noreferrer">Risan</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/simonrutard" target="_blank" rel="noopener">Simon Rutard</a>
+          <a class="name" href="https://sites.google.com/view/simonrutard" target="_blank" rel="noopener noreferrer">Simon Rutard</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/shinichiro-seki/" target="_blank" rel="noopener">関真一朗(Seki, Shin-ichiro)</a>
+          <a class="name" href="https://sites.google.com/view/shinichiro-seki/" target="_blank" rel="noopener noreferrer">関真一朗(Seki, Shin-ichiro)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/kittipong-subwattanachai/" target="_blank" rel="noopener">Kittipong Subwattanachai</a>
+          <a class="name" href="https://sites.google.com/view/kittipong-subwattanachai/" target="_blank" rel="noopener noreferrer">Kittipong Subwattanachai</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.math.kindai.ac.jp/laboratory/tasaka/" target="_blank" rel="noopener">田坂浩二(Tasaka, Koji)</a>
+          <a class="name" href="https://www.math.kindai.ac.jp/laboratory/tasaka/" target="_blank" rel="noopener noreferrer">田坂浩二(Tasaka, Koji)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.math.nthu.edu.tw/~ftwei/" target="_blank" rel="noopener">魏福村(Wei, Fu-Tsun)</a>
+          <a class="name" href="https://www.math.nthu.edu.tw/~ftwei/" target="_blank" rel="noopener noreferrer">魏福村(Wei, Fu-Tsun)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://khalefyaddaden.github.io/" target="_blank" rel="noopener">Khalef Yaddaden</a>
+          <a class="name" href="https://khalefyaddaden.github.io/" target="_blank" rel="noopener noreferrer">Khalef Yaddaden</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://sites.google.com/view/yujinbo/" target="_blank" rel="noopener">余锦波(Yu, Jinbo)</a>
+          <a class="name" href="https://sites.google.com/view/yujinbo/" target="_blank" rel="noopener noreferrer">余锦波(Yu, Jinbo)</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://people.mpim-bonn.mpg.de/zagier/" target="_blank" rel="noopener">Don Zagier</a>
+          <a class="name" href="https://people.mpim-bonn.mpg.de/zagier/" target="_blank" rel="noopener noreferrer">Don Zagier</a>
         </div>
       </li>
 	  <li>
         <div class="item">
-          <a class="name" href="https://www.math.ru.nl/~zudilin/" target="_blank" rel="noopener">Wadim Zudilin</a>
+          <a class="name" href="https://www.math.ru.nl/~zudilin/" target="_blank" rel="noopener noreferrer">Wadim Zudilin</a>
         </div>
       </li>
 	  
@@ -1395,24 +1394,24 @@
     <h3 id="links-tools">便利サイトとサービス</h3>
     <p class="note muted">研究ツール、データベース、コミュニティ、個人の常用サイトなど。</p>
     <ul class="links-compact two-col">
-      <li><div class="item"><a class="name" href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a></div></li>
-      <li><div class="item"><a class="name" href="https://mathscinet.ams.org" target="_blank" rel="noopener">MathSciNet</a></div></li>
-      <li><div class="item"><a class="name" href="https://zbmath.org" target="_blank" rel="noopener">zbMATH</a></div></li>
-      <li><div class="item"><a class="name" href="https://oeis.org" target="_blank" rel="noopener">OEIS</a></div></li>
-      <li><div class="item"><a class="name" href="https://www.lmfdb.org" target="_blank" rel="noopener">LMFDB</a></div></li>
-      <li><div class="item"><a class="name" href="https://dlmf.nist.gov/" target="_blank" rel="noopener">DLMF</a></div></li>
-      <li><div class="item"><a class="name" href="https://functions.wolfram.com/" target="_blank" rel="noopener">Wolfram Functions</a></div></li>
-      <li><div class="item"><a class="name" href="https://www.findstat.org/" target="_blank" rel="noopener">FindStat</a></div></li>
-      <li><div class="item"><a class="name" href="https://ncatlab.org/" target="_blank" rel="noopener">nLab</a></div></li>
-      <li><div class="item"><a class="name" href="https://stacks.math.columbia.edu/" target="_blank" rel="noopener">Stacks Project</a></div></li>
-      <li><div class="item"><a class="name" href="https://tikzcd.yichuanshen.de/" target="_blank" rel="noopener">tikzcd-editor</a></div></li>
-      <li><div class="item"><a class="name" href="https://doi2bib.org/" target="_blank" rel="noopener">doi2bib</a></div></li>
-      <li><div class="item"><a class="name" href="https://www.wolframalpha.com/" target="_blank" rel="noopener">Wolfram|Alpha</a></div></li>
-      <li><div class="item"><a class="name" href="https://sagecell.sagemath.org/" target="_blank" rel="noopener">SageMathCell</a></div></li>
-      <li><div class="item"><a class="name" href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos</a></div></li>
-      <li><div class="item"><a class="name" href="https://www.geogebra.org/" target="_blank" rel="noopener">GeoGebra</a></div></li>
-      <li><div class="item"><a class="name" href="https://sites.google.com/view/monthly-meeting-mzv" target="_blank" rel="noopener">月例報告会</a></div></li>
-      <li><div class="item"><a class="name" href="https://sites.google.com/site/kmzsince2011/home" target="_blank" rel="noopener">関西多重 ζ 研究会</a></div></li>
+      <li><div class="item"><a class="name" href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a></div></li>
+      <li><div class="item"><a class="name" href="https://mathscinet.ams.org" target="_blank" rel="noopener noreferrer">MathSciNet</a></div></li>
+      <li><div class="item"><a class="name" href="https://zbmath.org" target="_blank" rel="noopener noreferrer">zbMATH</a></div></li>
+      <li><div class="item"><a class="name" href="https://oeis.org" target="_blank" rel="noopener noreferrer">OEIS</a></div></li>
+      <li><div class="item"><a class="name" href="https://www.lmfdb.org" target="_blank" rel="noopener noreferrer">LMFDB</a></div></li>
+      <li><div class="item"><a class="name" href="https://dlmf.nist.gov/" target="_blank" rel="noopener noreferrer">DLMF</a></div></li>
+      <li><div class="item"><a class="name" href="https://functions.wolfram.com/" target="_blank" rel="noopener noreferrer">Wolfram Functions</a></div></li>
+      <li><div class="item"><a class="name" href="https://www.findstat.org/" target="_blank" rel="noopener noreferrer">FindStat</a></div></li>
+      <li><div class="item"><a class="name" href="https://ncatlab.org/" target="_blank" rel="noopener noreferrer">nLab</a></div></li>
+      <li><div class="item"><a class="name" href="https://stacks.math.columbia.edu/" target="_blank" rel="noopener noreferrer">Stacks Project</a></div></li>
+      <li><div class="item"><a class="name" href="https://tikzcd.yichuanshen.de/" target="_blank" rel="noopener noreferrer">tikzcd-editor</a></div></li>
+      <li><div class="item"><a class="name" href="https://doi2bib.org/" target="_blank" rel="noopener noreferrer">doi2bib</a></div></li>
+      <li><div class="item"><a class="name" href="https://www.wolframalpha.com/" target="_blank" rel="noopener noreferrer">Wolfram|Alpha</a></div></li>
+      <li><div class="item"><a class="name" href="https://sagecell.sagemath.org/" target="_blank" rel="noopener noreferrer">SageMathCell</a></div></li>
+      <li><div class="item"><a class="name" href="https://www.desmos.com/calculator" target="_blank" rel="noopener noreferrer">Desmos</a></div></li>
+      <li><div class="item"><a class="name" href="https://www.geogebra.org/" target="_blank" rel="noopener noreferrer">GeoGebra</a></div></li>
+      <li><div class="item"><a class="name" href="https://sites.google.com/view/monthly-meeting-mzv" target="_blank" rel="noopener noreferrer">月例報告会</a></div></li>
+      <li><div class="item"><a class="name" href="https://sites.google.com/site/kmzsince2011/home" target="_blank" rel="noopener noreferrer">関西多重 ζ 研究会</a></div></li>
     </ul>
   </div>
 </section>
