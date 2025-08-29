@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8" />
+<title>Redirecting…</title>
+<link rel="canonical" href="https://kuyufan.github.io/zhHP.html">
+<meta name="robots" content="noindex">
+
+<script>
+  (function () {
+    var basePath = ''; // 若是子路徑站（例如 /myrepo/），改成 '/myrepo/'
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var code = lang.slice(0, 2); // 'zh' | 'en' | 'ja' | 其他
+    var map = {
+      zh: basePath + 'zhHP.html',
+      en: basePath + 'enHP.html',
+      ja: basePath + 'jaHP.html'
+    };
+    var target = map[code] || map.zh; // 預設導向中文；要預設英文/日文改成 map.en / map.ja
+    location.replace(target);
+  })();
+</script>
+
+<noscript>
+  <p>Please choose your language:
+    <a href="zhHP.html">中文</a> ·
+    <a href="enHP.html">English</a> ·
+    <a href="jaHP.html">日本語</a>
+  </p>
+</noscript>
+</html>
