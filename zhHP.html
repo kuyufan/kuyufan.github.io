@@ -258,7 +258,35 @@
   text-decoration: none !important;
   opacity: .95;
   pointer-events: none;
-}</style>
+}
+/* 有演講（.talk 裡面含有連結）的條目：整塊高亮 + 左側色條 */
+.talks li:has(.talk a){
+  background: rgba(16,185,129,.10);     /* 淡綠底 */
+  border-left: 4px solid #10b981;       /* 左側色條（emerald-500） */
+  padding: .75rem 1rem .85rem;
+  border-radius: .75rem;
+}
+
+/* 標題後自動加一個「演講」徽章 */
+.talks li:has(.talk a) .talk-title::after{
+  content: " 演講";
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .1rem .5rem;
+  border: 1px dashed #10b981;
+  border-radius: 9999px;
+  font-size: .8rem;
+  color: #10b981;
+}
+
+/* 在「演講：」欄位前加麥克風小圖示 */
+.talks li:has(.talk a) .talk-meta .talk::before{
+  content: "🎤 ";
+}
+
+/* 沒有演講（沒有連結）的條目就保持原樣；可選：讓它們稍微淡一點 */
+.talks li:not(:has(.talk a)) .talk-title { opacity:.95; }
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -1700,6 +1728,7 @@
 	</body>
 
 </html>
+
 
 
 
