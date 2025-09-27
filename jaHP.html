@@ -1627,46 +1627,54 @@
 })();
 </script>
 <script>
-/**
- * 近況底部照片（依訪客數循環）+ 自動偵測 /photo/ 連號總張數
- * 規則：顯示第 (visitCount % total) + 1 張
- * 假設檔名：/photo/(1).jpg … /photo/(N).jpg（連號、不中斷）
- */
-(function(){
-  const SLOT_ID = 'news-photo';
-  const slot = document.getElementById(SLOT_ID);
+// 近況底部照片（依訪客數循環）— 檔名格式：/photo/001.jpg … /photo/NNN.jpg
+(function () {
+  const slot = document.getElementById('news-photo');
   if (!slot) return;
 
-  const PATH = n => `/photo/${encodeURIComponent(`(${n}).jpg`)}`;
-  const CACHE_KEY = 'news-photo:total';
-  const CACHE_TTL = 24 * 60 * 60 * 1000; // 1 天
-  const MAX_PROBE = 400;                 // 最大探測上限（可視需要調整）
+  // 檔名採三位數補零
+  const PATH = n => `/photo/${String(n).padStart(3, '0')}.jpg`;
 
-  // 用 HEAD 測試某張是否存在（不會下載整張圖）
-  async function exists(n){
+  // 快取一天；加版本號避免舊值卡住
+  const CACHE_KEY = 'news-photo:total:v2';
+  const CACHE_TTL = 24 * 60 * 60 * 1000;
+  const MAX_PROBE = 400;
+
+  // 檔案存在性：HEAD 失敗時用 Range GET 當後備（抓 1 byte）
+  async function exists(n) {
+    const url = PATH(n);
     try {
-      const r = await fetch(PATH(n), { method:'HEAD', cache:'no-store' });
-      return r.ok;
+      const r = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+      if (r.ok) return true;
+    } catch {}
+    try {
+      const r = await fetch(url, {
+        method: 'GET',
+        headers: { Range: 'bytes=0-0' },
+        cache: 'no-store'
+      });
+      return r.ok || r.status === 206;
     } catch {
       return false;
     }
   }
 
-  // 自動偵測總張數：1,2,4,8 倍增 → 二分搜尋；結果快取 1 天
-  async function discoverTotal(){
+  // 自動偵測總張數（倍增 + 二分），結果快取一天
+  async function discoverTotal() {
     try {
       const raw = localStorage.getItem(CACHE_KEY);
-      if (raw){
+      if (raw) {
         const { total, ts } = JSON.parse(raw);
-        if (Number.isFinite(total) && total > 0 && Date.now() - ts < CACHE_TTL) return total;
+        if (Number.isFinite(total) && total > 0 && Date.now() - ts < CACHE_TTL)
+          return total;
       }
-    } catch(_) {}
+    } catch {}
 
     let hi = 1;
     while (hi <= MAX_PROBE && await exists(hi)) hi *= 2;
     let lo = Math.floor(hi / 2);
-    if (lo === 0) return 0;             // 一張都沒有
-    hi = Math.min(hi, MAX_PROBE + 1);   // 上限保護
+    if (lo === 0) return 0;
+    hi = Math.min(hi, MAX_PROBE + 1);
 
     while (lo + 1 < hi) {
       const mid = Math.floor((lo + hi) / 2);
@@ -1674,13 +1682,15 @@
     }
     const total = lo;
 
-    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ total, ts: Date.now() })); } catch(_){}
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ total, ts: Date.now() }));
+    } catch {}
     return total;
   }
 
-  const to1Based = (k, total) => ((k % total) + total) % total + 1;
+  const to1 = (k, total) => ((k % total) + total) % total + 1;
 
-  function render(i){
+  function render(i) {
     const img = new Image();
     img.src = PATH(i);
     img.alt = `近況照片（第 ${i} 張）`;
@@ -1690,27 +1700,27 @@
     slot.appendChild(img);
   }
 
-  async function start(visitCount){
+  async function start(visitCount) {
     const total = await discoverTotal();
     if (!total) { render(1); return; }
 
-    // 依訪客數取張數；若剛好選到不存在（萬一中間有缺），向後回退找最近的一張
-    let idx = to1Based(Number(visitCount) || 0, total);
-    for (let step = 0; step < Math.min(10, total); step++){
+    let idx = to1(Number(visitCount) || 0, total);
+    // 若剛好抽到缺號，向後回退找最近存在的一張
+    for (let step = 0; step < Math.min(10, total); step++) {
       const cand = ((idx - 1 - step + total) % total) + 1;
       if (await exists(cand)) { idx = cand; break; }
     }
     render(idx);
   }
 
-  // 等待「訪客數已就緒」事件（由你的 GAS 計數器派發）
-  function onReady(e){
+  // 等訪客數事件（GAS counter 會丟出）
+  function onReady(e) {
     start(e.detail);
     document.removeEventListener('visitcount:ready', onReady);
   }
-  document.addEventListener('visitcount:ready', onReady, { once:true });
+  document.addEventListener('visitcount:ready', onReady, { once: true });
 
-  // 安全網：8 秒還沒拿到訪客數就先顯示第一張
+  // 安全網：8 秒沒拿到訪客數先顯示第一張
   setTimeout(() => { if (!slot.querySelector('img')) start(0); }, 8000);
 })();
 </script>
