@@ -1637,7 +1637,7 @@
   const slot = document.getElementById(SLOT_ID);
   if (!slot) return;
 
-  const PATH = n => `/photo/(${n}).jpg`;
+  const PATH = n => `/photo/${encodeURIComponent(`(${n}).jpg`)}`;
   const CACHE_KEY = 'news-photo:total';
   const CACHE_TTL = 24 * 60 * 60 * 1000; // 1 天
   const MAX_PROBE = 400;                 // 最大探測上限（可視需要調整）
