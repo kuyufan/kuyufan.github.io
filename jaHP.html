@@ -1693,13 +1693,20 @@
   const to1 = (k, total) => ((k % total) + total) % total + 1;
 
   function render(i) {
-    const img = new Image();
-    img.src = PATH(i);
-    img.alt = `近況照片（第 ${i} 張）`;
-    img.loading = 'lazy';
-    img.decoding = 'async';
+  const img = new Image();
+  img.src = PATH(i) + '?v=' + Date.now();   // 防快取卡住
+  img.alt = `近況照片（第 ${i} 張）`;
+  img.loading = 'lazy';
+  img.decoding = 'async';
+
+  img.onload = () => {
     slot.textContent = '';
     slot.appendChild(img);
+  };
+
+  img.onerror = () => {
+    slot.textContent = '（照片載入失敗）';
+  };
   }
 
   async function start(visitCount) {
