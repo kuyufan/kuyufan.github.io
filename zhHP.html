@@ -1788,117 +1788,49 @@
 })();
 </script>
 <script>
-// 近況底部照片（依訪客數循環）— 檔名：/photo/001.jpg … /photo/NNN.jpg
+/* 近況照片：依訪客數挑 1..20 的其中一張；若該張不存在就往回找上一張 */
 (function () {
   const slot = document.getElementById('news-photo');
   if (!slot) return;
 
-  const pad = n => String(n).padStart(3,'0');
-  const candidates = n => [`/photo/${pad(n)}.jpg`, `/photo/${pad(n)}.JPG`]; // 兩種大小寫都試
+  const TOTAL = 20;                       // 你目前的張數
+  const pad   = n => String(n).padStart(3,'0');
+  const wrap1 = (k,t) => ((Number(k)%t)+t)%t + 1;  // 0→1, 1→2, …, t→t
 
-  // 檢查檔案是否存在：先 HEAD，失敗再用 Range 1 byte
-  async function exists(url) {
-    try {
-      const h = await fetch(url, { method: 'HEAD', cache: 'no-store' });
-      if (h.ok) return true;
-    } catch {}
-    try {
-      const g = await fetch(url, { method: 'GET', headers: { Range: 'bytes=0-0' }, cache: 'no-store' });
-      return g.ok || g.status === 206;
-    } catch { return false; }
+  function showByVisit(k){
+    let i = wrap1(k||0, TOTAL);
+
+    // 嘗試載入第 i 張；失敗就往回找 i-1（循環）
+    const tryShow = (left) => {
+      if (left <= 0) { slot.textContent = '（沒有可用的照片）'; return; }
+      const img = new Image();
+      img.alt = `近況照片（第 ${i} 張）`;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.src = `photo/${pad(i)}.jpg`;
+      img.onload  = () => slot.replaceChildren(img);
+      img.onerror = () => { i = (i===1 ? TOTAL : i-1); tryShow(left-1); };
+    };
+
+    tryShow(TOTAL);
   }
 
-  async function firstExists(n) {
-    for (const url of candidates(n)) {
-      if (await exists(url)) return url;
-    }
-    return null;
-  }
-
-  // 快取總張數一天；提升版本避免舊值卡住
-  const CACHE_KEY = 'news-photo:total:v3';
-  const CACHE_TTL = 24 * 60 * 60 * 1000;
-  const MAX_PROBE = 400; // 你的上限
-
-  async function discoverTotal() {
-    try {
-      const raw = localStorage.getItem(CACHE_KEY);
-      if (raw) {
-        const { total, ts } = JSON.parse(raw);
-        if (Number.isFinite(total) && total > 0 && Date.now() - ts < CACHE_TTL) return total;
-      }
-    } catch {}
-
-    // 倍增 + 二分找最大連續編號（允許中間有少量缺號，因為我們用 firstExists 判定）
-    let hi = 1;
-    while (hi <= MAX_PROBE && await firstExists(hi)) hi *= 2;
-    let lo = Math.floor(hi / 2);
-    if (lo === 0) return 0;
-    hi = Math.min(hi, MAX_PROBE + 1);
-
-    while (lo + 1 < hi) {
-      const mid = Math.floor((lo + hi) / 2);
-      if (await firstExists(mid)) lo = mid; else hi = mid;
-    }
-    const total = lo;
-
-    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ total, ts: Date.now() })); } catch {}
-    return total;
-  }
-
-  // ★ 修正 off-by-one：1 → 001，2 → 002，…，(total+1) → 001
-  const to1 = (k, total) => ((Number(k) - 1) % total + total) % total + 1;
-
-  function render(url, i) {
-    const img = new Image();
-    img.src = url + '?v=' + Date.now(); // 防快取
-    img.alt = `近況照片（第 ${i} 張）`;
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    img.onload = () => { slot.replaceChildren(img); };
-    img.onerror = () => { slot.textContent = '（照片載入失敗）'; };
-  }
-
-  async function start(visitCount) {
-    const total = await discoverTotal();
-    if (!total) {
-      const url = (await firstExists(1)) || candidates(1)[0];
-      render(url, 1);
-      return;
-    }
-
-    let idx = to1(visitCount || 0, total);
-
-    // 如果剛好抽到缺號，往回找最近存在的（最多回退 10 步）
-    let url = await firstExists(idx);
-    if (!url) {
-      for (let step = 1; step <= Math.min(10, total); step++) {
-        const cand = ((idx - 1 - step + total) % total) + 1;
-        url = await firstExists(cand);
-        if (url) { idx = cand; break; }
-      }
-    }
-    if (!url) url = (await firstExists(1)) || candidates(1)[0];
-    render(url, idx);
-  }
-
-  function bootWith(n){ start(Number(n) || 0); }
-
-  // 先用全域變數（避免事件競速），沒有再等事件
+  // 1) 若訪客數已在全域就直接用；2) 否則等事件；3) 8 秒後保險顯示一張
   if (typeof window.__visitCount === 'number' && Number.isFinite(window.__visitCount)) {
-    bootWith(window.__visitCount);
+    showByVisit(window.__visitCount);
   } else {
-    document.addEventListener('visitcount:ready', e => bootWith(e.detail), { once: true });
+    document.addEventListener('visitcount:ready', e => showByVisit(e.detail), { once:true });
+    setTimeout(() => showByVisit(0), 8000);
   }
-
-  // 安全網：8 秒還沒拿到訪客數，就先挑一張
-  setTimeout(() => { if (!slot.querySelector('img')) bootWith(0); }, 8000);
 })();
 </script>
+
+
 
 </body>
 
 </html>
+
 
 
 
