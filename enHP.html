@@ -1804,7 +1804,31 @@
     });
 })();
 </script>
+<script>
+/* 近況照片：依訪客數選一張（001~020） */
+(function () {
+  const MAX = 20;                                // 你目前有 20 張
+  const img = document.getElementById('news-photo-img');
+  if (!img) return;
 
+  const pad  = n => String(n).padStart(3, '0');
+  const pick = n => ((Number(n) - 1) % MAX + MAX) % MAX + 1;  // 轉成 1..MAX
+  function showBy(n){
+    const i = pick(n);
+    img.src = 'photo/' + pad(i) + '.jpg';        // 全小寫 .jpg
+    img.alt = `近況照片（第 ${i} 張）`;
+    img.dataset.done = '1';
+  }
+
+  // 若訪客數已先到手，直接用；否則等事件；再設安全網
+  if (typeof window.__visitCount === 'number' && Number.isFinite(window.__visitCount)) {
+    showBy(window.__visitCount);
+  } else {
+    document.addEventListener('visitcount:ready', e => showBy(e.detail), { once: true });
+    setTimeout(() => { if (!img.dataset.done) showBy(1); }, 8000); // 8 秒沒拿到就用 001
+  }
+})();
+</script>
 
 </body>
 
