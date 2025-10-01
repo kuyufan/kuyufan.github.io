@@ -455,9 +455,13 @@
       <li> 多重 ζ 値の樹形化間の写像と誤差項に関する研究を近日中に arXiv に乗せる予定。日本数学会 2025 年度秋季総合分科会および 2025 年度 RIMS 共同研究（公開型）「多重 ζ 値の諸相」で発表予定。</li>
       <li> 最近の研究の焦点：p 進多重 ζ 値、p 進多重ポリログ関数、p 進 L-関数など。</li>
     </ul>
-    <figure id="news-photo" class="news-photo" data-mode="by-visit" aria-live="polite">
-      <figcaption class="visually-hidden">近況隨機照片</figcaption>
-    </figure>
+    <figure id="news-photo" class="news-photo" aria-live="polite">
+       <img id="news-photo-img"
+       src="photo/001.jpg"
+       alt="近況照片"
+       loading="lazy"
+       decoding="async">
+	</figure>
     
 
     <!-- 履歷 
@@ -1600,139 +1604,9 @@
   });
 })();
 </script>
-<script>
-(function(){
-  const el = document.getElementById('visit-count');
-  if (!el) return;
 
-  const GAS_URL = 'https://script.google.com/macros/s/AKfycbwpArinLwrR1EGLVdlqjvjtoH1EIgjgZvHqgBn0n1Q6guDP38p4Bi7hdpBOLt4GelXX/exec';
 
-  fetch(GAS_URL + '?_=' + Date.now(), { cache: 'no-store' })
-    .then(r => {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
-    .then(d => {
-  const n = Number(d.value);
-  el.textContent = Number.isFinite(n) ? n.toLocaleString() : 'N/A';
-
-  /* ★ 新增：把訪客數廣播出去，讓照片模組能收到 */
-  document.dispatchEvent(new CustomEvent('visitcount:ready', { detail: n }));
-})
-.catch(err => {
-  console.error('counter error:', err);
-  el.textContent = 'N/A';
-
-  /* ★ 新增：即使失敗也廣播 0，照片至少顯示第一張 */
-  document.dispatchEvent(new CustomEvent('visitcount:ready', { detail: 0 }));
-});
-})();
-</script>
-<script>
-// 近況底部照片（依訪客數循環）— 檔名格式：/photo/001.jpg … /photo/NNN.jpg
-(function () {
-  const slot = document.getElementById('news-photo');
-  if (!slot) return;
-
-  // 檔名採三位數補零
-  const PATH = n => `/photo/${String(n).padStart(3, '0')}.jpg`;
-
-  // 快取一天；加版本號避免舊值卡住
-  const CACHE_KEY = 'news-photo:total:v2';
-  const CACHE_TTL = 24 * 60 * 60 * 1000;
-  const MAX_PROBE = 400;
-
-  // 檔案存在性：HEAD 失敗時用 Range GET 當後備（抓 1 byte）
-  async function exists(n) {
-    const url = PATH(n);
-    try {
-      const r = await fetch(url, { method: 'HEAD', cache: 'no-store' });
-      if (r.ok) return true;
-    } catch {}
-    try {
-      const r = await fetch(url, {
-        method: 'GET',
-        headers: { Range: 'bytes=0-0' },
-        cache: 'no-store'
-      });
-      return r.ok || r.status === 206;
-    } catch {
-      return false;
-    }
-  }
-
-  // 自動偵測總張數（倍增 + 二分），結果快取一天
-  async function discoverTotal() {
-    try {
-      const raw = localStorage.getItem(CACHE_KEY);
-      if (raw) {
-        const { total, ts } = JSON.parse(raw);
-        if (Number.isFinite(total) && total > 0 && Date.now() - ts < CACHE_TTL)
-          return total;
-      }
-    } catch {}
-
-    let hi = 1;
-    while (hi <= MAX_PROBE && await exists(hi)) hi *= 2;
-    let lo = Math.floor(hi / 2);
-    if (lo === 0) return 0;
-    hi = Math.min(hi, MAX_PROBE + 1);
-
-    while (lo + 1 < hi) {
-      const mid = Math.floor((lo + hi) / 2);
-      if (await exists(mid)) lo = mid; else hi = mid;
-    }
-    const total = lo;
-
-    try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify({ total, ts: Date.now() }));
-    } catch {}
-    return total;
-  }
-
-  const to1 = (k, total) => ((k % total) + total) % total + 1;
-
-  function render(i) {
-  const img = new Image();
-  img.src = PATH(i) + '?v=' + Date.now();   // 防快取卡住
-  img.alt = `近況照片（第 ${i} 張）`;
-  img.loading = 'lazy';
-  img.decoding = 'async';
-
-  img.onload = () => {
-    slot.textContent = '';
-    slot.appendChild(img);
-  };
-
-  img.onerror = () => {
-    slot.textContent = '（照片載入失敗）';
-  };
-  }
-
-  async function start(visitCount) {
-    const total = await discoverTotal();
-    if (!total) { render(1); return; }
-
-    let idx = to1(Number(visitCount) || 0, total);
-    // 若剛好抽到缺號，向後回退找最近存在的一張
-    for (let step = 0; step < Math.min(10, total); step++) {
-      const cand = ((idx - 1 - step + total) % total) + 1;
-      if (await exists(cand)) { idx = cand; break; }
-    }
-    render(idx);
-  }
-
-  // 等訪客數事件（GAS counter 會丟出）
-  function onReady(e) {
-    start(e.detail);
-    document.removeEventListener('visitcount:ready', onReady);
-  }
-  document.addEventListener('visitcount:ready', onReady, { once: true });
-
-  // 安全網：8 秒沒拿到訪客數先顯示第一張
-  setTimeout(() => { if (!slot.querySelector('img')) start(0); }, 8000);
-})();
-</script>
+  
 </body>
 
 </html>
