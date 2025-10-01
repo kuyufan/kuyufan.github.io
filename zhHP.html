@@ -464,8 +464,12 @@
       <li> 樹狀化多重 ζ 值之間的映射與誤差項研究將於近期上傳 arXiv；並預計於日本數學會 2025 年度總合分科會與 2025 年度 RIMS 共同研究（公開型）「多重 ζ 值的諸相」發表。</li>
       <li> 近期研究重點：p 進多重 ζ 值、 p 進多重多對數、p 進 L 函數等。</li>
     </ul>
-    <figure id="news-photo" class="news-photo" data-mode="by-visit" aria-live="polite">
-      <figcaption class="visually-hidden">近況隨機照片</figcaption>
+    <figure id="news-photo" class="news-photo" aria-live="polite">
+       <img id="news-photo-img"
+       src="photo/001.jpg"
+       alt="近況照片"
+       loading="lazy"
+       decoding="async">
 	</figure>
     <!-- 履歷 
     <h3 id="cv">履歷（更新中）</h3>
@@ -1787,48 +1791,35 @@
 })();
 </script>
 <script>
-/* 近況照片：依訪客數挑 1..20 的其中一張；若該張不存在就往回找上一張 */
+/* 近況照片：依訪客數選一張（001~020） */
 (function () {
-  const slot = document.getElementById('news-photo');
-  if (!slot) return;
+  const MAX = 20;                                // 你目前有 20 張
+  const img = document.getElementById('news-photo-img');
+  if (!img) return;
 
-  const TOTAL = 20;                       // 你目前的張數
-  const pad   = n => String(n).padStart(3,'0');
-  const wrap1 = (k,t) => ((Number(k)%t)+t)%t + 1;  // 0→1, 1→2, …, t→t
-
-  function showByVisit(k){
-    let i = wrap1(k||0, TOTAL);
-
-    // 嘗試載入第 i 張；失敗就往回找 i-1（循環）
-    const tryShow = (left) => {
-      if (left <= 0) { slot.textContent = '（沒有可用的照片）'; return; }
-      const img = new Image();
-      img.alt = `近況照片（第 ${i} 張）`;
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      img.src = `photo/${pad(i)}.jpg`;
-      img.onload  = () => slot.replaceChildren(img);
-      img.onerror = () => { i = (i===1 ? TOTAL : i-1); tryShow(left-1); };
-    };
-
-    tryShow(TOTAL);
+  const pad  = n => String(n).padStart(3, '0');
+  const pick = n => ((Number(n) - 1) % MAX + MAX) % MAX + 1;  // 轉成 1..MAX
+  function showBy(n){
+    const i = pick(n);
+    img.src = 'photo/' + pad(i) + '.jpg';        // 全小寫 .jpg
+    img.alt = `近況照片（第 ${i} 張）`;
+    img.dataset.done = '1';
   }
 
-  // 1) 若訪客數已在全域就直接用；2) 否則等事件；3) 8 秒後保險顯示一張
+  // 若訪客數已先到手，直接用；否則等事件；再設安全網
   if (typeof window.__visitCount === 'number' && Number.isFinite(window.__visitCount)) {
-    showByVisit(window.__visitCount);
+    showBy(window.__visitCount);
   } else {
-    document.addEventListener('visitcount:ready', e => showByVisit(e.detail), { once:true });
-    setTimeout(() => showByVisit(0), 8000);
+    document.addEventListener('visitcount:ready', e => showBy(e.detail), { once: true });
+    setTimeout(() => { if (!img.dataset.done) showBy(1); }, 8000); // 8 秒沒拿到就用 001
   }
 })();
 </script>
 
-
-
 </body>
 
 </html>
+
 
 
 
