@@ -300,6 +300,7 @@
   height: auto;              /* 保持原始長寬比 */
   image-orientation: from-image; /* 儘量尊重 EXIF 方向 */
 }
+#news-photo img.is-hidden { display: none; }
 </style>
 	</head>
 	<body class="is-preload">
@@ -460,7 +461,7 @@
     </ul>
     <figure id="news-photo" class="news-photo" aria-live="polite">
        <img id="news-photo-img"
-       src="photo/001.jpg"
+       class="is-hidden"
        alt="近況照片"
        loading="lazy"
        decoding="async">
@@ -1805,27 +1806,39 @@
 })();
 </script>
 <script>
-/* 近況照片：依訪客數選一張（001~020） */
+/* 近況照片：依訪客數選一張（001~020），沒拿到前不顯示 */
 (function () {
-  const MAX = 20;                                // 你目前有 20 張
-  const img = document.getElementById('news-photo-img');
+  const MAX = 20;  // 你現在有 20 張
+  const img  = document.getElementById('news-photo-img');
   if (!img) return;
 
-  const pad  = n => String(n).padStart(3, '0');
-  const pick = n => ((Number(n) - 1) % MAX + MAX) % MAX + 1;  // 轉成 1..MAX
+  const pad  = n => String(n).padStart(3,'0');
+  const pick = n => ((Number(n)-1) % MAX + MAX) % MAX + 1; // 轉成 1..MAX
+
   function showBy(n){
-    const i = pick(n);
-    img.src = 'photo/' + pad(i) + '.jpg';        // 全小寫 .jpg
-    img.alt = `近況照片（第 ${i} 張）`;
-    img.dataset.done = '1';
+    const i   = pick(n);
+    const url = 'photo/' + pad(i) + '.jpg';
+
+    // 先預載，等載入成功再把真正 <img> 顯示出來，避免閃爍/先出錯圖
+    const pre = new Image();
+    pre.onload  = () => {
+      img.src = url;
+      img.alt = `近況照片（第 ${i} 張）`;
+      img.classList.remove('is-hidden');
+    };
+    pre.onerror = () => {
+      // 這裡你可以選擇顯示錯誤訊息，或保持空白
+      // document.getElementById('news-photo').textContent = '（照片載入失敗）';
+    };
+    pre.src = url;
   }
 
-  // 若訪客數已先到手，直接用；否則等事件；再設安全網
+  // 若訪客數已經回來（window.__visitCount 是你的訪客數腳本設的），就直接顯示
   if (typeof window.__visitCount === 'number' && Number.isFinite(window.__visitCount)) {
     showBy(window.__visitCount);
   } else {
-    document.addEventListener('visitcount:ready', e => showBy(e.detail), { once: true });
-    setTimeout(() => { if (!img.dataset.done) showBy(1); }, 8000); // 8 秒沒拿到就用 001
+    // 否則等事件；不做任何預設圖 ⇒ 使用者不會先看到 001.jpg
+    document.addEventListener('visitcount:ready', e => showBy(e.detail), { once:true });
   }
 })();
 </script>
