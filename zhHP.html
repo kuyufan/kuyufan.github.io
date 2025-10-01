@@ -465,8 +465,9 @@
       <li> 近期研究重點：p 進多重 ζ 值、 p 進多重多對數、p 進 L 函數等。</li>
     </ul>
     <figure id="news-photo" class="news-photo" data-mode="by-visit" aria-live="polite">
+      <img src="photo/001.jpg" alt="近況照片" loading="lazy" decoding="async">
       <figcaption class="visually-hidden">近況隨機照片</figcaption>
-    </figure>
+	</figure>
     <!-- 履歷 
     <h3 id="cv">履歷（更新中）</h3>
     <p>
@@ -1889,9 +1890,53 @@
   setTimeout(() => { if (!slot.querySelector('img')) start(0); }, 8000);
 })();
 </script>
+<script>
+(() => {
+  const holder = document.querySelector('#news-photo img');
+  if (!holder) return;
+
+  const pad = n => String(n).padStart(3,'0');
+  const pathJpg = n => `photo/${pad(n)}.jpg`;
+  const pathJPG = n => `photo/${pad(n)}.JPG`;
+
+  // 檢查檔案是否存在（用 Range 1 byte，避免整張下載）
+  async function exists(url){
+    try{
+      const r = await fetch(url, { method:'GET', headers:{ Range:'bytes=0-0' }, cache:'no-store' });
+      return r.ok || r.status === 206;
+    }catch{ return false; }
+  }
+
+  // 依訪客數挑一張；若剛好缺號就往回找最近存在的
+  async function pick(visit = 0, maxProbe = 400){
+    // 你最多有幾張可以把 maxProbe 改大/小；中間缺號也沒關係
+    let idx = ((Number(visit) % maxProbe) + maxProbe) % maxProbe + 1;
+    for (let step = 0; step < maxProbe; step++){
+      const i = ((idx - 1 - step + maxProbe) % maxProbe) + 1;
+      const a = pathJpg(i), b = pathJPG(i);     // 同時容忍 .jpg/.JPG 檔名大小寫
+      if (await exists(a)) return a;
+      if (await exists(b)) return b;
+    }
+    return pathJpg(1);
+  }
+
+  async function show(n){
+    const src = await pick(n);
+    holder.src = src;
+    holder.alt = '近況照片';
+  }
+
+  // 與你的訪客數程式（GAS）對接
+  document.addEventListener('visitcount:ready', e => show(e.detail), { once:true });
+
+  // 保險：若沒拿到訪客數，幾秒後直接顯示一張
+  setTimeout(() => { if (!holder.src || holder.src.endsWith('001.jpg')) show(0); }, 7000);
+})();
+</script>
 </body>
 
 </html>
+
 
 
 
