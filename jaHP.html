@@ -1604,7 +1604,36 @@
   });
 })();
 </script>
+<script>
+(function(){
+  const el = document.getElementById('visit-count');
+  if (!el) return;
 
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbwpArinLwrR1EGLVdlqjvjtoH1EIgjgZvHqgBn0n1Q6guDP38p4Bi7hdpBOLt4GelXX/exec';
+
+  fetch(GAS_URL + '?_=' + Date.now(), { cache: 'no-store' })
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(d => {
+      const n = Number(d.value);
+      el.textContent = Number.isFinite(n) ? n.toLocaleString() : 'N/A';
+
+      // ★ 新增：存到全域，避免事件先發後聽
+      window.__visitCount = n;
+      document.dispatchEvent(new CustomEvent('visitcount:ready', { detail: n }));
+    })
+    .catch(err => {
+      console.error('counter error:', err);
+      el.textContent = 'N/A';
+
+      // ★ 新增：失敗也寫個 0，照片至少能顯示
+      window.__visitCount = 0;
+      document.dispatchEvent(new CustomEvent('visitcount:ready', { detail: 0 }));
+    });
+})();
+</script>
 
   
 </body>
