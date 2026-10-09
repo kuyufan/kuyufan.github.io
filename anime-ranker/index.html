@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#121629" />
+<title>動畫 Elo 排名實驗室</title>
+<!-- Firebase 設定：請將 Firebase Console 顯示的 Web App 設定貼入下方。這些公開識別碼不是密碼。 -->
+<script>
+window.FIREBASE_CONFIG = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  appId: ""
+};
+</script>
+<style>
+:root{color-scheme:dark;--bg:#101424;--panel:#1a2034;--panel2:#222a42;--ink:#f1f3fd;--muted:#a4afc9;--line:#343e5d;--accent:#a79aff;--accent-strong:#c5bbff;--mint:#77e2ca;--amber:#ffcca6;--rose:#ff9eae;--shadow:0 18px 45px rgba(3,5,14,.24)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 80% 48% at 48% -7%,#363454 0%,transparent 76%),var(--bg);color:var(--ink);font:15px/1.65 system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;min-height:100vh}
+button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}a{color:var(--accent-strong)}.shell{max-width:1220px;margin:0 auto;padding:32px 24px 100px}
+header{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:20px}.eyebrow{color:var(--mint);text-transform:uppercase;font-size:12px;letter-spacing:.19em;font-weight:800}.brand h1{font-size:clamp(26px,3.5vw,39px);margin:0;letter-spacing:-.04em;line-height:1.35}.sub{margin:8px 0 0;color:var(--muted)}
+.pill{border:1px solid #515475;background:#292b48;color:#d9d3ff;border-radius:100px;padding:8px 14px;font-size:12px;font-weight:700;white-space:nowrap}
+nav{display:flex;gap:7px;margin:24px 0 24px;border-bottom:1px solid var(--line);padding-bottom:12px;flex-wrap:wrap}nav button{background:transparent;border:1px solid transparent;border-radius:11px;color:var(--muted);padding:9px 17px;font-weight:700}nav button:hover{color:var(--ink);background:var(--panel)}nav button[aria-current="page"]{background:#332f58;border-color:#554f91;color:#dfd7ff}
+.section{display:none}.section.active{display:block}.statgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:24px}.stat{padding:17px 20px;border:1px solid var(--line);background:rgba(29,35,57,.76);border-radius:15px}.stat .label{font-size:12px;color:var(--muted)}.stat .value{font-size:26px;font-weight:800;line-height:1.4;font-variant-numeric:tabular-nums}.stat .hint{color:var(--muted);font-size:12px}
+.surface{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:17px;box-shadow:var(--shadow)}.surface.flat{box-shadow:none}.surface h2{margin:0 0 7px;font-size:19px;letter-spacing:-.015em}.surface p{margin:7px 0;color:var(--muted)}.splithead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:17px}
+.controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.field{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}.field label{white-space:nowrap}select,input,textarea{color:var(--ink);background:#10182d;border:1px solid #4a536d;border-radius:10px;padding:10px 12px;outline:none;min-width:0}input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #a79aff20}select{padding-right:24px}textarea{width:100%;min-height:115px;resize:vertical}.btn{border:1px solid #545e81;background:#2a344e;color:var(--ink);border-radius:10px;padding:10px 16px;font-weight:700;line-height:1.3;transition:background .15s,border-color .15s,transform .15s}.btn:hover{background:#384462;border-color:#8793ba}.btn:active{transform:translateY(1px)}.btn.primary{background:#8c7af6;color:#121127;border-color:#a79aff}.btn.primary:hover{background:#afa2ff}.btn.mint{background:#53bfa9;border-color:#77e2ca;color:#0b2525}.btn.danger{color:#ffc8d0;border-color:#88596e;background:#49273c}.btn.danger:hover{background:#67354e}.btn.small{padding:7px 10px;font-size:12px}.btn.ghost{border-color:transparent;background:transparent;color:var(--muted)}.btn.ghost:hover{background:var(--panel2);color:var(--ink)}
+.pairgrid{display:grid;grid-template-columns:minmax(0,1fr) 80px minmax(0,1fr);gap:14px;align-items:stretch}.animecard{display:flex;flex-direction:column;min-height:290px;justify-content:space-between;border:1px solid #5a6381;background:linear-gradient(156deg,#292b52 0%,#202740 70%);border-radius:17px;padding:24px;text-align:left;width:100%;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s}.animecard:hover{transform:translateY(-3px);border-color:#b4a8ff;box-shadow:0 12px 35px #05082050}.animecard.right{background:linear-gradient(156deg,#254044,#202740 75%)}.animecard.right:hover{border-color:#86edda}.cardtag{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);font-weight:750}.pick{text-transform:uppercase;letter-spacing:.1em;color:var(--accent-strong)}.right .pick{color:var(--mint)}.animecard h3{font-size:clamp(20px,2.6vw,30px);line-height:1.4;margin:20px 0 14px;overflow-wrap:anywhere;letter-spacing:-.025em}.rating{font-variant-numeric:tabular-nums;font-size:27px;font-weight:800}.minor{font-size:12px;color:var(--muted)}.versus{display:flex;justify-content:center;align-items:center;color:#838ba7;font-size:19px;letter-spacing:.06em;font-weight:900}.pairactions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}.shortcuts{font-size:12px;text-align:center;color:var(--muted);margin-top:12px}.shortcuts kbd{border:1px solid #555f7a;border-bottom-width:2px;border-radius:5px;padding:1px 5px;background:#222a42;font:11px ui-monospace,monospace}
+.notice{padding:13px 16px;border-radius:11px;background:#202a45;border-left:3px solid var(--accent);font-size:13px;color:#ccd5ef;margin-bottom:17px}.notice.warn{border-color:var(--amber)}.empty{text-align:center;color:var(--muted);padding:50px 12px}.empty strong{display:block;font-size:20px;color:var(--ink)}
+.tablewrap{width:100%;overflow-x:auto}table{width:100%;border-collapse:collapse;table-layout:fixed}thead{color:var(--muted);font-size:12px;background:#22283e}th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}tbody tr:hover{background:#252c44}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}td.titlecol{font-weight:650;overflow-wrap:anywhere}.rankpos{display:inline-flex;align-items:center;justify-content:center;width:31px;height:31px;border-radius:8px;background:#2c344b;font-weight:800;color:#d9dded}.rankpos.top{background:#463d62;color:#e2c9ff}.muted{color:var(--muted)}.smalltext{font-size:12px}.state{font-size:11px;border:1px solid #6c6272;border-radius:100px;padding:2px 7px;color:#e0d0d7;white-space:nowrap}.state.ready{color:#9ee9ce;border-color:#346e64}.state.archived{color:#9da6b8;border-color:#67718a}
+.toolgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.toolgrid input{width:100%}.managehead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.search{width:min(100%,340px)}.pager{display:flex;justify-content:flex-end;align-items:center;gap:12px;margin-top:14px;color:var(--muted);font-size:13px}
+.historyrow{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}.historynames{flex:1;min-width:0;font-size:13px;overflow-wrap:anywhere}.historynames .win{color:var(--mint);font-weight:800}.historynames .draw{color:var(--amber);font-weight:800}.historynames .lose{color:var(--muted)}.historydate{color:var(--muted);font-size:11px;flex:none}.guide{line-height:1.85;color:#c4cce2}.guide strong{color:#f0f3ff}.guide code{background:#27314a;padding:2px 5px;border-radius:5px}.settinggroup{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.hr{height:1px;background:var(--line);margin:22px 0}details summary{cursor:pointer;font-weight:700;color:#d5cfff;padding:8px 0}details[open] summary{margin-bottom:12px}.manualinputs{display:flex;gap:9px;flex-wrap:wrap}.manualinputs input{flex:1 1 240px}
+#toast{position:fixed;bottom:25px;right:25px;z-index:99;max-width:min(460px,calc(100vw - 36px));background:#302f53;border:1px solid #706baf;border-radius:12px;color:#f7f5ff;padding:13px 18px;box-shadow:0 20px 35px #05061588;display:none}footer{margin-top:35px;color:#7f89a7;text-align:center;font-size:12px}
+@media(max-width:800px){.statgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pairgrid{grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);gap:8px}.animecard{padding:16px;min-height:250px}.animecard h3{font-size:19px}.rating{font-size:22px}.versus{font-size:15px}.toolgrid{grid-template-columns:1fr}.historydate{display:none}}
+@media(max-width:520px){.shell{padding:24px 13px 70px}.surface{padding:16px;border-radius:14px}.stat{padding:12px}.stat .value{font-size:23px}nav button{flex:1;font-size:13px;padding:9px 7px}.pairgrid{grid-template-columns:1fr 1fr;gap:9px}.versus{display:none}.animecard{min-height:258px;padding:14px}.animecard h3{font-size:18px}.cardtag{display:block}.pairactions .btn{flex:1 1 90px}.hide-mobile{display:none}.historyrow{gap:7px}}
+
+.cloudgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.cloudform{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.cloudform input{min-width:160px;flex:1}.cloudnote{font-size:13px;color:var(--muted);overflow-wrap:anywhere}.cloudgood{color:var(--mint)}.cloudbad{color:var(--amber)}.cloudbox{padding:13px 16px;border:1px solid var(--line);background:#1e2842;border-radius:12px;margin:12px 0}.copynote{font-size:12px;color:var(--muted)}
+@media(max-width:720px){.cloudgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+  <div class="brand"><div class="eyebrow">ANIME • ELO LAB</div><h1>動畫排名實驗室 <span style="color:var(--accent)">↗</span></h1><p class="sub">兩部動畫，選出你心中的贏家。讓偏好慢慢變成排名。</p></div>
+  <span class="pill" id="saveIndicator">● 本機自動儲存</span>
+</header>
+<nav aria-label="主要功能">
+  <button type="button" data-nav="compare" aria-current="page">⚔ 對戰</button>
+  <button type="button" data-nav="ranking">🏆 排行榜</button>
+  <button type="button" data-nav="library">▦ 作品管理</button>
+  <button type="button" data-nav="data">⚙ 資料與說明</button>
+  <button type="button" data-nav="cloud">☁ 雲端同步</button>
+</nav>
+<div class="statgrid" id="stats"></div>
+<main>
+<section class="section active" id="sec-compare" aria-label="動畫對戰">
+  <div class="surface">
+    <div class="splithead"><div><h2>今日來場對決</h2><p>點擊較喜歡的動畫，即記錄一場勝利。</p></div><div class="controls"><div class="field"><label for="matchMode">配對方式</label><select id="matchMode"><option value="smart">智慧配對</option><option value="new">優先未評作品</option><option value="random">完全隨機</option></select></div><div class="field"><label for="kFactor">K 值</label><select id="kFactor"><option value="16">16</option><option value="24">24</option><option value="32" selected>32</option><option value="40">40</option></select></div></div></div>
+    <div id="pairContent"></div>
+    <div class="pairactions"><button class="btn" data-action="draw" id="drawButton">🤝 平手 <span class="hide-mobile">（S）</span></button><button class="btn" data-action="skip">⤨ 換一組 <span class="hide-mobile">（空白鍵）</span></button><button class="btn ghost" data-action="undo">↶ 撤銷上一場</button></div>
+    <div class="shortcuts">快捷鍵：<kbd>A</kbd> 左邊勝　<kbd>S</kbd> 平手　<kbd>D</kbd> 右邊勝　<kbd>Space</kbd> 換一組　<kbd>Z</kbd> 撤銷</div>
+    <details style="margin-top:18px"><summary>指定兩部作品對戰（進階功能）</summary><div class="manualinputs"><input id="manualA" list="animeSuggestions" placeholder="左邊：輸入完整動畫名稱" /><input id="manualB" list="animeSuggestions" placeholder="右邊：輸入完整動畫名稱" /><button type="button" class="btn" data-action="manual">設定對戰</button></div><datalist id="animeSuggestions"></datalist><p class="smalltext">需從下拉建議選擇完整作品名稱。指定配對不會立即記錄勝負。</p></details>
+  </div>
+  <div class="surface flat"><div class="splithead"><h2>最近對戰</h2><button class="btn small ghost" data-nav="data">資料管理 →</button></div><div id="historyRecent"></div></div>
+</section>
+<section class="section" id="sec-ranking" aria-label="排行榜">
+  <div class="surface"><div class="splithead"><div><h2>當前排行榜</h2><p>等級分是偏好估計，並非作品的客觀品質分數。</p></div><div class="controls"><input class="search" id="rankSearch" type="search" placeholder="搜尋動畫名稱…" aria-label="搜尋排行榜" /><select id="rankSort" aria-label="排序方式"><option value="rating">依等級分</option><option value="games">依對戰次數</option><option value="name">依名稱</option></select><select id="rankMinGames" aria-label="最少對戰次數"><option value="0">全部作品</option><option value="5">至少 5 場</option><option value="10">至少 10 場</option><option value="20">至少 20 場</option></select></div></div><div class="controls" style="margin:0 0 14px"><button class="btn primary" data-action="copyAll">📋 複製完整排行榜</button><button class="btn" data-action="copyFiltered">複製目前篩選結果</button><span class="copynote">包含所有頁，不限於目前顯示的 40 筆；可貼入 Word 或 TXT。</span></div><div class="notice warn">剛開始所有作品均為 1500 分。對戰太少時名次波動會很大；建議優先參考已累積至少 10 場對戰的作品。</div><div id="rankTable"></div><div class="pager" id="rankPager"></div></div>
+</section>
+<section class="section" id="sec-library" aria-label="管理作品">
+  <div class="toolgrid">
+    <div class="surface flat"><h2>加入新作品</h2><p>每季看完新動畫，直接輸入名稱即可加入。</p><div class="controls" style="margin-top:17px"><input id="addOne" placeholder="動畫名稱" style="flex:1" /><button class="btn primary" data-action="addOne">＋ 新增</button></div></div>
+    <div class="surface flat"><h2>一次加入多部</h2><p>每行一部，會自動忽略已存在的同名作品。</p><textarea id="addBulk" placeholder="作品 A&#10;作品 B&#10;作品 C"></textarea><button class="btn" data-action="addBulk">批次加入</button></div>
+  </div>
+  <div class="surface"><div class="splithead"><div><h2>作品清單</h2><p>封存作品後不再參與新配對；原有對戰紀錄仍保留。</p></div><div class="controls"><input id="librarySearch" class="search" type="search" placeholder="搜尋作品…" aria-label="搜尋作品" /><select id="libraryFilter" aria-label="顯示作品"><option value="active">進行中</option><option value="archived">已封存</option><option value="all">全部</option></select></div></div><div id="libraryTable"></div><div class="pager" id="libraryPager"></div></div>
+</section>
+<section class="section" id="sec-data" aria-label="資料與說明">
+  <div class="toolgrid"><div class="surface flat"><h2>儲存與備份</h2><p>未登入雲端時使用本機儲存；登入後，作品及對戰會寫入你的私人 Firestore 資料庫。無論何種模式，都建議定期備份 JSON。</p><div class="settinggroup"><button class="btn primary" data-action="export">⬇ 備份 JSON</button><button class="btn" data-action="exportCSV">⬇ 排行榜 CSV</button></div><div class="field" style="flex-wrap:wrap"><label for="importFile">從備份恢復</label><input type="file" accept=".json,application/json" id="importFile" style="max-width:100%" /></div><p class="smalltext">匯入備份會取代目前所有作品和對戰紀錄，操作前會再次確認。</p></div>
+    <div class="surface flat"><h2>記錄調整</h2><p>更正錯誤選擇時，可以刪除特定對戰；全部等級分會按剩餘對戰順序重新計算。</p><div class="settinggroup"><button class="btn danger" data-action="clearMatches">清空對戰（保留作品）</button><button class="btn danger" data-action="resetAll">完全重設為初始清單</button></div><p class="smalltext">這兩項操作不可直接撤銷，請先備份。</p></div></div>
+  <div class="surface flat"><h2>對戰記錄（最近 60 場）</h2><div id="historyAll"></div></div>
+  <div class="surface flat"><h2>這個排名如何運作？</h2><div class="guide">
+    <p><strong>計分：</strong>每部動畫起始 Elo 1500 分。每場對戰依兩部的預估勝率調整分數。若 A 的預期分數為 <code>E=1/(1+10^((R_B-R_A)/400))</code>，則新分數為 <code>R_A'=R_A+K×(S-E)</code>，其中勝／和／敗的 <code>S</code> 分別為 1、0.5、0。兩部動畫分數增減總和為 0。</p>
+    <p><strong>K 值：</strong>K=32 是預設。數值越大，單場影響越大。系統會逐場記錄當時的 K 值，之後修改 K 不會改動先前對戰的計分方式。</p>
+    <p><strong>智慧配對：</strong>優先考慮對戰較少、評分相近，而且最近沒有碰過面的兩部作品；仍會偶爾安排跨分數對戰。若要確保新加入的動畫被看見，可切換「優先未評作品」。</p>
+    <p><strong>封存與刪除：</strong>封存只停止參與新對戰，歷史紀錄仍保留並影響其他作品分數。永久刪除則連它參與的對戰一起刪除，整個 Elo 排名重新計算。</p>
+    <p><strong>資料位置：</strong>未登入時使用瀏覽器 <code>localStorage</code>；設定 Firebase 並登入後，資料儲存在 Cloud Firestore，手機和電腦使用同一帳號可自動同步。同步期間需保持連線；如遇失敗請立即備份 JSON。</p>
+  </div></div>
+</section>
+<section class="section" id="sec-cloud" aria-label="雲端同步">
+  <div class="surface"><h2>☁ 雲端同步</h2><p>將這個網站放到 GitHub Pages，連接 Firebase 後，在手機與電腦以同一帳號登入即可共用排行榜。帳號登入狀態也會保留。</p>
+    <div class="cloudbox"><strong id="cloudState">本機模式</strong><div id="cloudDetail" class="cloudnote">尚未設定 Firebase 或尚未登入。</div></div>
+    <div id="cloudConfigHelp" class="notice warn">尚未填入 Firebase 設定。請依附帶教學在 Firebase 建立專案、開啟電子郵件登入與 Firestore，並將 Web App 設定填入 index.html 頂部的 FIREBASE_CONFIG。</div>
+    <div id="cloudAuth" hidden>
+      <div id="cloudSignedOut"><h2>登入自己的雲端資料</h2><p>第一次使用請先「建立帳號」，往後在其他裝置選「登入」。本版使用電子郵件／密碼登入，請妥善保管密碼。</p><form id="cloudLoginForm" class="cloudform"><input type="email" id="cloudEmail" autocomplete="username" placeholder="電子郵件" required /><input type="password" id="cloudPassword" autocomplete="current-password" placeholder="密碼（至少 6 字元）" minlength="6" required /><button class="btn primary" type="submit">登入</button><button type="button" class="btn" id="cloudSignUp">建立帳號</button></form></div>
+      <div id="cloudSignedIn" hidden><div class="controls"><span>登入帳號：<strong id="cloudUser"></strong></span><button class="btn small" id="cloudRetry" type="button">重新檢查同步</button><button class="btn small" id="cloudDownloadPending" type="button" hidden>⬇ 下載未同步紀錄</button><button class="btn small ghost" id="cloudSignOut" type="button">登出</button></div><p class="cloudnote">雲端模式會同步作品、對戰與分數（分數由對戰紀錄重新計算）。本機舊紀錄不會被自動覆蓋；第一次啟用雲端時可選擇匯入。請在重要操作後確認上方狀態為「已同步」。</p></div>
+    </div>
+  </div>
+  <div class="surface flat"><h2>資料安全與注意事項</h2><div class="guide"><p><strong>帳號隔離：</strong>Firestore 安全規則僅允許已登入使用者讀寫自己 UID 下的資料。Firebase Web 設定屬於公開識別資訊，不能代替資料庫安全規則。</p><p><strong>跨裝置：</strong>兩台裝置都要連上網路並登入同一個 Firebase 帳號。修改後會自動更新另一台的畫面；若網路不穩、授權失敗或超出額度，會出現警告。</p><p><strong>舊資料遷移：</strong>第一次登入尚未初始化的帳號時，可將目前瀏覽器的資料上傳。建議在遷移前先下載 JSON 備份。</p><p><strong>不能只靠雲端：</strong>Firebase 不是永久無限免費儲存，須留意專案額度及帳號維護。重要紀錄仍建議定期下載備份。</p></div></div>
+</section>
+</main><footer>ANIME ELO LAB · 本機／雲端雙模式 · 定期備份 JSON</footer>
+</div><div id="toast" role="status" aria-live="polite"></div>
+<script id="initial-titles" type="application/json">["紫羅蘭永恆花園", "命運石之門", "心理測量者", "刀劍神域", "出租女友", "橘色奇蹟", "我推的孩子", "無職轉生", "Re從零開始的異世界生活", "我們的存在", "花牌情緣", "葬送的芙莉蓮", "進擊的巨人", "關於我轉生變成史萊姆這檔事", "在地下城尋求邂逅是否搞錯了什麼", "藍箱", "灰色的果實", "擅長捉弄人的高木同學", "王者天下", "魔法科高校的劣等生", "藥屋少女的呢喃", "彈珠汽水瓶裡的千歲同學", "CLANNAD", "魔法水果籃", "Re LIFE", "我獨自升級", "罪惡王冠", "終將成為妳", "86-不存在的地區-", "狼與辛香料", "來自新世界", "跨越種族與你相戀", "東京卍復仇者", "娜娜奈奈NANA", "白色相簿", "無名記憶", "永遠的黃昏", "四月是你的謊言", "輝夜大小姐想讓人告白", "一週的朋友", "龍與虎", "青春豬頭不會夢見兔女郎學姐", "鬼人幻燈抄", "寒蟬鳴泣之時", "Angel Beats", "後天的方向", "有你的小鎮", "你所期望的永遠/願此刻永恆", "魔法使的新娘", "歡迎來到實力至上主義的教室", "新石記", "重啟咲良田", "鬼滅之刃", "只有我不存在的街道", "Vivy fluorite eye’s song", "絕緣的暴風雨", "來自深淵", "約定的夢幻島", "狂賭之淵", "境界的彼方", "未來日記", "Little Busters", "香格里拉·開拓異境-糞作獵手挑戰神作-", "百變的七倉同學", "未聞花名", "花開伊呂波", "暗殺教室", "青春之旅", "告白實行委員會", "可朔性記憶", "Just Because", "夏日重現", "吹響吧！上低音號", "亞托莉-我摯愛的時光-", "明日同學的水手服", "影宅", "達爾文遊戲", "平凡職業成就世界最強", "DARLING in the FRANXX", "家有女友", "Lycoris Recoli莉可麗絲", "我們的重置人生", "來自風平浪靜的明日", "好想告訴你", "五等分的新娘", "櫻花庄的寵物女孩", "月色真美", "戀愛無法用雙子除盡", "戀上換裝娃娃", "記憶縫線", "戀愛隨意鍵接", "我的幸福婚姻", "尋找失去的未來", "薰香花朵凜然綻放", "蜂蜜檸檬蘇打", "戀愛與謊言", "玻璃之唇", "真實之淚", "我們不可能成為戀人！絕對不行。（※似乎可行？）", "死亡筆記本", "我的青春戀愛物語果然有問題", "神統記", "偽戀", "無論何時我們的戀情都是10厘米", "如果這叫愛情感覺會很噁心", "敗北女主太多了", "不時輕聲地以俄語遮羞的鄰座艾莉同學", "12歲～小小胸口的怦然心動～", "聖女魔力無所不能", "關於我在無意間被隔壁的天使變成廢柴這件事", "繼母的拖油瓶是我的前女友", "我們大家的河合庄", "在世界盡頭詠唱愛的少女", "俺物語", "寄生獸", "銀砂糖師與黑妖精", "剃掉鬍子的我與撿到的女高中生", "獻祭公主與獸王", "明天，美食廣場見", "AKB0048", "弱角友崎同學", "轉生成女性向遊戲只有毀滅結局的壞人大小姐", "海賊王女", "直至魔女消逝", "灰原同學重返過去，開啟所向無敵的第二輪青春遊戲", "夏日口袋", "我心裡的糟糕念頭", "Citrus-柑橘物香氣-", "我的妹妹不可能那麼可愛", "OVERLORD", "陰陽回天Re：Birth", "終究，與你相戀", "夫婦以上戀人未滿", "戀如雨止", "複製品的我也會談戀愛", "想結束這場「我愛你」的遊戲", "轉生貴族憑鑑定技能扭轉人生", "你與我最後的戰場，亦或是世界起始的聖戰", "隨興旅-That’s Journey-", "鄰座的怪同學", "星辰墜落之國的妮娜", "輪迴第7次的惡役令孃，在前敵國享受自由自在的新娘生活", "魔導具師妲莉亞永不妥協", "噬血狂襲", "怕痛的我把防禦力點滿就對了", "科學的超電磁炮", "加速世界", "杖與劍的魔劍譚", "地。-關於地球的運動-", "堤亞穆帝國物語～從斷頭台開始，公主重生後的逆轉人生", "以死亡遊戲為生", "赤髮白雪姬", "春夏秋冬代行者 春之舞", "3D女友", "戀語輕唱", "為美好世界獻上祝福", "羈絆者", "杜鵑婚約", "堀與宮村", "緣結甘神家", "遊戲人生", "超時空要塞Δ", "判處勇者刑 懲罰勇者9004隊刑務紀錄", "Silent Witch 沉默魔女的秘密", "公爵家的未婚妻", "晨曦公主", "School Days/日在校園", "破滅的王國", "屍體如山的死亡遊戲", "歸還者的魔法要特別", "黃泉使者", "詐欺遊戲", "泛而不精的我被逐出了勇者隊伍", "外科醫生愛麗絲", "真的要結婚嗎", "東京地震8.0", "終末的伊澤塔", "徒然喜歡你", "我們的雨色協議", "16bit的感動", "白砂的水族館", "路人女主的養成方法", "盾之勇者成名錄", "想成為影之強者", "我和班上第二可愛的女生成為朋友", "幼女戰記", "惡食千金與狂血公爵", "小書癡的下剋上", "終結的熾天使", "來自色彩繽紛的明日", "彼方的阿斯特拉", "轉生王女與天才千金的魔法革命", "優雅貴族的休假指南", "CUE！", "義妹生活", "理科生墜入情網故嘗試證明", "式守同學不只可愛而已", "月光下的異世界之旅", "宅男腐女戀愛真難", "間諜教室", "豬肝記得煮熟再吃", "女騎士成為蠻族新娘", "Murder Mystery of the Dead", "海盜戰記", "末日時在做什麼？有沒有空？可以來拯救嗎？", "轉生成蜘蛛又如何", "女神的露天咖啡廳", "青春紀行", "這公司有我喜歡的人", "厄里斯的聖杯", "小魔女學園", "我的英雄學院", "指尖相觸，戀戀不捨", "為何我的世界被遺忘了", "七魔劍支配天下", "黑色五葉草", "Charlotte", "無能的奈奈", "相合之物", "Love Live", "魔王2099", "現實主義勇者的王國重建記", "比宇宙更遠的地方", "水屬性的魔法使", "魔術師庫諾看得見一切", "瀕危物種少女", "東京喰種", "22/7", "中二病也要談戀愛", "衣衫襤褸的大小姐受到姐姐前未婚夫的寵愛", "稻荷戀之歌", "學生會長是女僕", "這裡是充滿笑容的職場", "聲優廣播的幕前幕後", "成為悲劇元兇的最強異端，最後頭目女王為了人民犧牲奉獻", "轉生為第七王子，隨心所欲的魔法學習之路", "久保同學不放過我", "妻子變成小學生", "公爵千金的家庭教師", "男女之間的友情存在嗎？(不，不存在！！)", "被鄰國王子溺愛的反派千金", "一兆遊戲", "溜掉的大魚比不上自己釣的魚", "THE NEW GATE", "Fate/Zero", "魔法使的約定", "經驗豐富的你和經驗為零的我交往的故事", "你又被殺了呢，偵探大人", "成為名垂青史的惡役千金", "聖女因太過完美不夠可愛而被廢除婚約並賣到鄰國", "魔王學院的不適任者", "和山田談場LV999的戀愛", "哥布林殺手", "重生大小姐正在攻略龍帝殿下", "工作細胞", "約會大作戰", "魔法少女小圓", "治癒魔法的錯誤使用方法", "老夫老妻重返青春", "涼宮春日的憂鬱/長門有希的消失", "最強的王者，在第二次的人生能做什麼？", "群花綻放，彷彿修羅", "雖然我是註定沒落的貴族，閒來無事只好來深究魔法", "處刑少女的生存之道", "冰菓", "山田君與七魔女", "我們真的學不來", "間諜家家酒", "受到猩猩之神庇佑的大小姐受到王立騎士團寵愛", "反派千金等級99～我是隱藏頭目但不是魔王～", "清戀", "我的妹妹是黃漫老師", "終末的後宮", "英雄王，為了窮盡武道而轉生", "肌肉魔法使", "貴族轉生 得天眷顧一出生就獲得最強力量", "喜歡的沖繩妹說方言", "龍王的工作", "漆黑的子彈", "和青梅竹馬之間不會有戀愛喜劇", "帝乃三姊妹意外地容易相處", "世界頂尖的暗殺者轉生為異世界貴族", "能幫我弄乾淨嗎？", "我的可愛對黑岩目高不管用", "即使如此依舊步步逼近", "2.5次元的誘惑", "境界觸發者", "急戰5秒殊死鬥", "給不滅的你", "安逸領主的愉快領地防衛", "自稱賢者弟子的賢者", "午夜的傾心旋律", "我喜歡的是妹妹但不是妹妹", "三月的獅子", "鄉下大叔成為劍聖", "朋友的妹妹只纏著我", "天才王子的赤字國家重生術", "白聖女與黑牧師", "身為魔族的我想向勇者小隊的可愛女孩告白", "咒術迴戰", "上伊那牡丹，醉姿如百合", "書蟲公主", "嘆息的亡靈好想引退", "多田君不戀愛", "謊言遊戲", "瞬間治癒卻被當成廢物踢出隊伍的天才治療師，改當無照治療師快樂過活", "百合就是我的工作", "龍族", "小桃小栗", "古諾希亞", "天國大魔境", "人渣的本願", "相反的你和我", "新人大叔冒險者，被最強隊伍操到死成無敵", "我要【招架】一切～反誤解的世界最強想成為冒險家", "冰屬性男子與無表情女子", "藍色監獄", "不中用的前輩", "魔法禁書目錄", "異世界藥局", "滿懷美夢的少年是現實主義者", "Clevatess -魔獸之王與嬰兒與屍之勇者-", "黑貓與魔女的教室", "最狂輔助職業【話術士】世界最強戰團聽我號令", "靠廢柴技能【狀態異常】成為最強的我將蹂躪一切", "緋紅連結", "事與願違的不死冒險者", "因為不是真正的夥伴而被逐出勇者隊伍，流落到邊境展開慢活人生", "擁有超常技能的異世界美食家", "青梅竹馬絕對不會輸的戀愛喜劇", "魔法老師/悠久持有者", "最後可以再拜託您一件事嗎", "異世界的處置依社畜而定", "結界師", "被勇者隊伍開除的馴獸師，邂逅最強種的貓耳少女", "最強陰陽師的異世界轉生記", "AI電子基因", "勇者之渣", "黑之召喚士", "對我垂涎欲滴的非人少女", "在異世界或的超強能力的我，在現實世界照樣無敵~等級提升改變人生命運~", "因為是反派大小姐所以養了魔王", "從零開始的魔法書/魔法使黎明期", "打工魔王", "甜點轉生", "琉璃的寶石", "精靈幻想記", "其實，我才是最強的？", "轉生貴族的異世界冒險~不知自重的諸神的使徒~", "灼眼的夏娜", "賢者之孫", "聖劍學院的魔劍使", "魔法公主的小煩惱", "失格紋的最強賢者", "轉生成為劍", "鄰人似銀河", "金牌得主", "異世界默示錄麥諾格拉從毀滅文明開始征服世界", "爆肝工程師的異世界狂想曲", "異世界魔王與召喚少女的奴隸魔術", "史上最強大魔王轉生成村民A", "比方說，這是個出身魔王關附近的少年在新手村生活的故事", "脫離了A級隊伍的我 和從前的徒弟們前往迷宮深處", "幹雜活我乃最強", "BanG Dream My Go", "前輩是男孩子", "章魚嗶的原罪", "戀愛FLOPS", "被解雇的暗黑士兵慢生活的第二人生", "我和班上最討厭的女生結婚了", "雖然是公會的櫃檯小姐，但因為不想加班所以打算獨自討伐迷宮頭目", "因想當冒險者而前往大都市的女兒已經升到了S級", "偵探已死", "萊莎的煉金工房~常暗女王與秘密藏身處~", "夏色奇蹟", "為了在異世界摸摸毛茸茸而努力", "轉生之後的我變成了龍蛋～目標是世界最強～", "北海道辣妹賊拉可愛", "古見同學有交流障礙", "強者的新傳說", "歌聲是法式千層酥", "暗月：月之祭壇", "let's play 充滿挑戰的人生", "終將成為最強煉金術師", "不正經的魔術講師與禁忌教典", "被隊伍驅逐的治癒師，其實是最強的", "為了養老去異世界存8萬金幣", "我推是反派大小姐", "至高之牌", "歡迎來到日本，精靈小姐", "野生的大魔王出現了", "差點在迷宮深處被信任的夥伴殺掉", "父親是英雄 母親是精靈 身為女兒的我是轉生者", "歡迎光臨流放者食堂", "婚姻劇毒", "不善吸血的吸血鬼", "暴食狂戰士", "冰劍的魔術師要統一世界", "文豪野犬", "矢野同學的普通日常", "異世界悠閒紀行～邊養娃邊當冒險者～", "撿走被人悔婚的千金，教會她壞壞的幸福生活", "迷宮飯", "從lv2開始開外掛的前勇者候補", "雖然等級只有一級但固有技能是最強的", "身為魔王的我娶了奴隸精靈為妻，該如何表白我的愛？", "魔王軍最強的魔術師是人類", "我家的英雄", "轉生惡女的黑歷史", "國王遊戲", "女性向遊戲世界對路人角色很不友好", "隊友太弱所以貫徹輔助的宮廷魔法師 慘遭流放目標卻是最強", "佐佐木與文鳥小嗶", "最強肉盾的迷宮攻略～擁有稀少技能體力9999的肉盾，被勇者隊伍辭退了～", "緋彈的亞莉亞", "身為暗殺者的我明顯比勇者還強", "我不是說了能力要平均值嗎", "現在的是哪一個多聞！？", "靠著魔法藥水在異世界活下去", "超人高中生們即便在異世界也能從容生存", "花舞少女", "非人學生與厭世教師", "小阿爾瑪想要成為家人", "打了300年的史萊姆不知不覺就練到滿級", "世界盡頭的聖騎士", "放學後桌遊俱樂部", "無彩限的幻影世界", "裏世界野餐", "精靈使的劍舞", "點滿農民相關技能後，不知為何就變強了", "第二次被異世界召喚", "落地騎士英雄譚", "派對咖孔明", "魔王勇者", "被驅逐出勇者隊伍的白魔導師，被S級冒險者撿到", "神渴望著遊戲", "只有我能進入的隱藏地下城", "我立於百萬生命之上", "線上遊戲的老婆不可能是女生", "川柳少女", "骸骨騎士大人異世界冒險中", "TARI TARI", "小林家的龍女僕", "紫雲寺家的兄弟姊妹", "總之就是非常可愛", "心靈代碼", "不幸職業【鑑定士】其實是最強的", "異世界休閒農家", "相殺相愛", "魔法製造者～異世界魔法的製作方法～", "地獄模式～喜歡速通遊戲的玩家在廢設定異世界無雙～", "重來吧，魔王大人！R", "賽馬娘", "影子籃球員", "比太陽更耀眼的星星", "秘密內幕～女警的逆襲～", "人形機器人瑪麗", "Happy Sugar Life", "阿爾蒂", "成神之日", "戀愛小行星", "博多豚骨拉麵團", "請在伸展台上微笑", "K-ON", "自稱壞人大小姐的婚約者觀察記錄", "虛構推理", "昴宿七星", "地下城裡的人們", "時光流逝，飯菜依舊美味", "無職英雄 技能什麼的毫無用處", "真白之音", "夜晚的水母不會游泳", "灰與幻想的格林姆迦爾", "我的妻子沒有感情", "雙人單身露營", "契約之吻", "天久鷹央的推理病歷表", "冰之城牆", "凍牌～地下麻將鬥牌錄～", "S級怪獸《貝希摩斯》被誤認成小貓，成為精靈女孩的騎士(寵物)一起生活", "再見龍生，你好人生", "捏造陷阱-NTR-", "中年男的異世界網購生活", "某大叔的VRMMO活動記", "從路人角色開始的探索英雄譚", "被稱為廢物的原英雄，被家裡流放後隨心所欲地活下去", "親吻姐姐", "黃昏旅店", "喜歡的人忘記戴眼鏡了", "大小姐與看門狗", "朱音落語", "學園默示錄", "不死少女的謀殺鬧劇", "一個人的異世界攻略", "風夏", "渡君的XX即將崩壞", "轉生賢者的異世界生活", "身為VTuber的我因為忘記關台而成為了傳說", "吸血鬼男子宿舍", "異世界四重奏", "魔都精兵的奴隸", "素材採集家的異世界旅行", "艦隊收藏", "婚戒物語", "中年大叔轉生反派千金", "家裡蹲吸血姬的鬱悶", "孤獨搖滾", "只要長得可愛即使是變態你也喜歡嗎", "甘城輝煌樂園救世主", "費馬的料理", "無口的柏田小姐與元氣的太田君", "女友成雙", "勇者辭職不干了", "秒殺外掛太強了，異世界的傢伙們根本就不是對手", "綻放的阿爾斯諾特利亞", "不良少女", "想擺脫公主教育的我", "沒有辣妹會對阿宅溫柔！？", "金裝的維爾梅~瀕臨墮落的魔法師和最強的災厄一起衝入魔法世界~", "暗殺女僕冥土小姐", "與變成異世界美少女的大叔一起冒險", "網路勝利組", "普攻是全體二連擊的媽媽你喜歡嗎", "TechnoRoid超越意志", "單間，光照尚好，附帶天使", "東京24區", "維度戰記", "聖劍使的禁咒詠唱", "阿魯斯的巨獸", "噬魂師NOT", "目前，正被打擾中", "怪人的沙拉碗", "異世界失格", "憑你也想討伐魔王", "村井之戀", "最弱技能《果實大師》 關於能無限食用技能果實(吃了就會死)這件事", "如果究極進化的完全沉浸RPG是比現實更垃圾的遊戲", "上班族轉生異世界當上四天王不是很正常嗎？", "富豪刑警", "科學的一方通行", "愚蠢天使與惡魔共舞", "最弱的馴養師開啟的撿垃圾的旅途", "啟示錄酒店", "登山少女", "學園孤島", "妳遇難了嗎", "不相信人類的冒險者好像要去拯救世界", "英雄教室", "魔法戰爭", "夜櫻家大作戰", "櫻子小姐的腳下埋著屍體", "江戶前精靈", "蘑菇魔女", "王之逆襲，意志的繼承者", "彈丸論破", "到了聯誼會上發現連一個女生都沒有", "氣絕勇者與暗殺公主", "異世界迷宮黑心企業", "醜男真戰士", "絆之Allele", "開掛藥師的異世界悠閒生活", "沒有下流梗的灰暗世界", "無神世界中的神明活動", "進化果實~不知不覺踏上勝利的人生~", "花野井君與相思病", "東方少年", "鹿乃子乃子乃子虎視眈眈", "這個世界漏洞百出", "組長女兒與保母", "關於我被綁架到大小姐學校當庶民樣本這檔事", "怪異與少女與神隱", "魔女守護者", "IS", "蒼之騎士團", "異世界迷宮裡的後宮生活", "核爆默示錄", "別當哥哥了", "幻日夜羽", "凹凸魔女的母女故事", "公主大人”拷問”的時間到了", "我的朋友很少", "緣之空", "29歲單身中堅冒險家的日常", "神渣☆偶像", "勇者死了", "天才麻將少女", "請問你今天要來點兔子嗎", "搖滾樂是淑女的興趣", "失憶症", "HOTEL INHUMANS", "怪病醫拉姆尼", "魔王女兒太溫柔了！！", "單蠢女孩", "Kanon", "怪物事變", "戰鬥員派遣中", "異世界食堂", "AIR", "空之境界", "天地創造設計部", "貓娘樂園", "靦腆英雄", "為醜女獻上花束", "柔光魔女股份有限公司", "隱瞞之事", "別對映像研出手", "最強的職業不是勇者也不是賢者好像是鑑定士(偽)的樣子？", "為什麼老師會在這裡", "桃子男孩渡海而來", "不知為何我和尼特且宅的女忍者開始了同居生活", "妖幻三重奏", "淫亂的青醬不能學習", "小智是女生啦", "若葉女孩", "信長老師的年幼妻子", "一疊間漫畫咖啡廳日常", "漂流少年", "天竺鼠車車", "當雛菊邂逅少女", "萌菌物語", "底牌很多的維多利亞", "LV999的村民", "女主角？聖女？都不對，我是雜役女僕（自豪）！", "落第賢者的學院無雙", "貓與龍", "無自覺聖女今天也無意識地釋放力量", "從0位居民開始的邊境領主大人", "少女怪獸焦糖味", "說出這邊交給我你們先走以後十年過去成了傳說", "岩元前輩的推薦", "鬼之花嫁", "魔法少女奈葉 exceeds gun blaze vengeance", "聲稱不愛我的下任公爵為何會溺愛我", "才女的侍從", "炒翻天", "世界最強後衛 迷宮國的新人探索者", "我是不才惡女", "與奔馳於透明之夜的你，談一場看不見的戀愛。", "被遺棄聖女的異世界美食之旅", "最強出涸皇子的暗躍帝位爭奪", "轉學後班上的清純可愛美少女，竟是小時候玩在一起的哥兒們", "暴走千金立誓復仇", "感謝對戰，大小姐才不玩格鬥遊戲", "莫比烏斯之塵", "我獨自盜墓", "畫完這個再去死", "Grow up show向日葵馬戲團", "花織即使是轉生也想打架", "二十世紀電氣目錄", "與你相戀到世界盡頭", "遭到流放的轉生重騎士憑藉遊戲知識大開無雙", "我家的弟弟們真是讓您費心了"]</script>
+<script>
+'use strict';
+const STORAGE_KEY='anime-elo-ku-yu-v1';
+const BASE=1500;
+let cloudMode='local';
+const seed=JSON.parse(document.querySelector('#initial-titles').textContent);
+const byId=id=>document.getElementById(id);
+const escapeHtml=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const uid=()=>typeof crypto!=='undefined' && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36)+'-'+Math.random().toString(36).slice(2);
+const tidyName=s=>String(s).trim().replace(/\s+/g,' ');
+const normalize=s=>tidyName(s).normalize('NFKC').toLocaleLowerCase();
+const number=n=>Number(n).toLocaleString('zh-TW');
+const dateString=d=>{const x=new Date(d);return Number.isNaN(+x)?'未知日期':x.toLocaleString('zh-TW',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'});};
+const initial=()=>({version:1,titles:seed.map(name=>({id:uid(),name,active:true,createdAt:new Date().toISOString()})),matches:[]});
+function isObject(x){return x!==null && typeof x==='object'&&!Array.isArray(x);}
+function validate(data){
+  if(!isObject(data)||data.version!==1||!Array.isArray(data.titles)||!Array.isArray(data.matches))throw Error('檔案不是這個程式的備份（版本不符）。');
+  if(data.titles.length>30000||data.matches.length>200000)throw Error('備份過大，無法匯入。');
+  const ids=new Set(),names=new Set();
+  const titles=[];
+  for(const t of data.titles){
+    if(!isObject(t)||typeof t.id!=='string'||t.id.length>150||t.id.length===0||typeof t.name!=='string')throw Error('作品資料有錯誤。');
+    const name=tidyName(t.name),key=normalize(name);
+    if(!name||name.length>500||ids.has(t.id)||names.has(key))throw Error('作品名稱或識別碼重複／不合法。');
+    ids.add(t.id);names.add(key);titles.push({id:t.id,name,active:t.active!==false,createdAt:typeof t.createdAt==='string'?t.createdAt:''});
+  }
+  const matchIds=new Set(),matches=[];
+  for(const m of data.matches){
+    if(!isObject(m)||typeof m.id!=='string'||m.id.length>150||matchIds.has(m.id)||!ids.has(m.a)||!ids.has(m.b)||m.a===m.b||![0,.5,1].includes(m.score)||!Number.isInteger(m.k)||m.k<4||m.k>100)throw Error('對戰紀錄有錯誤。');
+    matchIds.add(m.id);matches.push({id:m.id,a:m.a,b:m.b,score:m.score,k:m.k,at:typeof m.at==='string'?m.at:'',...(Number.isSafeInteger(m.order)&&m.order>=0?{order:m.order}:{})});
+  }
+  return {version:1,titles,matches};
+}
+let db,loadingWarning=null;
+try{let data=localStorage.getItem(STORAGE_KEY);db=data?validate(JSON.parse(data)):initial();}catch(e){db=initial();loadingWarning=e.message;}
+let scores=new Map(),statsCache=null,currentPair=null,currentTab='compare',rankPage=0,libPage=0,rankQuery='',libQuery='',selectedMode='smart',recentPairKeys=[];
+let saveOk=true;
+function save(){
+  if(loadingWarning){byId('saveIndicator').textContent='⚠ 舊資料異常，尚未儲存';toast('舊資料無法讀取。請先匯入 JSON 備份或完全重設。');return false;}
+  if(cloudMode==='loading'){toast('正在載入雲端資料，請稍後再操作。');return false;}
+  if(cloudMode==='cloud'){
+    if(!window.cloudSync){toast('雲端模組尚未準備完成，請備份 JSON。');return false;}
+    return window.cloudSync.persist(db);
+  }
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(db));saveOk=true;byId('saveIndicator').textContent='● 本機自動儲存（未同步）';return true;}
+  catch(e){saveOk=false;byId('saveIndicator').textContent='⚠ 無法儲存，請立即備份';toast('瀏覽器無法儲存資料，請下載 JSON 備份！');return false;}
+}
+function calc(){
+  scores=new Map();for(const t of db.titles)scores.set(t.id,{rating:BASE,win:0,draw:0,loss:0,games:0,delta:0});
+  for(const m of db.matches){let a=scores.get(m.a),b=scores.get(m.b);if(!a||!b)continue;
+    const expected=1/(1+10**((b.rating-a.rating)/400));const shift=m.k*(m.score-expected);
+    a.rating+=shift;b.rating-=shift;a.games++;b.games++;
+    if(m.score===1){a.win++;b.loss++;}else if(m.score===0){a.loss++;b.win++;}else{a.draw++;b.draw++;}
+  }
+  statsCache={active:db.titles.filter(t=>t.active).length,archived:db.titles.filter(t=>!t.active).length,matches:db.matches.length};
+}
+function activeTitles(){return db.titles.filter(t=>t.active);}
+function pairKey(a,b){return [a,b].sort().join('|');}
+function randChoice(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function shuffleSample(arr,count){const tmp=arr.slice();for(let i=0;i<count;i++){const j=i+Math.floor(Math.random()*(tmp.length-i));[tmp[i],tmp[j]]=[tmp[j],tmp[i]];}return tmp.slice(0,count);}
+function weightedChoice(items,getWeight){const weights=items.map(getWeight);let sum=weights.reduce((a,b)=>a+b,0);let p=Math.random()*sum;for(let i=0;i<items.length;i++){p-=weights[i];if(p<=0)return items[i];}return items[items.length-1];}
+function choosePair(mode=selectedMode){
+  const all=activeTitles();if(all.length<2)return null;
+  const recentMatches=db.matches.slice(-90);const freq=new Map();for(const m of recentMatches){let k=pairKey(m.a,m.b);freq.set(k,(freq.get(k)||0)+1);}
+  let a;
+  if(mode==='random'){a=randChoice(all);}else if(mode==='new'){
+    const min=Math.min(...all.map(t=>scores.get(t.id).games));const pool=all.filter(t=>scores.get(t.id).games<=min+1);a=randChoice(pool);
+  }else{
+    const min=Math.min(...all.map(t=>scores.get(t.id).games));
+    if(Math.random()<.32){a=randChoice(all.filter(t=>scores.get(t.id).games<=min+2));}
+    else{a=weightedChoice(all,t=>1/Math.sqrt(1+scores.get(t.id).games));}
+  }
+  const remaining=all.filter(t=>t.id!==a.id);
+  if(mode==='random')return {a:a.id,b:randChoice(remaining).id};
+  const sample=remaining.length<=80?remaining:shuffleSample(remaining,80);
+  let best=null,bestScore=-Infinity;
+  for(const b of sample){
+    const sa=scores.get(a.id),sb=scores.get(b.id),difference=Math.abs(sa.rating-sb.rating);
+    const recentCount=freq.get(pairKey(a.id,b.id))||0;
+    const gap=difference/400;
+    const underplayed=1/Math.sqrt(1+sb.games);
+    const hasExperience=sa.games===0?Math.min(sb.games,12)/12:0;
+    const score=2.7/(1+gap)+1.2*underplayed+.35*hasExperience-5*recentCount+Math.random()*.9;
+    if(score>bestScore){bestScore=score;best=b;}
+  }
+  return best?{a:a.id,b:best.id}:null;
+}
+function nextPair(){let old=currentPair;currentPair=choosePair();if(currentPair && old && activeTitles().length>2&&pairKey(old.a,old.b)===pairKey(currentPair.a,currentPair.b)){
+  for(let i=0;i<6;i++){let candidate=choosePair();if(candidate&&pairKey(candidate.a,candidate.b)!==pairKey(old.a,old.b)){currentPair=candidate;break;}}
+}renderPair();}
+function toast(message){const element=byId('toast');element.textContent=message;element.style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>element.style.display='none',3900);}
+function record(score){
+  if(!currentPair)return;
+  const {a,b}=currentPair;if(!db.titles.some(t=>t.id===a&&t.active)||!db.titles.some(t=>t.id===b&&t.active))return;
+  db.matches.push({id:uid(),a,b,score,k:Number(byId('kFactor').value),at:new Date().toISOString()});
+  calc();save();renderStats();nextPair();renderHistory();
+}
+function undoLast(){if(!db.matches.length)return toast('還沒有對戰可以撤銷。');const last=db.matches.pop();calc();save();currentPair={a:last.a,b:last.b};if(!activeTitles().some(t=>t.id===last.a)||!activeTitles().some(t=>t.id===last.b))nextPair();renderAll();toast('已撤銷上一場對戰。');}
+function renderStats(){const active=db.titles.filter(t=>t.active);const battled=active.filter(t=>scores.get(t.id).games>0).length;let n=statsCache;
+  byId('stats').innerHTML=`<div class="stat"><div class="label">參與排名</div><div class="value">${number(n.active)}</div><div class="hint">已封存 ${number(n.archived)} 部</div></div><div class="stat"><div class="label">總對戰場次</div><div class="value">${number(n.matches)}</div><div class="hint">每場自動計分</div></div><div class="stat"><div class="label">已有對戰的作品</div><div class="value">${number(battled)}</div><div class="hint">佔目前作品 ${n.active?Math.round(battled/n.active*100):0}%</div></div><div class="stat"><div class="label">尚未對戰</div><div class="value">${number(n.active-battled)}</div><div class="hint">可用「優先未評」</div></div>`;
+}
+function renderPair(){const el=byId('pairContent');const p=currentPair;
+  byId('drawButton').disabled=!p;
+  if(!p){el.innerHTML='<div class="empty"><strong>至少需要兩部進行中的動畫</strong>請到「作品管理」新增作品或恢復封存。</div>';return;}
+  const a=db.titles.find(t=>t.id===p.a),b=db.titles.find(t=>t.id===p.b);if(!a||!b){nextPair();return;}
+  function card(t,side){const s=scores.get(t.id);return `<button type="button" class="animecard ${side==='b'?'right':''}" data-action="vote" data-score="${side==='a'?1:0}"><div class="cardtag"><span class="pick">${side==='a'?'A · 左邊勝':'B · 右邊勝'}</span><span>已比 ${s.games} 場</span></div><h3>${escapeHtml(t.name)}</h3><div><div class="rating">${Math.round(s.rating)} <span class="minor">ELO</span></div><div class="minor">${s.win} 勝 · ${s.draw} 和 · ${s.loss} 敗</div></div></button>`;}
+  el.innerHTML=`<div class="pairgrid">${card(a,'a')}<div class="versus">VS</div>${card(b,'b')}</div>`;
+}
+function displayResult(m,small){const a=db.titles.find(t=>t.id===m.a),b=db.titles.find(t=>t.id===m.b);if(!a||!b)return '';
+  const an=escapeHtml(a.name),bn=escapeHtml(b.name),winner=m.score===1?an:m.score===0?bn:'平手',t=m.score===1?`<span class="win">${an}</span> 勝 ${bn}`:m.score===0?`${an} 敗給 <span class="win">${bn}</span>`:`${an} <span class="draw">＝</span> ${bn}`;
+  return `<div class="historyrow"><div class="historynames">${t}${small?'':`<div class="smalltext muted">K = ${m.k} · ${dateString(m.at)}</div>`}</div>${small?`<span class="historydate">${dateString(m.at)}</span>`:`<button class="btn small ghost" data-action="deleteMatch" data-id="${escapeHtml(m.id)}" title="刪除此場並重算">刪除此場</button>`}</div>`;
+}
+function renderHistory(){const rev=db.matches.slice().reverse();byId('historyRecent').innerHTML=rev.length?rev.slice(0,7).map(m=>displayResult(m,true)).join(''):'<div class="empty">目前還沒有對戰紀錄。從上方選一部開始！</div>';
+  byId('historyAll').innerHTML=rev.length?rev.slice(0,60).map(m=>displayResult(m,false)).join(''):'<div class="empty">尚無紀錄</div>';
+}
+function rankList(){const arr=db.titles.filter(t=>t.active).map(t=>({...t,stat:scores.get(t.id)}));arr.sort((a,b)=>b.stat.rating-a.stat.rating||b.stat.games-a.stat.games||a.name.localeCompare(b.name,'zh-Hant'));return arr;}
+
+function filteredRankList(){const arr=rankList().map((t,i)=>({...t,position:i+1}));const min=Number(byId('rankMinGames').value),sort=byId('rankSort').value;
+  const list=arr.filter(t=>t.stat.games>=min&&normalize(t.name).includes(normalize(rankQuery)));
+  if(sort==='games')list.sort((a,b)=>b.stat.games-a.stat.games||b.stat.rating-a.stat.rating);
+  if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name,'zh-Hant'));
+  return list;
+}
+function rankingText(filtered){
+  const all=rankList().map((t,i)=>({...t,position:i+1}));
+  const rows=filtered?filteredRankList():all;
+  const header=`動畫 Elo 排行榜${filtered?'（目前篩選）':''}｜${new Date().toLocaleString('zh-TW')}｜共 ${rows.length} 部`;
+  return [header,'排名　動畫名稱｜Elo｜場次｜勝／和／敗',...rows.map(t=>`${t.position}. ${t.name}｜${t.stat.rating.toFixed(1)}｜${t.stat.games} 場｜${t.stat.win}／${t.stat.draw}／${t.stat.loss}`)].join('\n');
+}
+async function copyRanking(filtered=false){const content=rankingText(filtered);
+  try{
+    if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(content);}
+    else{const ta=document.createElement('textarea');ta.value=content;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.focus();ta.select();if(!document.execCommand('copy'))throw Error('複製功能遭瀏覽器阻擋');ta.remove();}
+    toast(`已複製 ${filtered?filteredRankList().length:rankList().length} 部動畫的排行榜，可貼到 Word 或 TXT。`);
+  }catch(e){toast('無法直接複製，請改用「排行榜 CSV」或在 HTTPS 網址上開啟。');}
+}
+function renderRanks(){const arr=rankList().map((t,index)=>({...t,position:index+1}));const min=+byId('rankMinGames').value,sort=byId('rankSort').value;
+  let list=arr.filter(t=>t.stat.games>=min&&normalize(t.name).includes(normalize(rankQuery)));
+  if(sort==='games')list.sort((a,b)=>b.stat.games-a.stat.games||b.stat.rating-a.stat.rating);
+  if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name,'zh-Hant'));
+  const size=40,pages=Math.max(1,Math.ceil(list.length/size));rankPage=Math.min(rankPage,pages-1);
+  const chunk=list.slice(rankPage*size,(rankPage+1)*size);
+  byId('rankTable').innerHTML=list.length?`<div class="tablewrap"><table><colgroup><col style="width:65px"><col><col style="width:105px"><col style="width:96px"><col class="hide-mobile" style="width:110px"></colgroup><thead><tr><th>排名</th><th>動畫</th><th class="num">Elo 分數</th><th class="num">場次</th><th class="num hide-mobile">勝 / 和 / 敗</th></tr></thead><tbody>${chunk.map(t=>`<tr><td><span class="rankpos ${t.position<=3?'top':''}">${t.position}</span></td><td class="titlecol">${escapeHtml(t.name)} <span class="state ${t.stat.games>=10?'ready':''}">${t.stat.games>=10?'有參考性':'暫定'}</span></td><td class="num"><strong>${t.stat.rating.toFixed(1)}</strong></td><td class="num">${t.stat.games}</td><td class="num hide-mobile">${t.stat.win} / ${t.stat.draw} / ${t.stat.loss}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">沒有符合條件的動畫。請調整搜尋或場次篩選。</div>';
+  byId('rankPager').innerHTML=`<span>符合 ${number(list.length)} 部 · 第 ${rankPage+1} / ${pages} 頁</span><button class="btn small" data-action="rankPrev" ${rankPage===0?'disabled':''}>上一頁</button><button class="btn small" data-action="rankNext" ${rankPage>=pages-1?'disabled':''}>下一頁</button>`;
+}
+function renderLibrary(){const filter=byId('libraryFilter').value;const list=db.titles.filter(t=>(filter==='all'||(filter==='active'?t.active:!t.active))&&normalize(t.name).includes(normalize(libQuery)));
+  const size=30,pages=Math.max(1,Math.ceil(list.length/size));libPage=Math.min(libPage,pages-1);const chunk=list.slice(libPage*size,(libPage+1)*size);
+  byId('libraryTable').innerHTML=list.length?`<div class="tablewrap"><table><colgroup><col><col style="width:94px"><col style="width:160px"></colgroup><thead><tr><th>作品名稱</th><th class="num">對戰場次</th><th>操作</th></tr></thead><tbody>${chunk.map(t=>`<tr><td class="titlecol">${escapeHtml(t.name)} ${!t.active?'<span class="state archived">已封存</span>':''}</td><td class="num">${scores.get(t.id).games}</td><td><div class="controls" style="gap:2px"><button class="btn small ghost" data-action="rename" data-id="${escapeHtml(t.id)}">更名</button><button class="btn small ghost" data-action="toggleActive" data-id="${escapeHtml(t.id)}">${t.active?'封存':'恢復'}</button><button class="btn small ghost" style="color:var(--rose)" data-action="deleteTitle" data-id="${escapeHtml(t.id)}">刪除</button></div></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">目前沒有符合條件的作品。</div>';
+  byId('libraryPager').innerHTML=`<span>${number(list.length)} 部 · 第 ${libPage+1} / ${pages} 頁</span><button class="btn small" data-action="libPrev" ${libPage===0?'disabled':''}>上一頁</button><button class="btn small" data-action="libNext" ${libPage>=pages-1?'disabled':''}>下一頁</button>`;
+}
+function renderSuggestions(){byId('animeSuggestions').innerHTML=activeTitles().map(t=>`<option value="${escapeHtml(t.name)}"></option>`).join('');}
+function renderAll(){calc();renderStats();renderPair();renderHistory();renderRanks();renderLibrary();renderSuggestions();}
+function nav(tab){currentTab=tab;document.querySelectorAll('[data-nav]').forEach(b=>b.setAttribute('aria-current',b.dataset.nav===tab?'page':'false'));document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===`sec-${tab}`));if(tab==='ranking')renderRanks();if(tab==='library')renderLibrary();if(tab==='data')renderHistory();window.scrollTo({top:0,behavior:'smooth'});}
+function addTitles(text){const found=new Set(db.titles.map(t=>normalize(t.name)));let added=0,skipped=0;
+  for(const raw of text.split(/\r?\n/)){const name=tidyName(raw),key=normalize(name);if(!name)continue;if(name.length>500||found.has(key)){skipped++;continue;}db.titles.push({id:uid(),name,active:true,createdAt:new Date().toISOString()});found.add(key);added++;}
+  if(added){save();renderAll();if(!currentPair)nextPair();}
+  toast(`新增 ${added} 部，忽略重複或過長名稱 ${skipped} 部。`);return added;
+}
+function download(name,content,type){const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function exportJson(){download(`anime-elo-backup-${new Date().toISOString().slice(0,10)}.json`,JSON.stringify(db,null,2),'application/json;charset=utf-8');toast('備份檔已下載。');}
+function exportCsv(){const quote=x=>'"'+String(x).replaceAll('"','""')+'"';const lines=[['名次','動畫名稱','Elo','場次','勝','和','敗'].map(quote).join(',')];rankList().forEach((t,i)=>lines.push([i+1,t.name,t.stat.rating.toFixed(2),t.stat.games,t.stat.win,t.stat.draw,t.stat.loss].map(quote).join(',')));download(`anime-elo-ranking-${new Date().toISOString().slice(0,10)}.csv`,'\ufeff'+lines.join('\r\n'),'text/csv;charset=utf-8');toast('CSV 排行榜已下載。');}
+async function importJson(file){if(!file)return;try{const parsed=validate(JSON.parse(await file.text()));if(!confirm(`確定以此備份取代目前資料？\n作品：${parsed.titles.length} 部，對戰：${parsed.matches.length} 場。\n\n目前資料將被覆蓋。`))return;db=parsed;currentPair=null;loadingWarning=null;save();calc();nextPair();renderAll();toast('備份匯入完成。');}catch(e){alert('匯入失敗：'+e.message);}finally{byId('importFile').value='';}}
+function deleteMatch(id){const m=db.matches.find(x=>x.id===id);if(!m)return;if(!confirm('確定刪除此場對戰並重新計算全部 Elo 嗎？'))return;db.matches=db.matches.filter(x=>x.id!==id);save();renderAll();toast('對戰已刪除，分數已重新計算。');}
+function rename(id){const t=db.titles.find(x=>x.id===id);if(!t)return;let name=prompt('修改作品名稱：',t.name);if(name===null)return;name=tidyName(name);if(!name||name.length>500)return toast('名稱不可空白且不可超過 500 字。');if(db.titles.some(x=>x.id!==id&&normalize(x.name)===normalize(name)))return toast('已存在同名作品。');t.name=name;save();renderAll();toast('已更改名稱。');}
+function deleteTitle(id){const t=db.titles.find(x=>x.id===id);if(!t)return;const count=db.matches.filter(m=>m.a===id||m.b===id).length;
+  if(!confirm(`永久刪除「${t.name}」？\n\n與此作品相關的 ${count} 場對戰也會永久刪除，並重新計算其他作品的 Elo。\n\n只是不想再配對，建議先使用「封存」。`))return;
+  db.titles=db.titles.filter(x=>x.id!==id);db.matches=db.matches.filter(m=>m.a!==id&&m.b!==id);
+  save();calc();if(currentPair&&(currentPair.a===id||currentPair.b===id))nextPair();renderAll();toast('已刪除作品及相關對戰。');
+}
+document.addEventListener('click',e=>{
+  if(cloudMode!=='loading')return;
+  const control=e.target.closest('[data-action]');
+  if(control && !['copyAll','copyFiltered','export','exportCSV','rankPrev','rankNext','libPrev','libNext','skip'].includes(control.dataset.action)){
+    e.stopImmediatePropagation();e.preventDefault();toast('雲端資料載入中，暫時不能修改作品或對戰。');
+  }
+},true);
+document.addEventListener('keydown',e=>{if(cloudMode==='loading' && ['a','s','d','z',' '].includes(e.key.toLowerCase()) && !['INPUT','TEXTAREA'].includes(e.target.tagName)){e.stopImmediatePropagation();e.preventDefault();}},true);
+document.addEventListener('click',e=>{
+  const navButton=e.target.closest('[data-nav]');if(navButton){nav(navButton.dataset.nav);return;}
+  const b=e.target.closest('[data-action]');if(!b||b.disabled)return;
+  const action=b.dataset.action;
+  if(action==='copyAll')copyRanking(false);
+  else if(action==='copyFiltered')copyRanking(true);
+  else if(action==='vote')record(Number(b.dataset.score));
+  else if(action==='draw')record(.5);
+  else if(action==='skip')nextPair();
+  else if(action==='undo')undoLast();
+  else if(action==='rankPrev'){rankPage--;renderRanks();}
+  else if(action==='rankNext'){rankPage++;renderRanks();}
+  else if(action==='libPrev'){libPage--;renderLibrary();}
+  else if(action==='libNext'){libPage++;renderLibrary();}
+  else if(action==='addOne'){let added=addTitles(byId('addOne').value);if(added)byId('addOne').value='';}
+  else if(action==='addBulk'){let added=addTitles(byId('addBulk').value);if(added)byId('addBulk').value='';}
+  else if(action==='manual'){let na=normalize(byId('manualA').value),nb=normalize(byId('manualB').value);let a=activeTitles().find(t=>normalize(t.name)===na),c=activeTitles().find(t=>normalize(t.name)===nb);if(!a||!c||a.id===c.id)return toast('請選擇兩部不同、且未封存的完整動畫名稱。');currentPair={a:a.id,b:c.id};renderPair();toast('已設定指定對戰，請選擇勝負。');}
+  else if(action==='toggleActive'){let t=db.titles.find(x=>x.id===b.dataset.id);if(!t)return;t.active=!t.active;calc();save();if(currentPair&&(!db.titles.find(x=>x.id===currentPair.a)?.active||!db.titles.find(x=>x.id===currentPair.b)?.active))nextPair();renderAll();toast(t.active?'已恢復作品。':'已封存作品。');}
+  else if(action==='rename')rename(b.dataset.id);
+  else if(action==='deleteTitle')deleteTitle(b.dataset.id);
+  else if(action==='deleteMatch')deleteMatch(b.dataset.id);
+  else if(action==='export')exportJson();
+  else if(action==='exportCSV')exportCsv();
+  else if(action==='clearMatches'){if(!confirm(`將永久清空 ${db.matches.length} 場對戰，保留全部作品及封存狀態，確定嗎？`))return;db.matches=[];save();renderAll();toast('已清空對戰。');}
+  else if(action==='resetAll'){if(!confirm('確定完全重設為最初的 652 部作品清單嗎？\n\n目前新增的作品和全部對戰紀錄都會消失！'))return;if(!confirm('請再次確認：此操作不可撤銷，是否繼續？'))return;db=initial();loadingWarning=null;save();calc();nextPair();renderAll();toast('已回到初始清單。');}
+});
+byId('rankSearch').addEventListener('input',e=>{rankQuery=e.target.value;rankPage=0;renderRanks();});
+byId('rankSort').addEventListener('change',()=>{rankPage=0;renderRanks();});
+byId('rankMinGames').addEventListener('change',()=>{rankPage=0;renderRanks();});
+byId('librarySearch').addEventListener('input',e=>{libQuery=e.target.value;libPage=0;renderLibrary();});
+byId('libraryFilter').addEventListener('change',()=>{libPage=0;renderLibrary();});
+byId('matchMode').addEventListener('change',e=>{selectedMode=e.target.value;nextPair();});
+byId('importFile').addEventListener('change',e=>importJson(e.target.files?.[0]));
+byId('addOne').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();byId('addOne').parentElement.querySelector('[data-action="addOne"]').click();}});
+document.addEventListener('keydown',e=>{const t=e.target;if(e.ctrlKey||e.metaKey||e.altKey||['INPUT','TEXTAREA','SELECT'].includes(t.tagName)||t.isContentEditable||currentTab!=='compare')return;
+  if(e.key==='a'||e.key==='A'){e.preventDefault();record(1);}else if(e.key==='s'||e.key==='S'){e.preventDefault();record(.5);}else if(e.key==='d'||e.key==='D'){e.preventDefault();record(0);}else if(e.code==='Space'){e.preventDefault();nextPair();}else if(e.key==='z'||e.key==='Z'){e.preventDefault();undoLast();}
+});
+calc();nextPair();renderAll();if(loadingWarning){byId('saveIndicator').textContent='⚠ 舊資料異常，尚未儲存';toast('既有資料無法讀取。為避免覆蓋已暫停自動儲存，請匯入備份或完全重設。');}else save();
+</script>
+<script type="module">
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+import {getFirestore,doc,getDoc,setDoc,collection,getDocs,onSnapshot,writeBatch} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
+
+const cfg=window.FIREBASE_CONFIG||{};
+const isConfigured=['apiKey','authDomain','projectId','appId'].every(k=>typeof cfg[k]==='string'&&cfg[k].trim()&&!cfg[k].includes('填入'));
+const $=id=>document.getElementById(id);
+const state=(label,detail,error=false)=>{
+  $('cloudState').textContent=label;$('cloudDetail').textContent=detail||'';
+  $('cloudState').className=error?'cloudbad':'cloudgood';
+  $('saveIndicator').textContent=(cloudMode==='cloud'?'☁ ':'● ')+label;
+};
+// Inline main script uses `let` bindings, which are visible to this module in the same document global environment.
+const deep=x=>JSON.parse(JSON.stringify(x));
+let auth=null,store=null,user=null,unsub=[],titlesSnapshot=null,matchesSnapshot=null;
+let viewDB=null,queue=[],pumping=false,broken=false,generation=0;
+let initializedCloud=false;
+function getVersion(){return generation;}
+function setCloudMode(value){cloudMode=value;}
+function collectionRef(kind){return collection(store,'users',user.uid,kind);}
+function rowRef(kind,id){return doc(store,'users',user.uid,kind,id);}
+function orderOf(m,i){return Number.isFinite(m.order)?m.order:(Date.parse(m.at)||0)*1000+(i%1000);}
+function unpackDocs(snapshot){return snapshot.docs.map(d=>({...d.data(),id:d.id}));}
+function switchLocal(message){
+  unsub.forEach(f=>f());unsub=[];user=null;viewDB=null;queue=[];broken=false;pumping=false;titlesSnapshot=null;matchesSnapshot=null;
+  setCloudMode('local');$('cloudSignedIn').hidden=true;$('cloudSignedOut').hidden=false;$('cloudDownloadPending').hidden=true;
+  const raw=localStorage.getItem(STORAGE_KEY);
+  try{db=raw?validate(JSON.parse(raw)):initial();loadingWarning=null;}catch(e){db=initial();loadingWarning=e.message;}
+  currentPair=null;calc();nextPair();renderAll();
+  state('本機模式（未同步）',message||'可繼續在這台裝置使用；登入後會讀取雲端資料。');
+  $('saveIndicator').textContent=loadingWarning?'⚠ 本機資料異常':'● 本機模式（未同步）';
+}
+function toCloudView(){
+  if(!user||!titlesSnapshot||!matchesSnapshot||pumping||queue.length||broken)return;
+  try{
+    const titles=titlesSnapshot.map(({id,name,active,createdAt})=>({id,name,active,createdAt}));
+    const ids=new Set(titles.map(t=>t.id));
+    const matches=matchesSnapshot.filter(m=>ids.has(m.a)&&ids.has(m.b)).sort((a,b)=>orderOf(a,0)-orderOf(b,0)||a.id.localeCompare(b.id)).map(({id,a,b,score,k,at,order})=>({id,a,b,score,k,at,order}));
+    const incoming=validate({version:1,titles,matches});
+    db=incoming;viewDB=deep(incoming);loadingWarning=null;
+    if(currentPair&&(!db.titles.some(t=>t.id===currentPair.a&&t.active)||!db.titles.some(t=>t.id===currentPair.b&&t.active)))currentPair=null;
+    calc();if(!currentPair)nextPair();renderAll();
+    setCloudMode('cloud');state('已同步',`正在與雲端同步｜${db.titles.length} 部作品・${db.matches.length} 場對戰`);
+  }catch(e){broken=true;state('雲端資料有問題',`${e.message}。請備份 JSON，檢查雲端資料。`,true);}
+}
+function ensureOnSnapshots(){
+  unsub.forEach(f=>f());unsub=[];titlesSnapshot=null;matchesSnapshot=null;
+  const my=getVersion();
+  for(const kind of ['titles','matches']){
+    const remove=onSnapshot(collectionRef(kind),s=>{
+      if(my!==getVersion())return;
+      if(kind==='titles')titlesSnapshot=unpackDocs(s);
+      else matchesSnapshot=unpackDocs(s);
+      toCloudView();
+    },e=>{if(my===getVersion()){broken=true;state('同步監聽失敗',`${e.message}。請檢查資料庫規則與網路，下載 JSON 備份。`,true);}});
+    unsub.push(remove);
+  }
+}
+async function writeRows(kind,rows){
+  for(let i=0;i<rows.length;i+=350){const batch=writeBatch(store);
+    for(const entry of rows.slice(i,i+350))batch.set(rowRef(kind,entry.id),entry);
+    await batch.commit();
+  }
+}
+async function bootstrapNewAccount(){
+  const local=deep(db);
+  const modified=local.matches.length>0||local.titles.length!==seed.length||local.titles.some(t=>!t.active);
+  let source=modified&&confirm(`這個 Firebase 帳號尚未建立排名。\n\n你目前這台裝置有 ${local.titles.length} 部作品、${local.matches.length} 場對戰。\n\n按「確定」上傳本機資料；按「取消」從預設 ${seed.length} 部動畫開始。\n\n建議先下載 JSON 備份。`)?local:initial();
+  const before=await Promise.all([getDocs(collectionRef('titles')),getDocs(collectionRef('matches'))]);
+  if(before[0].size||before[1].size){
+    if(!confirm('偵測到上次未完成初始化的部分雲端資料。要清理這些部分資料並重新建立嗎？（建議先聯絡維護者，確定沒有其他裝置同時操作。）'))throw Error('取消初始化，請稍後重試。');
+    for(const [kind,s] of [['titles',before[0]],['matches',before[1]]]){
+      const docs=s.docs;
+      for(let i=0;i<docs.length;i+=350){let batch=writeBatch(store);docs.slice(i,i+350).forEach(x=>batch.delete(x.ref));await batch.commit();}
+    }
+  }
+  state('正在初次上傳',`將 ${source.titles.length} 部作品與 ${source.matches.length} 場對戰安全寫入雲端…`);
+  await writeRows('titles',source.titles.map(t=>({...t})));
+  await writeRows('matches',source.matches.map((m,i)=>({...m,order:orderOf(m,i)})));
+  await setDoc(rowRef('settings','sync'),{initialized:true,version:1,createdAt:new Date().toISOString()});
+}
+function computeChanges(prev,now){
+  const ops=[];
+  for(const [kind,key] of [['titles','titles'],['matches','matches']]){
+    const a=new Map(prev[key].map((x,i)=>[x.id,kind==='matches'?{...x,order:orderOf(x,i)}:x]));const b=new Map(now[key].map((x,i)=>[x.id,kind==='matches'?{...x,order:orderOf(x,i)}:x]));
+    for(const [id,item] of b){
+      const old=a.get(id);
+      if(!old||JSON.stringify(old)!==JSON.stringify(item)){
+        ops.push({kind,id,item,type:'set'});
+      }
+    }
+    for(const id of a.keys())if(!b.has(id))ops.push({kind,id,type:'delete'});
+  }
+  return ops;
+}
+function pendingBackup(){
+  try{localStorage.setItem('anime-cloud-pending-'+user.uid,JSON.stringify(db));}catch(e){state('請立即備份', '本機暫存失敗，請下載 JSON。',true);}
+}
+async function processQueue(){
+  if(pumping||!user||broken)return;
+  pumping=true;
+  try{
+    while(queue.length){
+      const {ops}=queue[0];
+      for(let i=0;i<ops.length;i+=350){const batch=writeBatch(store);
+        for(const x of ops.slice(i,i+350)){
+          if(x.type==='delete')batch.delete(rowRef(x.kind,x.id));
+          else batch.set(rowRef(x.kind,x.id),x.item);
+        }
+        await batch.commit();
+      }
+      queue.shift();
+    }
+    try{localStorage.removeItem('anime-cloud-pending-'+user.uid);}catch(e){}
+    const [t,m]=await Promise.all([getDocs(collectionRef('titles')),getDocs(collectionRef('matches'))]);
+    titlesSnapshot=unpackDocs(t);matchesSnapshot=unpackDocs(m);
+  }catch(e){
+    broken=true;state('同步失敗，尚有未儲存資料', `${e.message}。請先下載 JSON 備份；檢查網路及安全規則後按「重新檢查同步」。`,true);
+    toast('⚠ 雲端同步失敗！請立即下載 JSON 備份。');
+  }finally{pumping=false;if(!broken)toCloudView();}
+}
+window.cloudSync={
+  persist(value){
+    if(!user||!viewDB){toast('雲端還沒載入完成，請先備份。');return false;}
+    try{
+      const next=validate(deep(value));
+      const ops=computeChanges(viewDB,next);
+      if(!ops.length)return true;
+      viewDB=deep(next);queue.push({ops});pendingBackup();
+      state('正在同步',`還有 ${queue.length} 組變更等待寫入雲端…`);
+      processQueue();return true;
+    }catch(e){state('變更無法寫入',e.message,true);toast('資料格式錯誤，請下載 JSON 備份。');return false;}
+  }
+};
+async function openCloud(account){
+  generation++;user=account;initializedCloud=false;
+  setCloudMode('loading');$('cloudSignedOut').hidden=true;$('cloudSignedIn').hidden=false;$('cloudUser').textContent=account.email||account.uid;
+  state('正在讀取雲端', '正在確認雲端資料是否存在…');
+  try{
+    const setup=await getDoc(rowRef('settings','sync'));
+    if(!setup.exists()||!setup.data().initialized)await bootstrapNewAccount();
+    if(!user||user.uid!==account.uid)return;
+    initializedCloud=true;ensureOnSnapshots();
+    const pending=localStorage.getItem('anime-cloud-pending-'+account.uid);
+    if(pending && !localStorage.getItem('anime-cloud-recovery-'+account.uid))localStorage.setItem('anime-cloud-recovery-'+account.uid,pending);
+    if(pending||localStorage.getItem('anime-cloud-recovery-'+account.uid)){
+      $('cloudDownloadPending').hidden=false;
+      $('cloudDetail').textContent='偵測到之前尚未確認同步的本機資料。可按「下載未同步紀錄」保存，再視需要從 JSON 匯入；系統不會自動覆蓋雲端。';
+      toast('提醒：本機留有先前未確認同步的紀錄，建議下載備份。');
+    }
+  }catch(e){
+    setCloudMode('loading');state('連接失敗', `${e.message}。請檢查 Firebase 設定、驗證信件和 Firestore 規則。`,true);
+  }
+}
+async function retrySync(){
+  if(!user)return;
+  broken=false;
+  if(!initializedCloud){await openCloud(user);}
+  else if(queue.length){state('正在重試', '正在上傳未同步的修改…');processQueue();}
+  else{setCloudMode('loading');state('重新連接中','重新監聽雲端資料…');generation++;ensureOnSnapshots();}
+}
+if(isConfigured){
+  $('cloudConfigHelp').hidden=true;$('cloudAuth').hidden=false;
+  try{
+    const app=initializeApp(cfg);auth=getAuth(app);store=getFirestore(app);
+    state('檢查登入狀態', '正在啟動雲端服務…');
+    onAuthStateChanged(auth,account=>{
+      if(account)openCloud(account);
+      else{generation++;switchLocal('登入同一個帳號即可跨裝置同步。');}
+    },e=>state('登入狀態讀取失敗',e.message,true));
+    $('cloudLoginForm').addEventListener('submit',async e=>{
+      e.preventDefault();const email=$('cloudEmail').value.trim(),password=$('cloudPassword').value;
+      try{await signInWithEmailAndPassword(auth,email,password);$('cloudPassword').value='';}catch(e){state('登入失敗',`${e.code||''}：${e.message}`,true);}
+    });
+    $('cloudSignUp').addEventListener('click',async()=>{
+      const email=$('cloudEmail').value.trim(),password=$('cloudPassword').value;
+      if(!email||password.length<6)return toast('請輸入有效的電子郵件和至少 6 字元的密碼。');
+      try{await createUserWithEmailAndPassword(auth,email,password);$('cloudPassword').value='';toast('帳號已建立並登入。請妥善保管密碼。');}
+      catch(e){state('註冊失敗',`${e.code||''}：${e.message}`,true);}
+    });
+    $('cloudSignOut').addEventListener('click',async()=>{
+      if(queue.length||pumping||broken){if(!confirm('可能有尚未同步的修改。請先備份 JSON。確定登出？'))return;}
+      try{await signOut(auth);}catch(e){toast('登出失敗：'+e.message);}
+    });
+    $('cloudRetry').addEventListener('click',retrySync);
+    $('cloudDownloadPending').addEventListener('click',()=>{
+      if(!user)return;
+      const content=localStorage.getItem('anime-cloud-recovery-'+user.uid)||localStorage.getItem('anime-cloud-pending-'+user.uid);
+      if(!content)return toast('目前沒有可還原的暫存。');
+      try{validate(JSON.parse(content));download('anime-elo-unsynced-recovery.json',content,'application/json;charset=utf-8');toast('已下載本機未同步紀錄。可以透過「從備份恢復」匯入，但請先確認雲端資料以免覆蓋更新。');}
+      catch(e){toast('暫存格式不正確：'+e.message);}
+    });
+  }catch(e){state('Firebase 初始化失敗',e.message,true);}
+}else{
+  state('本機模式（未同步）', '完成 Firebase 設定並部署 GitHub Pages 後，即可啟用雲端登入。');
+  $('saveIndicator').textContent='● 本機模式（未同步）';
+}
+</script>
+</body>
+</html>
