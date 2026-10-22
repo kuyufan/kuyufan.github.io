@@ -452,13 +452,12 @@
     <!-- 近況 -->
     <h3 id="news">近況</h3>
     <ul class="news-list">
-      <li> </li>
       <li> 最近の研究の焦点：樹形化多重 ζ 値、p 進多重 ζ 値とp 進 L-関数など。</li>
     </ul>
     <figure id="news-photo" class="news-photo" aria-live="polite">
        <img id="news-photo-img"
        src="photo/000.jpg"
-       alt="近況照片"
+       alt="近況写真"
        loading="lazy"
        decoding="async">
 	</figure>
@@ -527,10 +526,12 @@
           <span class="rest">
             <span class="venue"><i>Mathematische Zeitschrift</i></span>
             <span class="year">2026</span>
+            <span class="kv">第314巻，論文番号35</span>
+            <span class="kv"><a href="https://doi.org/10.1007/s00209-026-04138-w" target="_blank" rel="noopener noreferrer">DOI: 10.1007/s00209-026-04138-w</a></span>
             <span class="kv"><a href="https://arxiv.org/abs/2406.08127" target="_blank" rel="noopener noreferrer">arXiv:2406.08127</a></span>
             <span class="kv">MSC: 11M32 (Primary) 14F42, 11M41 (Secondary)</span>
 			<span class="kv"><a href="https://rdcu.be/zQ6Rj4HWBZWa" target="_blank" rel="noopener noreferrer">PDF</a></span>
-            <span class="badge">開放取用</span>
+            <span class="badge">オープンアクセス</span>
           </span>
         </div>
       </li>
@@ -872,11 +873,7 @@
           <span class="rest">
             <span class="date"><time datetime="2025-03-24">2025-03-24</time></span>
             <span class="place">名古屋大学</span>
-            <span class="talk">講演スライド：
-              <a href=" " download>
-                Arborified多重ζ値の間の写像
-              </a>
-            </span>
+            <span class="talk">講演題目：Arborified多重ζ値の間の写像（板書による講演、スライドなし）</span>
           </span>
         </div>
       </li>
@@ -1789,13 +1786,16 @@
 <form id="contact-form" action="https://formspree.io/f/xldlkbbj" method="POST">
   <div class="row">
     <div class="col-6 col-12-mobile">
-      <input type="text" name="name" placeholder="お名前" required />
+      <label class="sr-only" for="contact-name">お名前</label>
+      <input type="text" id="contact-name" name="name" placeholder="お名前" required />
     </div>
     <div class="col-6 col-12-mobile">
-      <input type="email" name="email" placeholder="メールアドレス" required />
+      <label class="sr-only" for="contact-email">メールアドレス</label>
+      <input type="email" id="contact-email" name="email" placeholder="メールアドレス" required />
     </div>
     <div class="col-12">
-      <textarea name="message" placeholder="メッセージ" required></textarea>
+      <label class="sr-only" for="contact-message">メッセージ</label>
+      <textarea id="contact-message" name="message" placeholder="メッセージ" required></textarea>
     </div>
 
     <!-- 下面三行是主旨 / 送出後導回位置 / 蜜罐防垃圾 -->
@@ -1918,7 +1918,7 @@
   function showBy(n){
     const i = pick(n);
     img.src = 'photo/' + pad(i) + '.jpg';        // 全小寫 .jpg
-    img.alt = `近況照片（第 ${i} 張）`;
+    img.alt = `近況写真（全${MAX}枚のうち${i}枚目）`;
     img.dataset.done = '1';
   }
 
