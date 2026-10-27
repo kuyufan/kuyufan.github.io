@@ -10,7 +10,7 @@ Whenever education, research interests, publications or preprints, presentations
 
 1. Compare the current English website's academic data against the entries in the static PDF.
 2. Rebuild **and replace** `files/CV_KuYuFan.pdf` if any CV-relevant field changed, or verify that the PDF remains accurate if none changed. Replacing the HTML alone does not update the PDF.
-3. Check publication status and bibliographic details, sort newest first, and distinguish papers from preprints.
+3. Check publication status and bibliographic details; show every dated list in reverse chronological order (newest at top), including research papers with the same publication year, preprints, upcoming meetings and selected talks. Within a year, use actual publication or event dates rather than the year alone. Distinguish papers from preprints.
 4. Include only actual research presentations in the CV Talks section, not attendance without a presentation. The 2025-03-24 monthly seminar was a blackboard presentation without slides.
 5. Separate **Refereed Research Articles** (research journals) from **Expository and Outreach Publications** (e.g. 2021 *Mathmedia / 數學傳播*). Keep the outreach article on the website and in the CV's separate expository section; never present it as a refereed research paper.
 6. Keep **Schur multiple zeta values** and **arborified multiple zeta values** as distinct research topics in the CV.
