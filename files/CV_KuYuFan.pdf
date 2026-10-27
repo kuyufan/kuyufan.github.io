@@ -1,330 +1,361 @@
 %PDF-1.4
-% Academic CV - Ku-Yu Fan
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R /PageLayout /SinglePage >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 7 0 R /F5 8 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Count 3 /Kids [7 0 R 9 0 R 11 0 R] >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+<<
+/BaseFont /Times-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+<<
+/BaseFont /Times-Italic /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+<<
+/A <<
+/S /URI /Type /Action /URI (mailto:abc940605@gmail.com)
+>> /Border [ 0 0 0 ] /Rect [ 53 698.8898 192 711.8898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 6 0 obj
-<< /Length 4874 >>
-stream
-0.090 0.180 0.240 rg BT /F2 25 Tf 1 0 0 1 49 792.89 Tm (Ku-Yu Fan) Tj ET
-0.330 0.400 0.440 rg BT /F1 10 Tf 1 0 0 1 49 766.89 Tm (Ph.D. Candidate in Mathematics | Nagoya University) Tj ET
-0.090 0.420 0.450 rg BT /F1 8.80 Tf 1 0 0 1 49 747.89 Tm (abc940605@gmail.com) Tj ET
-0.090 0.420 0.450 rg BT /F1 8.80 Tf 1 0 0 1 431.28 747.89 Tm (kuyufan.github.io) Tj ET
-0.090 0.420 0.450 RG 1.25 w 49 731.89 m 546.28 731.89 l S
-0.090 0.420 0.450 rg 49 703.89 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 705.89 Tm (RESEARCH INTERESTS) Tj ET
-0.820 0.870 0.880 RG 0.60 w 196.50 708.89 m 546.28 708.89 l S
-0.090 0.180 0.240 rg BT /F1 8.80 Tf 1 0 0 1 49 677.89 Tm (Multiple zeta values; motivic periods and coactions; Schur multiple zeta values; arborified multiple zeta values; p-adic) Tj ET
-0.090 0.180 0.240 rg BT /F1 8.80 Tf 1 0 0 1 49 665.79 Tm (multiple zeta values; multiple polylogarithms; p-adic multiple L-functions.) Tj ET
-0.090 0.420 0.450 rg 49 648.69 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 650.69 Tm (EDUCATION) Tj ET
-0.820 0.870 0.880 RG 0.60 w 136.90 653.69 m 546.28 653.69 l S
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 620.99 Tm (2024-present) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 620.99 Tm (Ph.D. in Mathematics | Nagoya University) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 607.69 Tm (Graduate School of Mathematics - Expected September 2027) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 595.99 Tm (Advisor: Hidekazu Furusho) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 576.59 Tm (2021-2024) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 576.59 Tm (M.Sc. in Mathematics | National Taiwan University) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 563.29 Tm (Institute of Mathematics) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 551.59 Tm (Advisor: Nobuo Sato) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 532.19 Tm (2017-2021) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 532.19 Tm (B.Sc. in Mathematics | National Tsing Hua University) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 518.89 Tm (Department of Mathematics) Tj ET
-0.090 0.420 0.450 rg 49 503.19 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 505.19 Tm (REFEREED RESEARCH ARTICLES) Tj ET
-0.820 0.870 0.880 RG 0.60 w 249 508.19 m 546.28 508.19 l S
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 475.49 Tm (2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 475.49 Tm (Coaction formula for the motivic version of Yamamoto's integral) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 462.19 Tm (Mathematische Zeitschrift 314, Article 35 \(2026\). DOI: 10.1007/s00209-026-04138-w) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 443.79 Tm (2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 443.79 Tm (A map between arborifications of multiple zeta values) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 430.49 Tm (Journal of Algebra \(2026\). DOI: 10.1016/j.jalgebra.2026.06.006) Tj ET
-0.090 0.420 0.450 rg 49 413.79 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 415.79 Tm (PREPRINTS) Tj ET
-0.820 0.870 0.880 RG 0.60 w 136.90 418.79 m 546.28 418.79 l S
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 386.09 Tm (2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 386.09 Tm (Regularised double shuffle relations for planar Arborified Zeta Values) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 372.79 Tm (Pierre Catoire, Pierre J. Clavier and Ku-Yu Fan. arXiv:2609.02346) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 356.39 Tm (2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 356.39 Tm (p-adic multiple L-functions and twisted multiple Bernoulli numbers) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 343.09 Tm (Ku-Yu Fan. arXiv:2607.04086) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 326.69 Tm (2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 326.69 Tm (p-adic multiple zeta values of integer indices) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 313.39 Tm (Ku-Yu Fan. arXiv:2603.22923) Tj ET
-0.090 0.420 0.450 rg 49 299.69 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 301.69 Tm (EXPOSITORY PUBLICATION) Tj ET
-0.820 0.870 0.880 RG 0.60 w 224.90 304.69 m 546.28 304.69 l S
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 271.99 Tm (2021) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 271.99 Tm (The Number of Lattice Lines in Lattice Figures [in Chinese]) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 258.69 Tm (Ku-Yu Fan and Feng-Mei Lin. Mathmedia \(Shuxue Chuanbo\) 45\(2\), 44-53 \(2021\).) Tj ET
-0.820 0.870 0.880 RG 0.60 w 49 37 m 546.28 37 l S
-0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 49 24 Tm (KU-YU FAN | ACADEMIC CV) Tj ET
-0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 468.28 24 Tm (1 / 3 | OCT 2026) Tj ET
-endstream
+<<
+/A <<
+/S /URI /Type /Action /URI (https://kuyufan.github.io/)
+>> /Border [ 0 0 0 ] /Rect [ 208 698.8898 310 711.8898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 7 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R /Annots [12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R] >>
+<<
+/BaseFont /Times-Roman /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
+>>
 endobj
 8 0 obj
-<< /Length 5021 >>
-stream
-0.090 0.180 0.240 rg BT /F2 9 Tf 1 0 0 1 49 792.89 Tm (KU-YU FAN) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.10 Tf 1 0 0 1 384.36 792.89 Tm (SELECTED RESEARCH PRESENTATIONS) Tj ET
-0.820 0.870 0.880 RG 0.60 w 49 782.89 m 546.28 782.89 l S
-0.090 0.420 0.450 rg 49 750.89 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 752.89 Tm (SELECTED RESEARCH TALKS) Tj ET
-0.820 0.870 0.880 RG 0.60 w 227.70 755.89 m 546.28 755.89 l S
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 723.19 Tm (Sep 2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 723.19 Tm (Explicit Formulas for Cyclotomic Multiple Bernoulli Numbers) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 709.89 Tm (NCTS Number Theory Seminar, National Tsing Hua University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 692.49 Tm (Sep 2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 692.49 Tm (An explicit formula for the special values of the p-adic multiple L-functions) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 679.19 Tm (Mathematical Society of Japan, Autumn Meeting, Kobe University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 661.79 Tm (Jul 2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 661.79 Tm (Double shuffle relations for p-adic multiple zeta values of integer indices) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 648.49 Tm (5th International Workshop on Multiple Zeta Values and Related Topics, Central South University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 631.09 Tm (Jul 2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 631.09 Tm (Double shuffle relations for integer indices and their application to p-adic multiple zeta values) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 617.79 Tm (25th Sendai-Hiroshima Number Theory Conference, Tohoku University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 600.39 Tm (Jun 2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 600.39 Tm (p-adic multiple zeta values and double shuffle relations for integer indices) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 587.09 Tm (Algebraic and Combinatorial Perspectives in the Mathematical Sciences, online) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 569.69 Tm (Mar 2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 569.69 Tm (p-adic multiple zeta values of integer indices) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 556.39 Tm (Meeting in the Middle \(Characteristic 0 and p Multiple Zeta Values\), University of Hawaii at Manoa) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 538.99 Tm (Feb 2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 538.99 Tm (p-adic multiple L-function and twisted multiple Bernoulli numbers) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 525.69 Tm (MATHSCI Freshman Seminar, Nagoya University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 508.29 Tm (Sep 2025) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 508.29 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 494.99 Tm (RIMS Symposium on Multiple Zeta Values, Kyoto University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 477.59 Tm (Sep 2025) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 477.59 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 464.29 Tm (Mathematical Society of Japan, Autumn Meeting, Nagoya University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 446.89 Tm (Jul 2025) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 446.89 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 433.59 Tm (4th International Workshop on Multiple Zeta Values, Tongji University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 416.19 Tm (Mar 2025) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 416.19 Tm (A map between arborifications of multiple zeta values) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 402.89 Tm (Monthly Meeting, Nagoya University \(blackboard talk\)) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 385.49 Tm (Nov 2024) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 385.49 Tm (Coaction Formula for the Motivic Version of Yamamoto's Integral) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 372.19 Tm (2nd Kindai Workshop: Multiple Zeta Values and Modular Forms, Kindai University) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 354.79 Tm (May 2024) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 354.79 Tm (Coaction formula for the motivic version of Yamamoto's integral) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 341.49 Tm (Monthly Meeting, online) Tj ET
-0.820 0.870 0.880 RG 0.60 w 49 37 m 546.28 37 l S
-0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 49 24 Tm (KU-YU FAN | ACADEMIC CV) Tj ET
-0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 468.28 24 Tm (2 / 3 | OCT 2026) Tj ET
-endstream
+<<
+/BaseFont /Times-BoldItalic /Encoding /WinAnsiEncoding /Name /F5 /Subtype /Type1 /Type /Font
+>>
 endobj
 9 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R /Annots [20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R] >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://doi.org/10.1007/s00209-026-04138-w)
+>> /Border [ 0 0 0 ] /Rect [ 148 344.246 297.4851 358.246 ] /Subtype /Link /Type /Annot
+>>
 endobj
 10 0 obj
-<< /Length 5203 >>
-stream
-0.090 0.180 0.240 rg BT /F2 9 Tf 1 0 0 1 49 792.89 Tm (KU-YU FAN) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.10 Tf 1 0 0 1 398.86 792.89 Tm (TEACHING, SERVICE & OTHER WORK) Tj ET
-0.820 0.870 0.880 RG 0.60 w 49 782.89 m 546.28 782.89 l S
-0.090 0.420 0.450 rg 49 750.89 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 752.89 Tm (TEACHING EXPERIENCE) Tj ET
-0.820 0.870 0.880 RG 0.60 w 203.60 755.89 m 546.28 755.89 l S
-0.090 0.180 0.240 rg BT /F1 8.65 Tf 1 0 0 1 49 724.89 Tm (Teaching assistantships; recurring courses grouped by institution, all semesters preserved.) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 709.69 Tm (TA) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 709.69 Tm (Nagoya University) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 696.39 Tm (Special Topics in Foundations \(Analysis\) - Spring 2026;) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 684.69 Tm (Calculus - Spring and Fall 2025) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 665.29 Tm (TA) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 665.29 Tm (National Taiwan University) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 651.99 Tm (Calculus - Fall 2022, Spring and Fall 2023, Spring 2024;) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 640.29 Tm (Modern Algebra - Fall 2022, Spring 2023;) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 628.59 Tm (Linear Algebra - Fall 2021, Spring 2022) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 609.19 Tm (TA) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 609.19 Tm (National Tsing Hua University) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 595.89 Tm (Elementary Number Theory - Spring 2021;) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 584.19 Tm (Calculus - Fall 2020, Spring 2021;) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 572.49 Tm (Advanced Calculus - Spring 2020) Tj ET
-0.090 0.420 0.450 rg 49 551.79 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 553.79 Tm (FELLOWSHIPS AND AWARDS) Tj ET
-0.820 0.870 0.880 RG 0.60 w 223.80 556.79 m 546.28 556.79 l S
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 524.09 Tm (2024-2027) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 524.09 Tm (Japan-Taiwan Exchange Association Scholarship) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 510.79 Tm (Graduate Research Students Fellowship \(October 2024-September 2027\).) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 491.39 Tm (2019) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 491.39 Tm (Professor Han-Ching Lai Memorial Scholarship) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 478.09 Tm (Department of Mathematics, National Tsing Hua University.) Tj ET
-0.090 0.420 0.450 rg 49 460.39 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 462.39 Tm (ACADEMIC SERVICE & ORGANIZATION) Tj ET
-0.820 0.870 0.880 RG 0.60 w 280 465.39 m 546.28 465.39 l S
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 432.69 Tm (2026) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 432.69 Tm (Organizing Committee - Nagoya-Kansai Young Researchers' Zeta Meeting) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 419.39 Tm (Joint meeting of the 19th Young Mathematicians Conference on Zeta Functions and 70th Kansai) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 407.69 Tm (Multiple Zeta Seminar; supported by a selected Nagoya University student project \(2025\).) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 388.29 Tm (Sep 2024-) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 388.29 Tm (Organizer and Representative - Monthly Meeting) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 374.99 Tm (A monthly research meeting on multiple zeta values.) Tj ET
-0.090 0.420 0.450 rg 49 357.29 2.70 13 re f
-0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 359.29 Tm (SELECTED PATENTS) Tj ET
-0.820 0.870 0.880 RG 0.60 w 182.30 362.29 m 546.28 362.29 l S
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 329.59 Tm (2021) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 329.59 Tm (Single stacking element and component structures for multi-style combinations) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 316.29 Tm (Taiwan utility model M612210.) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 298.89 Tm (2018) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 298.89 Tm (Rhombic dodecahedron puzzle and multiple rhombic dodecahedron puzzle) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 285.59 Tm (Taiwan utility model M566100; US Patent 10,722,782.) Tj ET
-0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 268.19 Tm (2017) Tj ET
-0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 268.19 Tm (Hexagonal prismatic packing puzzle) Tj ET
-0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 254.89 Tm (Taiwan utility model M548578; US Patent 10,322,337.) Tj ET
-0.090 0.180 0.240 rg BT /F1 8.65 Tf 1 0 0 1 49 240.19 Tm (All listed patents co-invented with Wen-Liang Hung.) Tj ET
-0.820 0.870 0.880 RG 0.60 w 49 37 m 546.28 37 l S
-0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 49 24 Tm (KU-YU FAN | ACADEMIC CV) Tj ET
-0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 468.28 24 Tm (3 / 3 | OCT 2026) Tj ET
-endstream
+<<
+/A <<
+/S /URI /Type /Action /URI (https://doi.org/10.1016/j.jalgebra.2026.06.006)
+>> /Border [ 0 0 0 ] /Rect [ 261.0267 307.0898 415.3405 319.3898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 11 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R /Annots [33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R] >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://arxiv.org/abs/2609.02346)
+>> /Border [ 0 0 0 ] /Rect [ 353.2767 240.8898 428.153 253.1898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 12 0 obj
-<< /Type /Annot /Subtype /Link /Rect [49 744.89 210 758.89] /Border [0 0 0] /A << /S /URI /URI (mailto:abc940605@gmail.com) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://arxiv.org/abs/2607.04086)
+>> /Border [ 0 0 0 ] /Rect [ 198.3992 205.6898 273.2755 217.9898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 13 0 obj
-<< /Type /Annot /Subtype /Link /Rect [428.28 744.89 546.28 758.89] /Border [0 0 0] /A << /S /URI /URI (https://kuyufan.github.io/) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://arxiv.org/abs/2603.22923)
+>> /Border [ 0 0 0 ] /Rect [ 198.3992 170.4898 273.2755 182.7898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 14 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 472.49 405.48 487.64] /Border [0 0 0] /A << /S /URI /URI (https://doi.org/10.1007/s00209-026-04138-w) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.math.sinica.edu.tw/mathmedia/journals/4658)
+>> /Border [ 0 0 0 ] /Rect [ 148 90.94601 216.1133 104.946 ] /Subtype /Link /Type /Annot
+>>
 endobj
 15 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 440.79 360.01 455.94] /Border [0 0 0] /A << /S /URI /URI (https://doi.org/10.1016/j.jalgebra.2026.06.006) >> >>
+<<
+/Annots [ 5 0 R 6 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R ] /Contents 41 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 40 0 R /Resources <<
+/ExtGState <<
+/gRLs0 <<
+/CA .48
+>> /gRLs1 <<
+/CA 1
+>>
+>> /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
 endobj
 16 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 383.09 437.96 398.24] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2609.02346) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://ncts.ntu.edu.tw/events_1_detail.php?nid=3179)
+>> /Border [ 0 0 0 ] /Rect [ 148 693.9698 280.5214 706.3898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 17 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 353.39 412.80 368.54] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2607.04086) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.mathsoc.jp/activity/meeting/kobe26sept/index.html)
+>> /Border [ 0 0 0 ] /Rect [ 148 652.4698 352.102 664.8898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 18 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 323.69 324.32 338.84] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2603.22923) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://multizetacafe.github.io/changsha2026/)
+>> /Border [ 0 0 0 ] /Rect [ 148 610.9698 448.3984 623.3898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 19 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 268.99 394.41 284.14] /Border [0 0 0] /A << /S /URI /URI (https://www.math.sinica.edu.tw/mathmedia/journals/4658) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://hiro2.pm.tokushima-u.ac.jp/~hiroki/hiroshima26.html)
+>> /Border [ 0 0 0 ] /Rect [ 148 541.2698 365.3086 553.6898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 20 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 720.19 389.19 735.34] /Border [0 0 0] /A << /S /URI /URI (https://ncts.ntu.edu.tw/events_1_detail.php?nid=3179) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.math.ntnu.no/acpms/)
+>> /Border [ 0 0 0 ] /Rect [ 148 499.7698 447.2392 512.1898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 21 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 689.49 457 704.64] /Border [0 0 0] /A << /S /URI /URI (https://www.mathsoc.jp/activity/meeting/kobe26sept/index.html) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://sites.google.com/view/hawaii-mzv-2026/home-page)
+>> /Border [ 0 0 0 ] /Rect [ 148 458.2698 431.4348 470.6898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 22 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 658.79 447.94 673.94] /Border [0 0 0] /A << /S /URI /URI (https://multizetacafe.github.io/changsha2026/) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://sites.google.com/view/math-graduate/home)
+>> /Border [ 0 0 0 ] /Rect [ 148 402.7698 275.067 415.1898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 23 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 628.09 538.25 643.24] /Border [0 0 0] /A << /S /URI /URI (https://hiro2.pm.tokushima-u.ac.jp/~hiroki/hiroshima26.html) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://sites.google.com/view/rimsmzv2025/)
+>> /Border [ 0 0 0 ] /Rect [ 148 361.2698 328.8456 373.6898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 24 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 597.39 451.14 612.54] /Border [0 0 0] /A << /S /URI /URI (https://www.math.ntnu.no/acpms/) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.mathsoc.jp/activity/meeting/nagoya25sept/index.html)
+>> /Border [ 0 0 0 ] /Rect [ 148 319.7698 352.102 332.1898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 25 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 566.69 324.32 581.84] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/hawaii-mzv-2026/home-page) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://multizetacafe.github.io/shanghai2025/)
+>> /Border [ 0 0 0 ] /Rect [ 148 278.2698 365.8986 290.6898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 26 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 535.99 407.95 551.14] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/math-graduate/home) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://sites.google.com/view/monthly-meeting-mzv/)
+>> /Border [ 0 0 0 ] /Rect [ 148 236.7698 220.7398 249.1898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 27 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 505.29 372.82 520.44] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/rimsmzv2025/) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.math.kindai.ac.jp/laboratory/tasaka/2ndKindaiWS/)
+>> /Border [ 0 0 0 ] /Rect [ 148 195.2698 418.2282 207.6898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 28 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 474.59 372.82 489.74] /Border [0 0 0] /A << /S /URI /URI (https://www.mathsoc.jp/activity/meeting/nagoya25sept/index.html) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://sites.google.com/view/monthly-meeting-mzv/)
+>> /Border [ 0 0 0 ] /Rect [ 148 153.7698 220.7398 166.1898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 29 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 443.89 372.82 459.04] /Border [0 0 0] /A << /S /URI /URI (https://multizetacafe.github.io/shanghai2025/) >> >>
+<<
+/Annots [ 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 
+  26 0 R 27 0 R 28 0 R ] /Contents 42 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 40 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
 endobj
 30 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 413.19 360.01 428.34] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/monthly-meeting-mzv/) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.koryu.or.jp/Portals/0/taipei/2023/1018/%E6%B7%BB%E4%BB%98%E2%91%A0.pdf)
+>> /Border [ 0 0 0 ] /Rect [ 148 452.5585 247.9375 466.2585 ] /Subtype /Link /Type /Annot
+>>
 endobj
 31 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 382.49 415.91 397.64] /Border [0 0 0] /A << /S /URI /URI (https://www.math.kindai.ac.jp/laboratory/tasaka/2ndKindaiWS/) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.math.nthu.edu.tw/app/pages.php?PageID=HCLai_Scholarship)
+>> /Border [ 0 0 0 ] /Rect [ 402.403 414.4698 431.7246 426.8898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 32 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 351.79 405.48 366.94] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/monthly-meeting-mzv/) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://sites.google.com/view/zetawakate19)
+>> /Border [ 0 0 0 ] /Rect [ 148 303.5585 220.5905 317.2585 ] /Subtype /Link /Type /Annot
+>>
 endobj
 33 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 521.09 341.71 536.24] /Border [0 0 0] /A << /S /URI /URI (https://www.koryu.or.jp/Portals/0/taipei/2023/1018/%E6%B7%BB%E4%BB%98%E2%91%A0.pdf) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://sites.google.com/view/monthly-meeting-mzv/)
+>> /Border [ 0 0 0 ] /Rect [ 360.144 264.4698 434.0119 276.8898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 34 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 488.39 335.30 503.54] /Border [0 0 0] /A << /S /URI /URI (https://www.math.nthu.edu.tw/app/pages.php?PageID=HCLai_Scholarship) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://patents.google.com/patent/TWM612210U/en)
+>> /Border [ 0 0 0 ] /Rect [ 237.4136 195.9698 277.6648 208.3898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 35 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 429.69 448.12 444.84] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/zetawakate19) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://patents.google.com/patent/US10722782B2/en)
+>> /Border [ 0 0 0 ] /Rect [ 283.1296 160.4698 373.9819 172.8898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 36 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 385.29 345.64 400.44] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/monthly-meeting-mzv/) >> >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://patents.google.com/patent/US10322337B2/en)
+>> /Border [ 0 0 0 ] /Rect [ 283.1296 124.9698 373.9819 137.3898 ] /Subtype /Link /Type /Annot
+>>
 endobj
 37 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 326.59 469.35 341.74] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/TWM612210U/en) >> >>
+<<
+/Annots [ 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R 35 0 R 36 0 R ] /Contents 43 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 40 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
 endobj
 38 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 295.89 432.75 311.04] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/US10722782B2/en) >> >>
+<<
+/PageMode /UseNone /Pages 40 0 R /Type /Catalog
+>>
 endobj
 39 0 obj
-<< /Type /Annot /Subtype /Link /Rect [131 265.19 281.77 280.34] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/US10322337B2/en) >> >>
+<<
+/Author (Ku-Yu Fan) /CreationDate (D:20261027090113+00'00') /Creator (anonymous) /Keywords () /ModDate (D:20261027090113+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (Academic Curriculum Vitae - updated 27 October 2026) /Title (Ku-Yu Fan | Academic Curriculum Vitae) /Trapped /False
+>>
+endobj
+40 0 obj
+<<
+/Count 3 /Kids [ 15 0 R 29 0 R 37 0 R ] /Type /Pages
+>>
+endobj
+41 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2909
+>>
+stream
+Gau`V>Beg[&q8H9^n]?l_mo6&I9B'sgN;g>)`p'LY4hsk+GhO9Wk?u(:Oi9P#SMeAR?h@Np@pra8B_5nhol'570J'Qo06P+o_JocS5DZl\lp4+YWu:Qkj?n';][X=6^[D";'2qQTokCnjeS<]&<$/p/o]H<JT9CapG`Mm#_ugk&(g%/+8,/j)P,":"hOPfY't%0E8_CRNWnnuqC2R+790KI<U-.Y*qg4A@l[WV,Y$7o.$D)8lS\O/<)U7>+0gZs&GqGXJiVR=P6S_E%kIP^UT)K"a]qjR,oO:UeOlrTQ,Ft8Ij4Mk0(V/]5%Viq.a"QugS^&;I29Uu0*`(nlG-o)&+fP]6V+DASAgU554SWd>g"D3EP?V8Kk>aQBWQr(89feOr]&"2"Vq,IQtp#D6W.MuVs)Qob"0#op:'n$?H<O.PA4+DE0<H%aV4oGCD0&Tm'0AT+Vl+0[KWr:rA)%f7@<P$JgJk2KfretFL(gh?4sUr_/OK(-@1X28DE5rSXH,hL6_L1&-SQ++qhZpgi)(ka#qq4olC<*k#rAqCTGRRQL0eTg"bJIm4l0s],u*)gUW@2:;i0/*akZ`6js=&C^.@pIRkl!SNS,CNL]E"G:`7M=>r2."$<t*dD)Pi_gTTcGf8bVl<FQTOPG/;C@=tmNI*YU_`$L>6c"_8G"bEb!+N6jVt5T!/]`7tGlVGLV\@CsTL?`p0e\'(n1=7dHd<NC:Gh/:R'nd[(&8Ds4VnXUfl1ZdFB%&\dEsY;A"W#<mq6Tp+7CMl>i'7Y)QM94Ej=>:fc*^fPJn&<DPeJVW_ONWVX0t7hBC2=)\"@L5,qN&,$pse=euI*<oma="UC#gC#ji/W)aUQl[@Z6A(nE,:Ma3e[fPok0l%4/0GP1.TJ-[=_6j;<3,L/UIh;qiSPROacBpo(!3hjErhGB4XccDYcl]9NkXMGW.fY7SH'R/MdFbBAalat%<0#sC``817nG"bFeHK.FSLTP#?6kFsc1f!"/^r,0=O'4NIP,ecPG`V=^6AdHd5=%r5O85l;.i?Om!.H\nFJUh]RZI4Cf+VT#8MCjU>61oVCa:iI:uL:Kq_#GTtn9EW:3.2`3PNS;(X7Km@^2G_&\!;Qdh\FC6<ZRh*OQ6rKb,AU;@;JiMf]EG$`3e46($_d"*9.^reSIGHbJq[]r)O2G(9$aai=]KaD3J111*oWN!/L8Js4L`oUO=o&jDeU''eS=tIV>;_\XYnf3U/e(uq[h9h:;SCb?5!ncU[MXlJ%+%C1`D,aahNR0OJ68/?hFK%0`>0g0AgO\9H2"#'O\]Hdi`d@A6W\fXbC%n93cudQOOtn[s2,^nW3^Q%WF7l%#"1m@#W683?TP!+T:UG8n/EL9cjQat6;X-a!A38gX=:&ulR/[3X[E>Mc2%^GVb-]J*Xp]UpmgUo:0U\XcRG>sOcmTPnQU40!Z?KGS,ukC_Ft^RaeaV>moD]C`n+0\QUJ"`!#*"-s/K-K[W"'^d4Msh.6O-%i7*Ou;,,S&>-2OT)3&M$+_tfZco1!S-;69jm#=jdIO<AH-52S^aBK\bUg]HuDgNf/%^sYsc@)nqI$g>AsgB-U9^pX4Ep4^4t!<hI_Z./m]n11aqJ>Ls8^sYscd*LV[5Mf%J=obTlg/2C]"mEAOZ?O5&5eq8opPn\EqI-<l[R351+<j_VZj)qDYQOKQAhHc]3)+rEgMI;-DLk8GiO&!!d3:6:m?II)+OFthg`R-!!s63X[=mKY_NC+6ge'.+R1<\hgKi*r$n=pTjZ;8Ec.NVYASH2KK<To)dfH_46-in<;S`f!jV;OZWn6i&i`*:[%el`bS_HCqFKMmBJ,Nid(2uR1=tk>]F's=ijkVFM8-oSt8jXAON^8e;!b_k#Dhi?A@*[$:,?+\nfQ]kTcMj_T/N7@?W`u;T]<*jUFfC"1hp,q<8)c\ekC%!ArLDJnY!o#0Bt@9M6MAf9U@$o)E#hXNPHXb^1b>kCJ-l.:LK@bCRB^`>ac;Q,0-DgAm0;D]&5,(g`/[,l?m3G#/KcV*[KljJ$.HD[L4\9+X+7FqD\IC@Vk_rI@VM`joJ="pO8"g+!b/Q.%Fs]U\QJ7.llE?]BFT?9H<dCC!NG[I#:_h90uO0#I_2NHl\-A6XVXYM2(EK.W[1W$+t92icLZ>d!%h:F@KG(IV(I(;%G@O4P6L#MHXQEF#4grtJIL6m8rj)8%uDbCKr34&-\Zl'>5DljVQ%3/U,`@^+'9K_DHZlf\Tn?%'Oekg0[L_9@BaGK.3l=p_[2m]B]RWrJYT8XD6)EeXP@<lf;cp_3_^9PeTrbG85Kll3+SPPpb$aqQj=<gfA2CE]_*@i2\!BJr.!gGVb68ifeeJ7W[*5+*l0r2,=f;Zd'XiL(,>eNf2@$cq%m+L.X\RsD:Q)%;ml!0<+C=uZrNTQTK>TmPh0gjJb#M&frEbP,d:;';JjsmZr=C0);O2kHV$r^[T]J]lL_DfXS,llN``\41(DRljS.CU09[k=ma)3;H-(7M"#HetfISK)q7On2m?V]`_hZO1>'tL\FE./]RHWiAG"qFpPcKpm/h>Q\6,$)LV)NO?i%/$^"UmO$LO[4;kt4`Qrtu#%i=@$.4W!<VOZ?@no(YNtg)Ab:fW<Ucd7sN"Wr?$d"0ee:2Tr:2m+X#tDpMGrqYf^r09Kqn<Zr6^c'd60]>_#McnFn/gF[Rfelt#daJBeK5u:k^W$uECjCoal_1_NG>nLooCII!&$Hs:dr5Q;R[Q#9a%oO,:l>LD#YEsVtrpgAdS\@T"S\X.Io^pD_Mg&)VrTpKK:1XI-9,MaZ-qrZVI5N7=YR%g<*p=gX8?35SUI\2g]8f^;iZ031A%af%".SJBMC3_RikpH;WJAB<ZgC<TG"4jD+:q)BT+=B5iN=X.IOEl4m<%Z,pU\C+6))JN!Pik&L]~>endstream
+endobj
+42 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1985
+>>
+stream
+Gau`UgN)%,&:N/3m%]b9&-<u!l'nF"[1ga4>-^6Sp][B8M_Rf%,\:'UqC[")--)l2LM97g;]lBSZ0.Y5Kg<Jk%k[bc0u1gYHoRfb),03YD.:ET*0-p!6Fk9m!5c7lW.S1/U:p`oh4WuKYR;%3-W,$&qm78IE,[sqGb4B?1kqbY=7<n1_9)3+%8=OQoPH;b[tTO^M2gP!k%_Mon2E."n-Clbpr$b$:LR1g:mY(MaD3+@NeX0da(HV6?!Ud.NNUR1`c->a*?K,pm$/4rY?V]H4cB2Vq<NR@n2NrGoA.Re(kg->F+r)uMdXsmaS$U$$H+L8ZAn\%5T!#&gocAK#XOuX*=[Zh\;QAamKj]E$R2OJ^,q"9qn^(TCii+rZY]FIGG,nnp5(1e.H[U66"NRB`nm4FbW*6!_7.GEbtQcV2c`=XX0uq&b/X:Ko`g&f@/b>e'2cV;EFdXW>rBQ\;cp7)GG68rjQ[L5<Mj:F/79s&qs5G=)/$m^gj%['c;T8ZHNrEC#.5K$`hcjVq'_'h8N6Mu@)P!i(N,n!<uNU%E-2$P1(&XfLD-5uX%6hVf-u[06)8QBLB3?8;'%>7"Wpa5kZ&=NE3Y:5.c"G$n+bSDeF=F8)bYD!6/7-uLDDB>E+/pW#VT0T17dCf@PjWT;o<^NFLm3`MShiZKcu-'^;\G(QL!5Zp]SXs7F-0s+nJMX14j3U-?jF?P&Q\>&%IEL?]u9BJsNp4?W")tG\a\=?6V$cDSh0534sA-6nNsmb\?gBj)!&p"3SLa<"8K4"M2B/?RX!].L=EZ%l.=f%.q3B]6l8M&cK4/s8;hCPm#*bHZ0d%-,705+%rsg7K<NIEh\1_j_JAfB=X8K3uG-k<Lgj,W>qVf:PCHJVRhBJ3'20XDnp"/cP$8R=#35u>HHt.]V[/.e5.Xn.F.sl>]*C^9QG92JdW6>9=7,?I.<B\0h]4fH]]u>$r'9V>/5XOoKHLC-0V-29n+(VY=kX%@NmT\&L6pI0>epec\[cVo!DfV.UU\@4R,NOk4BN75-L^Z,S?F/r.@RMC6dDUj9Z8&-_i0/']d\qQ/YfbF[`3f$_O1oqnhXRf3A#XL-lW>grf,@1$:AeFg_Qcq';5aF>?ps8clDm/lTI1pT(G_7(?9i6)5Ga-q@Y:)+<3<KOMdc!VC(`h=eN63VC4=@<ADZWC6'3Td(T(Y\;+#C6IFl#U&9E*0JIl]H[%9-615g8SrN!.s)DXM/&pih3%)c;^'gi"l#lW#SjP>_LX/R`gZW*\\C%6</&*lbjb<AD7hkI/S$?9DGS.YOi7V8)4&V2OIJ3+d;Hm@epJqhAJg$C2j&#0'.mG1@(SK=rD>>/A_M\DeG74+TrA^K,k6]Y`_7A%^PbWDllp8(p)FL\_s-DrF9X+laqh6U%bX5)l#l0;KDArK8#`,Zfm\%RqjOOXFl._cE/BtDO%L]P9P52"k>f)H`;Z9Sg2.OP-htlknH:3)GcA#g'u*]aG1[Y5EQ?fK?LBk&MRV:WLj%D?^6AChJ=#u#]mJW8*N!;kHVN.`?tOlF$+k\S):H9,(#&u^oX`Q:akaG1/(Vr52'5nBqAu_le[qVe`-PHm/\f@&i%5i,U2NWh,[Wt**tU$TF0eCApG4C"/2CaXJ+KNX>XA6$E`HrC!S?mg(@k#>ZEuZ<nf-Ffisl::Y\W8?I#^19Q*H9&UZ&):AVIMZ;Alk\9MkgRDn`IZr">I3pI<HC]_o+\=Pr,4dUI?)&p?9S=*[`F:O-=2#K$PRh4]k`Zb/4*Gkrq.>VY0q,mK$n(a.K2Xn<1YB^0j@ML#.?P\m<Xk_eYYcM"`.DQm[^D5rf;EX-B?%]NMO3H[(ma5q.3a:\J:i*UQ2GeI\VG$!f=mWi\5!5i]%qeW;"^l\@UZ+4YMFGRD1`:n+@0h$E,iRA*R*el7O@.E$Z!dl)J!pi`J'uYIIHZQ*0]5H<?Z@qC.e"7l>S'asR]O/uj5-8[;H8i8;k26aSrrP*n9]Q~>endstream
+endobj
+43 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2499
+>>
+stream
+GauHN>>sQO'7KVYkXRN7'?s5r<Lt03fhGk<@$=Pf]F=@=/"^^O,f?pQ+.jV1D*Yn29i8"VO_4I6o]7',9u4Xf>5]DY!8fHggJ\HD_=@f/+9IjAE3buGaq^*Q#ie+D/q3X,oj,YjZYBib.7@4#A2=D0BsYD3TKJQcT'sKNL4c*OO8ceFe+q%.Yl#H+hc(Z,O:GSE!nVS]VbiEG3tE#f6EL?^./)#ATScQ7.6@$G8+Yd:%k$N^NoBd(io7lGjk8`Ur;L+b58cNUC.H4C[tLBF_gT&iECLYtc&rFJC>d,T"X?]4[i^N9d3"J>>eCE^DT38(IPR,\+;G^;&i1tngY:+L\qDRrfR?LDr*'e*Ab3B(QlQ]Lee33Ac-4o4?*9i-7JK8OX&OOO.qin/2U:I'AbNA*)18Y0mlfW7hP5mAX2W\md\5ROD_TqiDSGB+7+PeB\2&D.G-rK:h$QFagniE7-;<!0ngQA?BTg0D.]eS,,*]C2mLse/\F#Xmmf-oO"tFS]NiF`90j],CFpAlS/aDU,.,dmK<@;bT;6SGq%@9Y2C[rZ#n)5APFuM(3YUFWl%Q=&#rp55WI7Eu3Pjf]J=<-E/DQt?WrW!T9:=c'@:l"POJ?,,'=C``aFTflE$\JMt"A[E_ZI3<O-3[WpbS)#Q,I4@oE5e2r7@%/bb[E+A8#d8CVF5a3UL5$XM]Ecu=i%(t+q$q*%1!'6*5BVc$I<B))?SnU*o!#\Kr0m,onPe;HP#6#+DFare"r09NfBG:mr\-/I)8L>?S>#gB\;9R!TSrfF:uoq';J9;S-\>(\h\O4o4W!DF8ZeXMt.`nN[4Ug^s9g8kkoF.F9mhbk.?QMRSTC@[)mMHH61LUM#'a>?J(g`hnH4H8lm3`:Dg="aM]DSFaaiC\+-lJ@C\*A>'g^BN[L!ScEKT_X\s6N?NI.dp5'p:=19+DHNfHgF,OomVkqFg9jiRCG++quHZ#J-GnT5T;!2up5j*9"W8FE2FZL$L)sBD@@H_j*[<?\a`(KK@?=u,VYHnHpYFiW9lg`h1V=Q_^;/LT*3j2&gZel(3Sjh#j]MfJ4l!:P#Z_Cocq45f4`Ts<@k61H+/rYi?qbjU:HRSOip8hu)hG62]M9W/WUJF&W)kF'im85;>0&+c]&T#ldkB>%DALOcm9e-!gbk5_O9*6!-5ctDOYUHt2lsU(i;*a[G92MLoT@p)[2mY2@C#W_m?+h3G*a"spYb/"q4kudJbq3g6j6!dh&c&VU]$>F<)cWgrBc^=\3S#qg[Z"p3T4hD_)W*[KG.RM(;[U!_@k`7MGd!=+j,3BPF9q%V:3.rE?^skn#^od(1hl5;fh%_^dgck:0U^3ZbCPc3^pu'V`Wdb<%UkU6#uimVc4%=,WPbZJmX#S_-u0+N&$,Tp.7!i5ZNY:)M_o7tf`S\H`fLA6V`M9ESi:$biA^qJYgtF2#_roBU9bcHkj/=SoJ?8M4l1OcfV1_FeX"p!M]ViBIOAY6^@TJpcmocb!A$on)[<16N*l.`:;Y?S:#UBWi(.`L7i+@;^`2+^6f-bLT9qR+*S=OU:?+;b94M^r<51Q"^#s%!'Nk*ZicFt-leklBG`BOH=>8A?9SlE$Fob@o0-Cuj_C@dH+a/CGp2)klp&Uh8\S7`1N?Q4\i;SlYPM=\LJ6Z4852@POrSkX_dnWt>\S8NmctrW-)jOhIR<m-[ZQRZkG>N+^/Bpg%Qe1u)TeMT8XS)(b92UlnA9n#1hUATV<Bo"u6Yd[bASPCa!X<l23n%k#f$1]t-RQ4jpD6Lt9k6tYUPc9Q^+`]M3K29[,mL<np%(!h2pqS^neeo^=uL/ekH-Z-1-0ur9tek2oknoZ28or*m'6&/.@W%L.@[$,lf?m&=cMrW<pT)QX*%pn<fHdS`qYYGQlNE#[<>]4aW[^-<l8[C4^b[H"s9qeHVYBWFXX!<g1Rf7rQ]j>A2T:<A$nb[[!kGdNcP%t,Y%;Q7Sld(-6BHp2ti?PQnpUX/MPk_8;^:Ms0Huhl8Ktg]a&8AV2;U;1>`;t(@)B*b1F%D<0[,:'5tJ%Y$Q+aB_>;2%%?\he_`KmD9FW=<"Z#Y'>:'S?-4",hH&9NlGgR<;If1ZPaJtc?YjQ2!a+ET"aXZZ3O[.JqtY;4bHn?uk"jko%U",,pA.:SI4efl3mMrqL])8@'Il.*</_hIO1ctIW0.fYWd*P/MToefdXQ1!U#*(NHs%L+Q.gklB`g#F0]W1!4eGC+8`dWD_AjfE\U%J5KemS2e$8WY5/J(Bi(oH.=KNUd-Go@&Jg`0$94]tR@Cn]1P?[qua6l8.r-t*pkR:J*IH"&RqZelGAJjIis5FXgJA9I:bgh)25ZP@&^Ec(XQ>g3<2>cU[G/'OI!8ldSruH^K#B5GsRDRJG<4`.NBm`Iu@rdG%4qV&Q7n+1c",lrgTG3cSKug5(<ahYT)m$2H/&;$fio5XbW[-HXlu&W1]<qc]*7R7#cfZ.`IW]GZqchtNeJ;@R]>kspf`SR1!C'Z?D#~>endstream
 endobj
 xref
-0 40
+0 44
 0000000000 65535 f 
-0000000035 00000 n 
-0000000108 00000 n 
-0000000178 00000 n 
-0000000275 00000 n 
-0000000377 00000 n 
-0000000482 00000 n 
-0000005407 00000 n 
-0000005625 00000 n 
-0000010697 00000 n 
-0000010950 00000 n 
-0000016205 00000 n 
-0000016418 00000 n 
-0000016564 00000 n 
-0000016717 00000 n 
-0000016883 00000 n 
-0000017053 00000 n 
-0000017209 00000 n 
-0000017365 00000 n 
-0000017521 00000 n 
-0000017699 00000 n 
-0000017875 00000 n 
-0000018057 00000 n 
-0000018226 00000 n 
-0000018409 00000 n 
-0000018564 00000 n 
-0000018743 00000 n 
-0000018915 00000 n 
-0000019081 00000 n 
-0000019268 00000 n 
-0000019437 00000 n 
-0000019611 00000 n 
-0000019795 00000 n 
-0000019969 00000 n 
-0000020175 00000 n 
-0000020366 00000 n 
-0000020532 00000 n 
-0000020706 00000 n 
-0000020877 00000 n 
-0000021050 00000 n 
+0000000061 00000 n 
+0000000132 00000 n 
+0000000239 00000 n 
+0000000347 00000 n 
+0000000457 00000 n 
+0000000624 00000 n 
+0000000792 00000 n 
+0000000901 00000 n 
+0000001015 00000 n 
+0000001202 00000 n 
+0000001401 00000 n 
+0000001585 00000 n 
+0000001770 00000 n 
+0000001955 00000 n 
+0000002156 00000 n 
+0000002484 00000 n 
+0000002684 00000 n 
+0000002892 00000 n 
+0000003085 00000 n 
+0000003292 00000 n 
+0000003471 00000 n 
+0000003674 00000 n 
+0000003869 00000 n 
+0000004059 00000 n 
+0000004269 00000 n 
+0000004462 00000 n 
+0000004660 00000 n 
+0000004868 00000 n 
+0000005066 00000 n 
+0000005378 00000 n 
+0000005608 00000 n 
+0000005827 00000 n 
+0000006017 00000 n 
+0000006219 00000 n 
+0000006419 00000 n 
+0000006621 00000 n 
+0000006823 00000 n 
+0000007090 00000 n 
+0000007160 00000 n 
+0000007491 00000 n 
+0000007566 00000 n 
+0000010567 00000 n 
+0000012644 00000 n 
 trailer
-<< /Size 40 /Root 1 0 R >>
+<<
+/ID 
+[<fc36684d13816347c4f92fb42bad9969><fc36684d13816347c4f92fb42bad9969>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 39 0 R
+/Root 38 0 R
+/Size 44
+>>
 startxref
-21223
+15235
 %%EOF
