@@ -184,6 +184,14 @@
         result.push(entry(label, "Mathematics education / geometric puzzle design; with Wen-Liang Hung", taiwan.href, year));
       }
     });
+    // The two granted US patents are also documented in the DC2 application
+    // and official patent records; keep their numbers explicit for accurate citation.
+    result.push(entry("US Patent 10,322,337 — Hexagonal Prismatic Packing Puzzle",
+      "Co-invented with Wen-Liang Hung · Mathematics education",
+      "https://patents.google.com/patent/US10322337B2/en", "2019"));
+    result.push(entry("US Patent 10,722,782 — Rhombic Dodecahedron Puzzle",
+      "Co-invented with Wen-Liang Hung · Mathematics education",
+      "https://patents.google.com/patent/US10722782B2/en", "2020"));
     return result;
   }
   function academicCv(source, expected) {
@@ -207,7 +215,7 @@
         { text: siteUrl, link: siteUrl, color: "#087D83", alignment: "right" }
       ], margin: [0, 7, 0, 3]
     });
-    groups.push({ canvas: [{ type: "line", x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1.5, lineColor: "#087D83" }], margin: [0, 6, 0, 3] });
+    groups.push({ canvas: [{ type: "line", x1: 0, y1: 0, x2: 500, y2: 0, lineWidth: 1.5, lineColor: "#087D83" }], margin: [0, 6, 0, 3] });
     add("Research Interests", [{ text: "Multiple zeta values; motivic periods and coactions; arborified and Schur multiple zeta values; p-adic multiple zeta values and multiple L-functions.", margin: [0, 0, 0, 6] }]);
     add("Education", education(source, expected));
     add("Published Papers", publishedOrPreprints(source, "pubs-published"));
