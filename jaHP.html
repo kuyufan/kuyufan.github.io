@@ -252,7 +252,7 @@
   pointer-events: none;
 }
 /* 有演講（.talk 裡面含有連結）的條目：整塊高亮 + 左側色條 */
-.talks li:has(.talk a){
+.talks li:is(:has(.talk a), [data-talk="true"]){
   background: rgba(16,185,129,.10);     /* 淡綠底 */
   border-left: 4px solid #10b981;       /* 左側色條（emerald-500） */
   padding: .75rem 1rem .85rem;
@@ -260,7 +260,7 @@
 }
 
 /* 標題後自動加一個「演講」徽章 */
-.talks li:has(.talk a) .talk-title::after{
+.talks li:is(:has(.talk a), [data-talk="true"]) .talk-title::after{
   content: "講演";
   display: inline-block;
   margin-left: .5rem;
@@ -272,12 +272,12 @@
 }
 
 /* 在「演講：」欄位前加麥克風小圖示 */
-.talks li:has(.talk a) .talk-meta .talk::before{
+.talks li:is(:has(.talk a), [data-talk="true"]) .talk-meta .talk::before{
   content: "🎤 ";
 }
 
 /* 沒有演講（沒有連結）的條目就保持原樣；可選：讓它們稍微淡一點 */
-.talks li:not(:has(.talk a)) .talk-title { opacity:.95; }
+.talks li:not(:is(:has(.talk a), [data-talk="true"])) .talk-title { opacity:.95; }
 
 .visually-hidden {
   position: absolute !important;
@@ -337,7 +337,7 @@
         <li><a href="#bio" class="scrolly">自己紹介</a></li>
         <li><a href="#education" class="scrolly">学歴</a></li>
 		<li><a href="#news" class="scrolly">近況</a></li>
-        <!--<li><a href="#cv" class="scrolly">履歴書</a></li>-->
+        <li><a href="#cv" class="scrolly">CV</a></li>
       </ul>
     </li>
 
@@ -365,6 +365,8 @@
   </ul>
 </li>
 
+<li><a href="#awards" class="scrolly"><span class="icon solid fa-award">受賞・奨学金</span></a></li>
+<li><a href="#service" class="scrolly"><span class="icon solid fa-users">学術活動の運営</span></a></li>
 <li>
   <a href="#patents" class="scrolly"><span class="icon solid fa-file-alt">特許</span></a>
 </li>
@@ -463,11 +465,10 @@
 	</figure>
     
 
-    <!-- 履歷 
-    <h3 id="cv">履歴書（更新中）</h3>
-    <p>
-      <a href="files/CV_KuYuFan.pdf" class="button">履歴書をダウンロード<br>（更新中）</a>
-    </p>-->
+    <!-- CV PDF is assembled from the current English website data, not a fixed file. -->
+    <h3 id="cv">学術履歴書（CV）</h3>
+    <p><a href="#" id="download-academic-cv" class="button" role="button" data-expected-graduation="September 2027">英語版学術 CV（PDF）をダウンロード</a></p>
+    <p id="cv-status" class="muted" role="status" aria-live="polite"></p>
   </div>
 </section>
 
@@ -891,7 +892,7 @@
         </div>
       </li>
 
-	  <li>
+	  <li data-talk="true">
         <div class="talk-title">
           <a href="https://sites.google.com/view/monthly-meeting-mzv/%E9%81%8E%E5%8E%BB%E3%81%AE%E8%AC%9B%E6%BC%94?authuser=0" target="_blank" rel="noopener noreferrer">
             月例報告会
@@ -1438,6 +1439,56 @@
 </section>
 
 <!-- 特許 -->
+<section id="awards" class="two">
+  <div class="container">
+    <header><h2>受賞・奨学金</h2></header>
+    <p class="muted">数学研究と研究支援に関連する主な受賞歴。博士研究員応募用 CV には原則として奨学金のみを掲載。</p>
+    <ul class="edu awards-list">
+      <li class="award-item" data-cv="fellowship">
+        <div class="edu-year">2024–2027</div>
+        <div class="edu-body"><a href="https://www.koryu.or.jp/Portals/0/taipei/2023/1018/%E6%B7%BB%E4%BB%98%E2%91%A0.pdf" target="_blank" rel="noopener noreferrer">日本台湾交流協会 日本奨学金留学生（修士・博士留学生）</a>
+        <span class="award-meta muted"> — 2024 年度採用・2024 年 10 月～2027 年 9 月。</span></div>
+      </li>
+      <li class="award-item" data-cv="fellowship">
+        <div class="edu-year">2019</div>
+        <div class="edu-body"><a href="https://www.math.nthu.edu.tw/app/pages.php?PageID=HCLai_Scholarship" target="_blank" rel="noopener noreferrer">頼漢卿教授記念奨助学金</a>
+        <span class="award-meta muted"> — 国立清華大学数学系，108 学年度。</span></div>
+      </li>
+      <li class="award-item" data-cv="historical">
+        <div class="edu-year">2017</div>
+        <div class="edu-body"><a href="https://twsf.ntsec.gov.tw/activity/race-2/2017/pdf/010039.pdf" target="_blank" rel="noopener noreferrer">台湾国際科学フェア・数学部門，大会賞四等賞</a>
+        <span class="award-meta muted"> — 受賞研究：格子直線数とオイラー関数の研究。</span></div>
+      </li>
+      <li class="award-item" data-cv="historical">
+        <div class="edu-year">2016</div>
+        <div class="edu-body"><a href="https://www.doe.gov.taipei/News_Content.aspx?n=B3DDF0458F0FFC11&s=18C560FD4D1EEFC5&sms=72544237BBE4C5F6" target="_blank" rel="noopener noreferrer">全国高等学校数理・情報学科能力競技会・数学部門，全国決勝三等賞</a>
+        <span class="award-meta muted"> — 105 学年度全国決勝；台北市教育局の公式記事に氏名が掲載。</span></div>
+      </li>
+      <li class="award-item" data-cv="historical">
+        <div class="edu-year">2016</div>
+        <div class="edu-body"><a href="https://twsf.ntsec.gov.tw/activity/race-1/56.htm" target="_blank" rel="noopener noreferrer">第 56 回全国小中高校科学展覧会・高校数学部門，第 3 位</a>
+        <span class="award-meta muted"> — 平面・空間格子図形の研究。</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="service" class="two">
+  <div class="container">
+    <header><h2>学術活動の運営</h2></header>
+    <ul class="edu service-list">
+      <li class="service-item" data-cv="service">
+        <div class="edu-year">2026</div>
+        <div class="edu-body"><a href="https://sites.google.com/view/zetawakate19" target="_blank" rel="noopener noreferrer">名古屋・関西ゼータ若手研究集会</a> — 組織委員（2026 年；第 19 回ゼータ若手研究集会と第 70 回関西多重ゼータ研究会の合同開催；2025 年度名古屋大学学生プロジェクト採択）</div>
+      </li>
+      <li class="service-item" data-cv="service">
+        <div class="edu-year">2024–</div>
+        <div class="edu-body"><a href="https://sites.google.com/view/monthly-meeting-mzv/" target="_blank" rel="noopener noreferrer">月例報告会</a> — 運営担当（2024 年～現在）</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <section id="patents" class="two">
   <div class="container">
     <header><h2>特許</h2></header>
@@ -1839,6 +1890,11 @@
         </div>
       </li>
 	              
+      <li>
+        <div class="item">
+          <a class="name" href="https://hctsui.github.io/index.html" target="_blank" rel="noopener noreferrer">崔鴻竣(Tsui, Hung-Chun)</a>
+        </div>
+      </li>
 <li>
         <div class="item">
           <a class="name" href="https://webusers.imj-prg.fr/~michel.waldschmidt/index2.html" target="_blank" rel="noopener noreferrer">Michel Waldschmidt</a>
@@ -2072,6 +2128,7 @@
 })();
 </script>
   
+<script defer src="assets/js/cv-download.js"></script>
 </body>
 
 </html>
