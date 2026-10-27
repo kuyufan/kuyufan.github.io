@@ -12,10 +12,14 @@ Whenever education, research interests, publications or preprints, presentations
 2. Rebuild **and replace** `files/CV_KuYuFan.pdf` if any CV-relevant field changed, or verify that the PDF remains accurate if none changed. Replacing the HTML alone does not update the PDF.
 3. Check publication status and bibliographic details, sort newest first, and distinguish papers from preprints.
 4. Include only actual research presentations in the CV Talks section, not attendance without a presentation. The 2025-03-24 monthly seminar was a blackboard presentation without slides.
-5. CV Awards should include the 2024 Japan–Taiwan Exchange Association fellowship and 2019 National Tsing Hua University mathematics scholarship, while the three pre-university awards remain visible on the site but are omitted from the postdoctoral CV.
-6. Check that PhD is labeled **expected September 2027** until formally completed.
-7. Recheck English PDF text, hyperlinks, typography, page breaks, footers and the direct download link in all three HTML pages.
-8. The PDF must be committed **at the same time** as any CV-relevant website update. Avoid on-demand client-side PDF generation; the requested design is static, reliable, no CDN dependency.
+5. Separate **Refereed Research Articles** (research journals) from **Expository and Outreach Publications** (e.g. 2021 *Mathmedia / 數學傳播*). Keep the outreach article on the website and in the CV's separate expository section; never present it as a refereed research paper.
+6. Keep **Schur multiple zeta values** and **arborified multiple zeta values** as distinct research topics in the CV.
+7. Label the 2026 Nagoya teaching course as **Special Topics in Foundations (Analysis)** (Chinese 基礎論特論（分析）, Japanese 基礎論特論（解析）).
+8. In the CV patents section, present **three patent families**, one per website title (2021 stacking elements, 2018 rhombic dodecahedron puzzle, 2017 hexagonal prismatic puzzle), listing matching Taiwan and US patents where applicable.
+9. CV Awards should include the 2024 Japan–Taiwan Exchange Association fellowship and 2019 National Tsing Hua University mathematics scholarship, while the three pre-university awards remain visible on the site but are omitted from the postdoctoral CV.
+10. Check that PhD is labeled **expected September 2027** until formally completed.
+11. Recheck English PDF text, hyperlinks, typography, page breaks, footers and the direct download link in all three HTML pages.
+12. The PDF must be committed **at the same time** as any CV-relevant website update. Avoid on-demand client-side PDF generation; the requested design is static, reliable, no CDN dependency.
 
 The repository deliberately contains no client-side PDF generation code. All three pages link directly to `files/CV_KuYuFan.pdf`.
 
