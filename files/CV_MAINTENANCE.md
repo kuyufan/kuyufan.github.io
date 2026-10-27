@@ -25,3 +25,7 @@ The repository deliberately contains no client-side PDF generation code. All thr
 
 ### Format
 A4, modern restrained academic PDF with a date column, linkable publications and talk records, sections for education, publications, preprints, selected talks, fellowships, teaching, academic service and selected patents. Source data must remain grounded in the website and verified academic records.
+
+## Research meeting naming and academic role
+
+The meeting at https://sites.google.com/view/monthly-meeting-mzv/ is officially named **Monthly Meeting** in English and **月齢報告会** (not 月例報告会) in Japanese; use **月齡報告會** in Chinese. The organizer's official site lists Ku-Yu Fan (范) as **representative from September 2024 to present**. Represent this as **Organizer and Representative (September 2024–present)** in English, **組織者兼代表（2024 年 9 月至今）** in Chinese, and **運営・代表（2024 年 9 月～現在）** in Japanese. Use the same names when linking past talks and useful research activities. Keep the static PDF synchronized.
