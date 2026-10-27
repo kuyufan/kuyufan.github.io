@@ -72,6 +72,9 @@
 .news-list { list-style: none; margin: 0.75rem 0 0; padding: 0; }
 .news-list li { margin: 0.4rem 0; }
 .news-list li time { font-weight: 600; margin-right: 0.5rem; white-space: nowrap; }
+/* Prime congratulations share the visitor count's font size and visual style. */
+#top .visit-prime { display: block; }
+#top .visit-prime[hidden] { display: none !important; }
 /* Hero 訪客計數外觀 */
 .visit { margin-top: 0.8rem; font-size: 1.2rem; opacity: 0.9; }
 /* 關於我：學歷時間軸、淡字 */
@@ -417,7 +420,7 @@
 
 <header>
   <h2 class="alt">歡迎來到<strong>范谷瑜</strong>的個人網頁</h2>
-  <p class="visit">您是第 <span id="visit-count">—</span> 位訪客</p>
+  <p class="visit">您是第 <span id="visit-count">—</span> 位訪客<span id="prime-visit-message" class="visit-prime" hidden>恭喜你，<span id="prime-visit-number"></span>是一個質數</span></p>
 </header>
 
 						</div>
@@ -2215,6 +2218,27 @@
   const el = document.getElementById('visit-count');
   if (!el) return;
 
+  const primeMessage = document.getElementById('prime-visit-message');
+  const primeNumber = document.getElementById('prime-visit-number');
+
+  function isPrime(n) {
+    if (!Number.isSafeInteger(n) || n < 2) return false;
+    if (n === 2) return true;
+    if (n % 2 === 0) return false;
+    for (let d = 3; d <= n / d; d += 2) {
+      if (n % d === 0) return false;
+    }
+    return true;
+  }
+
+  function updatePrimeMessage(n) {
+    if (!primeMessage || !primeNumber) return;
+    const prime = isPrime(n);
+    primeMessage.hidden = !prime;
+    primeNumber.textContent = prime ? n.toLocaleString() : '';
+  }
+
+
   const GAS_URL = 'https://script.google.com/macros/s/AKfycbwpArinLwrR1EGLVdlqjvjtoH1EIgjgZvHqgBn0n1Q6guDP38p4Bi7hdpBOLt4GelXX/exec';
 
   fetch(GAS_URL + '?_=' + Date.now(), { cache: 'no-store' })
@@ -2225,6 +2249,7 @@
     .then(d => {
       const n = Number(d.value);
       el.textContent = Number.isFinite(n) ? n.toLocaleString() : 'N/A';
+      updatePrimeMessage(n);
 
       // ★ 新增：存到全域，避免事件先發後聽
       window.__visitCount = n;
@@ -2233,6 +2258,7 @@
     .catch(err => {
       console.error('counter error:', err);
       el.textContent = 'N/A';
+      updatePrimeMessage(0);
 
       // ★ 新增：失敗也寫個 0，照片至少能顯示
       window.__visitCount = 0;
