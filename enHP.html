@@ -251,7 +251,7 @@
   pointer-events: none;
 }
 /* 有演講（.talk 裡面含有連結）的條目：整塊高亮 + 左側色條 */
-.talks li:has(.talk a){
+.talks li:is(:has(.talk a), [data-talk="true"]){
   background: rgba(16,185,129,.10);     /* 淡綠底 */
   border-left: 4px solid #10b981;       /* 左側色條（emerald-500） */
   padding: .75rem 1rem .85rem;
@@ -259,7 +259,7 @@
 }
 
 /* 標題後自動加一個「演講」徽章 */
-.talks li:has(.talk a) .talk-title::after{
+.talks li:is(:has(.talk a), [data-talk="true"]) .talk-title::after{
   content: "Talk";
   display: inline-block;
   margin-left: .5rem;
@@ -271,12 +271,12 @@
 }
 
 /* 在「演講：」欄位前加麥克風小圖示 */
-.talks li:has(.talk a) .talk-meta .talk::before{
+.talks li:is(:has(.talk a), [data-talk="true"]) .talk-meta .talk::before{
   content: "🎤 ";
 }
 
 /* 沒有演講（沒有連結）的條目就保持原樣；可選：讓它們稍微淡一點 */
-.talks li:not(:has(.talk a)) .talk-title { opacity:.95; }
+.talks li:not(:is(:has(.talk a), [data-talk="true"])) .talk-title { opacity:.95; }
 
 .visually-hidden {
   position: absolute !important;
@@ -336,7 +336,7 @@
         <li><a href="#bio" class="scrolly">Bio</a></li>
         <li><a href="#education" class="scrolly">Education</a></li>
 		<li><a href="#news" class="scrolly">Updates</a></li>
-        <!--<li><a href="#cv" class="scrolly">履歷</a></li>-->
+        <li><a href="#cv" class="scrolly">CV</a></li>
       </ul>
     </li>
 
@@ -364,6 +364,8 @@
   </ul>
 </li>
 
+<li><a href="#awards" class="scrolly"><span class="icon solid fa-award">Awards and Fellowships</span></a></li>
+<li><a href="#service" class="scrolly"><span class="icon solid fa-users">Academic Service and Organization</span></a></li>
 <li>
   <a href="#patents" class="scrolly"><span class="icon solid fa-file-alt">Patents</span></a>
 </li>
@@ -465,11 +467,10 @@
        decoding="async">
 	</figure>
     
-    <!-- 履歷 
-    <h3 id="cv">履歷（更新中）</h3>
-    <p>
-      <a href="files/CV_KuYuFan.pdf" class="button">下載履歷<br>（更新中）</a>
-    </p>-->
+    <!-- CV PDF is assembled from the current English website data, not a fixed file. -->
+    <h3 id="cv">Academic CV</h3>
+    <p><a href="#" id="download-academic-cv" class="button" role="button" data-expected-graduation="September 2027">Download Academic CV (PDF)</a></p>
+    <p id="cv-status" class="muted" role="status" aria-live="polite"></p>
   </div>
 </section>
 				
@@ -981,7 +982,7 @@
         </div>
       </li>
 
-	  <li>
+	  <li data-talk="true">
         <div class="talk-title">
           <a href="https://sites.google.com/view/monthly-meeting-mzv/%E9%81%8E%E5%8E%BB%E3%81%AE%E8%AC%9B%E6%BC%94?authuser=0" target="_blank" rel="noopener noreferrer">
             Monthly Meeting
@@ -1566,6 +1567,60 @@
 </section>
 
 <!-- 專利 -->
+<section id="awards" class="two">
+  <div class="container">
+    <header><h2>Awards and Fellowships</h2></header>
+    <p class="muted">Selected fellowships and awards related to mathematics; the postdoctoral CV includes fellowships by default.</p>
+    <ul class="edu awards-list">
+      <li class="award-item" data-cv="fellowship">
+        <div class="edu-year">2024–2027</div>
+        <div class="edu-body"><a href="https://www.koryu.or.jp/Portals/0/taipei/2023/1018/%E6%B7%BB%E4%BB%98%E2%91%A0.pdf" target="_blank" rel="noopener noreferrer">Japan–Taiwan Exchange Association Scholarship (Graduate Research Students)</a>
+        <span class="award-meta muted"> — 2024 cohort; October 2024–September 2027. The public results identify candidates by examination number, not by name.</span></div>
+      </li>
+      <li class="award-item" data-cv="fellowship">
+        <div class="edu-year">2019</div>
+        <div class="edu-body"><a href="https://www.math.nthu.edu.tw/app/pages.php?PageID=HCLai_Scholarship" target="_blank" rel="noopener noreferrer">Professor Han-Ching Lai Memorial Scholarship</a>
+        <span class="award-meta muted"> — Department of Mathematics, National Tsing Hua University; academic year 2019. Recipient's name is partially masked in the public list.</span></div>
+      </li>
+      <li class="award-item" data-cv="historical">
+        <div class="edu-year">2017</div>
+        <div class="edu-body"><a href="https://twsf.ntsec.gov.tw/activity/race-2/2017/pdf/010039.pdf" target="_blank" rel="noopener noreferrer">Taiwan International Science Fair — Mathematics, Fourth Award</a>
+        <span class="award-meta muted"> — Award-winning research project on lattice lines and Euler's totient function.</span></div>
+      </li>
+      <li class="award-item" data-cv="historical">
+        <div class="edu-year">2016</div>
+        <div class="edu-body"><a href="https://www.doe.gov.taipei/News_Content.aspx?n=B3DDF0458F0FFC11&s=18C560FD4D1EEFC5&sms=72544237BBE4C5F6" target="_blank" rel="noopener noreferrer">National Senior High School Mathematics and Science Competition — Mathematics, Third Prize (Final)</a>
+        <span class="award-meta muted"> — National final, academic year 2016; named in an official Taipei City education release.</span></div>
+      </li>
+      <li class="award-item" data-cv="historical">
+        <div class="edu-year">2016</div>
+        <div class="edu-body"><a href="https://twsf.ntsec.gov.tw/activity/race-1/56.htm" target="_blank" rel="noopener noreferrer">56th National Science Fair — Senior High School Mathematics, Third Place</a>
+        <span class="award-meta muted"> — Research on lattice figures in two and three dimensions.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="service" class="two">
+  <div class="container">
+    <header><h2>Academic Service and Organization</h2></header>
+    <ul class="edu service-list">
+      <li class="service-item" data-cv="service">
+        <div class="edu-year">2026</div>
+        <div class="edu-body"><a href="https://sites.google.com/view/zetawakate19" target="_blank" rel="noopener noreferrer">Nagoya–Kansai Young Researchers' Zeta Meeting</a> — Organizing Committee (2026; joint 19th Zeta Young Researchers' Meeting / 70th Kansai MZV Seminar)</div>
+      </li>
+      <li class="service-item" data-cv="service">
+        <div class="edu-year">2024–</div>
+        <div class="edu-body"><a href="https://sites.google.com/view/monthly-meeting-mzv/" target="_blank" rel="noopener noreferrer">Monthly Research Seminar (MZV)</a> — Co-organizer (2024–present)</div>
+      </li>
+      <li class="service-item" data-cv="service">
+        <div class="edu-year">2025</div>
+        <div class="edu-body">Selected as a Graduate School of Mathematics Student Project, Nagoya University (2025)</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <section id="patents" class="two">
   <div class="container">
     <header><h2>Patents</h2></header>
@@ -2001,6 +2056,11 @@
         </div>
       </li>
 	              
+      <li>
+        <div class="item">
+          <a class="name" href="https://hctsui.github.io/index.html" target="_blank" rel="noopener noreferrer">Hung-Chun Tsui</a>
+        </div>
+      </li>
 <li>
         <div class="item">
           <a class="name" href="https://webusers.imj-prg.fr/~michel.waldschmidt/index2.html" target="_blank" rel="noopener noreferrer">Michel Waldschmidt</a>
@@ -2233,6 +2293,7 @@
 })();
 </script>
 
+<script defer src="assets/js/cv-download.js"></script>
 </body>
 
 </html>
