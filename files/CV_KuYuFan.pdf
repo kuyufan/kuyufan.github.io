@@ -1,10 +1,10 @@
 %PDF-1.4
-%Static Academic CV - Ku-Yu Fan
+% Academic CV - Ku-Yu Fan
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<< /Type /Catalog /Pages 2 0 R /PageLayout /SinglePage >>
 endobj
 2 0 obj
-<< /Type /Pages /Count 4 /Kids [6 0 R 8 0 R 10 0 R 12 0 R] >>
+<< /Type /Pages /Count 3 /Kids [7 0 R 9 0 R 11 0 R] >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -13,342 +13,318 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Length 4722 >>
-stream
-0.09 0.19 0.29 rg BT /F2 24.50 Tf 1 0 0 1 50 790 Tm (Ku-Yu Fan) Tj ET
-0.40 0.44 0.49 rg BT /F1 10.50 Tf 1 0 0 1 50 761 Tm (PhD Candidate in Mathematics | Nagoya University) Tj ET
-0.04 0.48 0.50 rg BT /F1 8.85 Tf 1 0 0 1 50 743 Tm (abc940605@gmail.com | https://kuyufan.github.io/) Tj ET
-0.04 0.48 0.50 RG 1.40 w 50 729 m 544 729 l S
-0.04 0.48 0.50 rg 50 697 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 702 Tm (RESEARCH INTERESTS) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 694 m 544 694 l S
-0.09 0.19 0.29 rg BT /F1 9.20 Tf 1 0 0 1 50 678 Tm (Multiple zeta values; motivic multiple zeta values and coactions; Schur multiple zeta values; arborified multiple zeta) Tj ET
-0.09 0.19 0.29 rg BT /F1 9.20 Tf 1 0 0 1 50 665.80 Tm (values; p-adic multiple zeta values; multiple polylogarithms; p-adic multiple L-functions.) Tj ET
-0.04 0.48 0.50 rg 50 622.60 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 627.60 Tm (EDUCATION) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 619.60 m 544 619.60 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 602.60 Tm (2024-2027*) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 603.60 Tm (PhD in Mathematics, Graduate School of Mathematics, Nagoya University \(expected) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 590.90 Tm (September 2027\)) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 575.20 Tm (Advisor: Hidekazu Furusho) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 551.40 Tm (2021-2024) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 552.40 Tm (Master of Science \(Mathematics\), Institute of Mathematics, National Taiwan University) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 539.70 Tm (\(NTU\) \(Advisor: Nobuo Sato\)) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 511.20 Tm (2017-2021) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 512.20 Tm (Bachelor of Science \(Mathematics\), Department of Mathematics, National Tsing Hua) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 499.50 Tm (University \(NTHU\)) Tj ET
-0.04 0.48 0.50 rg 50 449 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 454 Tm (REFEREED RESEARCH ARTICLES) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 446 m 544 446 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 429 Tm (2026) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 430 Tm (Coaction formula for the motivic version of Yamamoto's integral) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 414.30 Tm (Ku-Yu Fan | Mathematische Zeitschrift | Vol. 314, Article 35 | DOI: 10.1007/s00209-026-04138-w |) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 403.30 Tm (arXiv:2406.08127) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 379.50 Tm (2026) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 380.50 Tm (A map between arborifications of multiple zeta values) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 364.80 Tm (Ku-Yu Fan | Journal of Algebra | arXiv:2508.20387) Tj ET
-0.04 0.48 0.50 rg 50 319 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 324 Tm (PREPRINTS) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 316 m 544 316 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 299 Tm (2026) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 300 Tm (Regularised double shuffle relations for planar Arborified Zeta Values) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 284.30 Tm (Pierre Catoire, Pierre J. Clavier, Ku-Yu Fan | arXiv:2609.02346 [math.NT]) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 260.50 Tm (2026) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 261.50 Tm (p -adic multiple L -functions and twisted multiple Bernoulli numbers) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 245.80 Tm (Ku-Yu Fan | arXiv:2607.04086 [math.NT]) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 222 Tm (2026) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 223 Tm (p -adic multiple zeta values of integer indices) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 207.30 Tm (Ku-Yu Fan | arXiv:2603.22923 [math.NT]) Tj ET
-0.04 0.48 0.50 rg 50 161.50 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 166.50 Tm (EXPOSITORY AND OUTREACH PUBLICATIONS) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 158.50 m 544 158.50 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 141.50 Tm (2021) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 142.50 Tm (The Number of Lattice Lines in Lattice Figures [in Chinese]) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 126.80 Tm (Ku-Yu Fan and Feng-Mei Lin | Mathmedia \(Shuxue Chuanbo\), 45\(2\), 44-53 | Mathematics exposition) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 115.80 Tm (\(in Chinese\)) Tj ET
-0.40 0.44 0.49 rg BT /F1 8 Tf 1 0 0 1 50 32 Tm (Updated October 2026) Tj ET
-0.40 0.44 0.49 rg BT /F1 8 Tf 1 0 0 1 488 32 Tm (Page 1 of 4) Tj ET
-endstream
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R /Annots [13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R] >>
+<< /Length 4874 >>
+stream
+0.090 0.180 0.240 rg BT /F2 25 Tf 1 0 0 1 49 792.89 Tm (Ku-Yu Fan) Tj ET
+0.330 0.400 0.440 rg BT /F1 10 Tf 1 0 0 1 49 766.89 Tm (Ph.D. Candidate in Mathematics | Nagoya University) Tj ET
+0.090 0.420 0.450 rg BT /F1 8.80 Tf 1 0 0 1 49 747.89 Tm (abc940605@gmail.com) Tj ET
+0.090 0.420 0.450 rg BT /F1 8.80 Tf 1 0 0 1 431.28 747.89 Tm (kuyufan.github.io) Tj ET
+0.090 0.420 0.450 RG 1.25 w 49 731.89 m 546.28 731.89 l S
+0.090 0.420 0.450 rg 49 703.89 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 705.89 Tm (RESEARCH INTERESTS) Tj ET
+0.820 0.870 0.880 RG 0.60 w 196.50 708.89 m 546.28 708.89 l S
+0.090 0.180 0.240 rg BT /F1 8.80 Tf 1 0 0 1 49 677.89 Tm (Multiple zeta values; motivic periods and coactions; Schur multiple zeta values; arborified multiple zeta values; p-adic) Tj ET
+0.090 0.180 0.240 rg BT /F1 8.80 Tf 1 0 0 1 49 665.79 Tm (multiple zeta values; multiple polylogarithms; p-adic multiple L-functions.) Tj ET
+0.090 0.420 0.450 rg 49 648.69 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 650.69 Tm (EDUCATION) Tj ET
+0.820 0.870 0.880 RG 0.60 w 136.90 653.69 m 546.28 653.69 l S
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 620.99 Tm (2024-present) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 620.99 Tm (Ph.D. in Mathematics | Nagoya University) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 607.69 Tm (Graduate School of Mathematics - Expected September 2027) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 595.99 Tm (Advisor: Hidekazu Furusho) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 576.59 Tm (2021-2024) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 576.59 Tm (M.Sc. in Mathematics | National Taiwan University) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 563.29 Tm (Institute of Mathematics) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 551.59 Tm (Advisor: Nobuo Sato) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 532.19 Tm (2017-2021) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 532.19 Tm (B.Sc. in Mathematics | National Tsing Hua University) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 518.89 Tm (Department of Mathematics) Tj ET
+0.090 0.420 0.450 rg 49 503.19 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 505.19 Tm (REFEREED RESEARCH ARTICLES) Tj ET
+0.820 0.870 0.880 RG 0.60 w 249 508.19 m 546.28 508.19 l S
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 475.49 Tm (2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 475.49 Tm (Coaction formula for the motivic version of Yamamoto's integral) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 462.19 Tm (Mathematische Zeitschrift 314, Article 35 \(2026\). DOI: 10.1007/s00209-026-04138-w) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 443.79 Tm (2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 443.79 Tm (A map between arborifications of multiple zeta values) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 430.49 Tm (Journal of Algebra \(2026\). DOI: 10.1016/j.jalgebra.2026.06.006) Tj ET
+0.090 0.420 0.450 rg 49 413.79 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 415.79 Tm (PREPRINTS) Tj ET
+0.820 0.870 0.880 RG 0.60 w 136.90 418.79 m 546.28 418.79 l S
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 386.09 Tm (2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 386.09 Tm (Regularised double shuffle relations for planar Arborified Zeta Values) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 372.79 Tm (Pierre Catoire, Pierre J. Clavier and Ku-Yu Fan. arXiv:2609.02346) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 356.39 Tm (2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 356.39 Tm (p-adic multiple L-functions and twisted multiple Bernoulli numbers) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 343.09 Tm (Ku-Yu Fan. arXiv:2607.04086) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 326.69 Tm (2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 326.69 Tm (p-adic multiple zeta values of integer indices) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 313.39 Tm (Ku-Yu Fan. arXiv:2603.22923) Tj ET
+0.090 0.420 0.450 rg 49 299.69 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 301.69 Tm (EXPOSITORY PUBLICATION) Tj ET
+0.820 0.870 0.880 RG 0.60 w 224.90 304.69 m 546.28 304.69 l S
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 271.99 Tm (2021) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 271.99 Tm (The Number of Lattice Lines in Lattice Figures [in Chinese]) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 258.69 Tm (Ku-Yu Fan and Feng-Mei Lin. Mathmedia \(Shuxue Chuanbo\) 45\(2\), 44-53 \(2021\).) Tj ET
+0.820 0.870 0.880 RG 0.60 w 49 37 m 546.28 37 l S
+0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 49 24 Tm (KU-YU FAN | ACADEMIC CV) Tj ET
+0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 468.28 24 Tm (1 / 3 | OCT 2026) Tj ET
+endstream
 endobj
 7 0 obj
-<< /Length 5605 >>
-stream
-0.40 0.44 0.49 rg BT /F2 8 Tf 1 0 0 1 50 811 Tm (KU-YU FAN / ACADEMIC CURRICULUM VITAE) Tj ET
-0.80 0.84 0.88 RG 0.60 w 50 805 m 545 805 l S
-0.04 0.48 0.50 rg 50 761 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 766 Tm (SELECTED RESEARCH TALKS) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 758 m 544 758 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 741 Tm (2026-09-17) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 742 Tm (Explicit Formulas for Cyclotomic Multiple Bernoulli Numbers) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 726.30 Tm (NCTS Number Theory Seminar | National Tsing Hua University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 702.50 Tm (2026-09-01) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 703.50 Tm (An explicit formula for the special values of the p-adic multiple L-functions) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 687.80 Tm (MSJ Autumn Meeting 2026 | Kobe University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 664 Tm (2026-07-27) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 665 Tm (Double shuffle relations for p-adic multiple zeta values of integer indices) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 649.30 Tm (The 5th International Workshop on Multiple Zeta Values and Related Topics | Central South) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 638.30 Tm (University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 614.50 Tm (2026-07-07) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 615.50 Tm (Double shuffle relations for integer indices and their application to -adic multiple zeta) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 602.80 Tm (values) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 587.10 Tm (25th Sendai-Hiroshima Number Theory Conference | Tohoku University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 563.30 Tm (2026-06-19) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 564.30 Tm (p-adic multiple zeta values and double shuffle relations for integer indices) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 548.60 Tm (Algebraic and Combinatorial Perspectives in the Mathematical Sciences | Online) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 524.80 Tm (2026-03-16) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 525.80 Tm (p-adic multiple zeta values of integer indices) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 510.10 Tm (Meeting in the Middle: Conference on characteristic 0 and characteristic p multiple zeta values) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 499.10 Tm (\(and other topics\) | University of Hawai'i at Manoa) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 475.30 Tm (2026-02-17) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 476.30 Tm (p-adic multiple L-function and twisted multiple Bernoulli numbers) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 460.60 Tm (MATHSCI FRESHMAN SEMINAR 2026 | Nagoya University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 436.80 Tm (2025-09-29) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 437.80 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 422.10 Tm (2025 RIMS Symposia \(open\) "Various Aspects of Multiple Zeta Values" | Kyoto University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 398.30 Tm (2025-09-16) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 399.30 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 383.60 Tm (MSJ Autumn Meeting 2025 | Nagoya University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 359.80 Tm (2025-07-12) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 360.80 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 345.10 Tm (The 4th International Workshop on Multiple Zeta Values and Related Topics | Tongji University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 321.30 Tm (2024-11-08) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 322.30 Tm (Coaction Formula for the Motivic Version of Yamamoto's Integral) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 306.60 Tm (2nd Kindai Workshop Multiple Zeta Values and Modular Forms | Kindai University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 282.80 Tm (2024-05-23) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 283.80 Tm (Coaction formula for the motivic version of Yamamoto's integral) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 268.10 Tm (Monthly Meeting | Online) Tj ET
-0.04 0.48 0.50 rg 50 222.30 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 227.30 Tm (FELLOWSHIPS AND AWARDS) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 219.30 m 544 219.30 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 202.30 Tm (2024-2027) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 203.30 Tm (Japan-Taiwan Exchange Association Scholarship \(Graduate Research Students\)) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 187.60 Tm (Fellowship / scholarship) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 163.80 Tm (2019) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 164.80 Tm (Professor Han-Ching Lai Memorial Scholarship) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 149.10 Tm (Fellowship / scholarship) Tj ET
-0.04 0.48 0.50 rg 50 103.30 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 108.30 Tm (TEACHING EXPERIENCE) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 100.30 m 544 100.30 l S
-0.40 0.44 0.49 rg BT /F1 8 Tf 1 0 0 1 50 32 Tm (Updated October 2026) Tj ET
-0.40 0.44 0.49 rg BT /F1 8 Tf 1 0 0 1 488 32 Tm (Page 2 of 4) Tj ET
-endstream
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R /Annots [12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R] >>
 endobj
 8 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R /Annots [19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R] >>
+<< /Length 5021 >>
+stream
+0.090 0.180 0.240 rg BT /F2 9 Tf 1 0 0 1 49 792.89 Tm (KU-YU FAN) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.10 Tf 1 0 0 1 384.36 792.89 Tm (SELECTED RESEARCH PRESENTATIONS) Tj ET
+0.820 0.870 0.880 RG 0.60 w 49 782.89 m 546.28 782.89 l S
+0.090 0.420 0.450 rg 49 750.89 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 752.89 Tm (SELECTED RESEARCH TALKS) Tj ET
+0.820 0.870 0.880 RG 0.60 w 227.70 755.89 m 546.28 755.89 l S
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 723.19 Tm (Sep 2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 723.19 Tm (Explicit Formulas for Cyclotomic Multiple Bernoulli Numbers) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 709.89 Tm (NCTS Number Theory Seminar, National Tsing Hua University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 692.49 Tm (Sep 2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 692.49 Tm (An explicit formula for the special values of the p-adic multiple L-functions) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 679.19 Tm (Mathematical Society of Japan, Autumn Meeting, Kobe University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 661.79 Tm (Jul 2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 661.79 Tm (Double shuffle relations for p-adic multiple zeta values of integer indices) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 648.49 Tm (5th International Workshop on Multiple Zeta Values and Related Topics, Central South University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 631.09 Tm (Jul 2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 631.09 Tm (Double shuffle relations for integer indices and their application to p-adic multiple zeta values) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 617.79 Tm (25th Sendai-Hiroshima Number Theory Conference, Tohoku University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 600.39 Tm (Jun 2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 600.39 Tm (p-adic multiple zeta values and double shuffle relations for integer indices) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 587.09 Tm (Algebraic and Combinatorial Perspectives in the Mathematical Sciences, online) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 569.69 Tm (Mar 2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 569.69 Tm (p-adic multiple zeta values of integer indices) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 556.39 Tm (Meeting in the Middle \(Characteristic 0 and p Multiple Zeta Values\), University of Hawaii at Manoa) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 538.99 Tm (Feb 2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 538.99 Tm (p-adic multiple L-function and twisted multiple Bernoulli numbers) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 525.69 Tm (MATHSCI Freshman Seminar, Nagoya University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 508.29 Tm (Sep 2025) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 508.29 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 494.99 Tm (RIMS Symposium on Multiple Zeta Values, Kyoto University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 477.59 Tm (Sep 2025) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 477.59 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 464.29 Tm (Mathematical Society of Japan, Autumn Meeting, Nagoya University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 446.89 Tm (Jul 2025) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 446.89 Tm (A Map Between Arborifications of Multiple Zeta Values) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 433.59 Tm (4th International Workshop on Multiple Zeta Values, Tongji University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 416.19 Tm (Mar 2025) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 416.19 Tm (A map between arborifications of multiple zeta values) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 402.89 Tm (Monthly Meeting, Nagoya University \(blackboard talk\)) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 385.49 Tm (Nov 2024) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 385.49 Tm (Coaction Formula for the Motivic Version of Yamamoto's Integral) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 372.19 Tm (2nd Kindai Workshop: Multiple Zeta Values and Modular Forms, Kindai University) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 354.79 Tm (May 2024) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 354.79 Tm (Coaction formula for the motivic version of Yamamoto's integral) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 341.49 Tm (Monthly Meeting, online) Tj ET
+0.820 0.870 0.880 RG 0.60 w 49 37 m 546.28 37 l S
+0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 49 24 Tm (KU-YU FAN | ACADEMIC CV) Tj ET
+0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 468.28 24 Tm (2 / 3 | OCT 2026) Tj ET
+endstream
 endobj
 9 0 obj
-<< /Length 5154 >>
-stream
-0.40 0.44 0.49 rg BT /F2 8 Tf 1 0 0 1 50 811 Tm (KU-YU FAN / ACADEMIC CURRICULUM VITAE) Tj ET
-0.80 0.84 0.88 RG 0.60 w 50 805 m 545 805 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 783 Tm (Spring 2026) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 784 Tm (Special Topics in Foundations \(Analysis\)) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 768.30 Tm (Teaching Assistant, Nagoya University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 744.50 Tm (Fall 2025) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 745.50 Tm (Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 729.80 Tm (Teaching Assistant, Nagoya University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 706 Tm (Spring 2025) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 707 Tm (Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 691.30 Tm (Teaching Assistant, Nagoya University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 667.50 Tm (Spring 2024) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 668.50 Tm (Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 652.80 Tm (Teaching Assistant, National Taiwan University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 629 Tm (Fall 2023) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 630 Tm (Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 614.30 Tm (Teaching Assistant, National Taiwan University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 590.50 Tm (Spring 2023) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 591.50 Tm (Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 575.80 Tm (Teaching Assistant, National Taiwan University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 552 Tm (Spring 2023) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 553 Tm (Modern Algebra) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 537.30 Tm (Teaching Assistant, National Taiwan University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 513.50 Tm (Fall 2022) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 514.50 Tm (Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 498.80 Tm (Teaching Assistant, National Taiwan University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 475 Tm (Fall 2022) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 476 Tm (Modern Algebra) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 460.30 Tm (Teaching Assistant, National Taiwan University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 436.50 Tm (Spring 2022) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 437.50 Tm (Linear Algebra) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 421.80 Tm (Teaching Assistant, National Taiwan University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 398 Tm (Fall 2021) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 399 Tm (Linear Algebra) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 383.30 Tm (Teaching Assistant, National Taiwan University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 359.50 Tm (Spring 2021) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 360.50 Tm (Elementary Number Theory) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 344.80 Tm (Teaching Assistant, National Tsing Hua University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 321 Tm (Spring 2021) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 322 Tm (Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 306.30 Tm (Teaching Assistant, National Tsing Hua University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 282.50 Tm (Fall 2020) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 283.50 Tm (Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 267.80 Tm (Teaching Assistant, National Tsing Hua University) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 244 Tm (Spring 2020) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 245 Tm (Advanced Calculus) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 229.30 Tm (Teaching Assistant, National Tsing Hua University) Tj ET
-0.04 0.48 0.50 rg 50 183.50 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 188.50 Tm (ACADEMIC SERVICE AND ORGANIZATION) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 180.50 m 544 180.50 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 163.50 Tm (2026) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 164.50 Tm (Nagoya-Kansai Young Researchers' Zeta Meeting - Organizing Committee \(2026; joint) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 151.80 Tm (19th Zeta Young Researchers' Meeting / 70th Kansai MZV Seminar; supported by a) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 139.10 Tm (selected 2025 Nagoya University student project\)) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 123.40 Tm (Organizing role) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 99.60 Tm (2024-09-) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 100.60 Tm (Monthly Meeting - Organizer and Representative \(September 2024-present\)) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 84.90 Tm (Organizing role) Tj ET
-0.40 0.44 0.49 rg BT /F1 8 Tf 1 0 0 1 50 32 Tm (Updated October 2026) Tj ET
-0.40 0.44 0.49 rg BT /F1 8 Tf 1 0 0 1 488 32 Tm (Page 3 of 4) Tj ET
-endstream
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R /Annots [20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R] >>
 endobj
 10 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R /Annots [33 0 R 34 0 R] >>
-endobj
-11 0 obj
-<< /Length 1537 >>
+<< /Length 5203 >>
 stream
-0.40 0.44 0.49 rg BT /F2 8 Tf 1 0 0 1 50 811 Tm (KU-YU FAN / ACADEMIC CURRICULUM VITAE) Tj ET
-0.80 0.84 0.88 RG 0.60 w 50 805 m 545 805 l S
-0.04 0.48 0.50 rg 50 761 3.20 15 re f
-0.09 0.19 0.29 rg BT /F2 10.40 Tf 1 0 0 1 63 766 Tm (PATENTS IN MATHEMATICS EDUCATION) Tj ET
-0.80 0.84 0.88 RG 0.60 w 63 758 m 544 758 l S
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 741 Tm (2021) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 742 Tm (Single Stacking Element Structure and Single Stacking Component Structure for) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 729.30 Tm (Multi-Style Combinations) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 713.60 Tm (Taiwan utility model M612210 | Co-invented with Wen-Liang Hung) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 689.80 Tm (2018) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 690.80 Tm (Rhombic Dodecahedron Puzzle and Multiple Rhombic Dodecahedron Puzzle) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 675.10 Tm (Taiwan utility model M566100; US patent 10,722,782 | Co-invented with Wen-Liang Hung) Tj ET
-0.40 0.44 0.49 rg BT /F2 8.30 Tf 1 0 0 1 50 651.30 Tm (2017) Tj ET
-0.09 0.19 0.29 rg BT /F2 9.30 Tf 1 0 0 1 160 652.30 Tm (Hexagonal Prismatic Packing Puzzle) Tj ET
-0.40 0.44 0.49 rg BT /F1 8.50 Tf 1 0 0 1 160 636.60 Tm (Taiwan utility model M548578; US patent 10,322,337 | Co-invented with Wen-Liang Hung) Tj ET
-0.40 0.44 0.49 rg BT /F1 8 Tf 1 0 0 1 50 32 Tm (Updated October 2026) Tj ET
-0.40 0.44 0.49 rg BT /F1 8 Tf 1 0 0 1 488 32 Tm (Page 4 of 4) Tj ET
+0.090 0.180 0.240 rg BT /F2 9 Tf 1 0 0 1 49 792.89 Tm (KU-YU FAN) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.10 Tf 1 0 0 1 398.86 792.89 Tm (TEACHING, SERVICE & OTHER WORK) Tj ET
+0.820 0.870 0.880 RG 0.60 w 49 782.89 m 546.28 782.89 l S
+0.090 0.420 0.450 rg 49 750.89 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 752.89 Tm (TEACHING EXPERIENCE) Tj ET
+0.820 0.870 0.880 RG 0.60 w 203.60 755.89 m 546.28 755.89 l S
+0.090 0.180 0.240 rg BT /F1 8.65 Tf 1 0 0 1 49 724.89 Tm (Teaching assistantships; recurring courses grouped by institution, all semesters preserved.) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 709.69 Tm (TA) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 709.69 Tm (Nagoya University) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 696.39 Tm (Special Topics in Foundations \(Analysis\) - Spring 2026;) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 684.69 Tm (Calculus - Spring and Fall 2025) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 665.29 Tm (TA) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 665.29 Tm (National Taiwan University) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 651.99 Tm (Calculus - Fall 2022, Spring and Fall 2023, Spring 2024;) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 640.29 Tm (Modern Algebra - Fall 2022, Spring 2023;) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 628.59 Tm (Linear Algebra - Fall 2021, Spring 2022) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 609.19 Tm (TA) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 609.19 Tm (National Tsing Hua University) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 595.89 Tm (Elementary Number Theory - Spring 2021;) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 584.19 Tm (Calculus - Fall 2020, Spring 2021;) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 572.49 Tm (Advanced Calculus - Spring 2020) Tj ET
+0.090 0.420 0.450 rg 49 551.79 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 553.79 Tm (FELLOWSHIPS AND AWARDS) Tj ET
+0.820 0.870 0.880 RG 0.60 w 223.80 556.79 m 546.28 556.79 l S
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 524.09 Tm (2024-2027) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 524.09 Tm (Japan-Taiwan Exchange Association Scholarship) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 510.79 Tm (Graduate Research Students Fellowship \(October 2024-September 2027\).) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 491.39 Tm (2019) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 491.39 Tm (Professor Han-Ching Lai Memorial Scholarship) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 478.09 Tm (Department of Mathematics, National Tsing Hua University.) Tj ET
+0.090 0.420 0.450 rg 49 460.39 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 462.39 Tm (ACADEMIC SERVICE & ORGANIZATION) Tj ET
+0.820 0.870 0.880 RG 0.60 w 280 465.39 m 546.28 465.39 l S
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 432.69 Tm (2026) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 432.69 Tm (Organizing Committee - Nagoya-Kansai Young Researchers' Zeta Meeting) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 419.39 Tm (Joint meeting of the 19th Young Mathematicians Conference on Zeta Functions and 70th Kansai) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 407.69 Tm (Multiple Zeta Seminar; supported by a selected Nagoya University student project \(2025\).) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 388.29 Tm (Sep 2024-) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 388.29 Tm (Organizer and Representative - Monthly Meeting) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 374.99 Tm (A monthly research meeting on multiple zeta values.) Tj ET
+0.090 0.420 0.450 rg 49 357.29 2.70 13 re f
+0.090 0.180 0.240 rg BT /F2 10 Tf 1 0 0 1 61 359.29 Tm (SELECTED PATENTS) Tj ET
+0.820 0.870 0.880 RG 0.60 w 182.30 362.29 m 546.28 362.29 l S
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 329.59 Tm (2021) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 329.59 Tm (Single stacking element and component structures for multi-style combinations) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 316.29 Tm (Taiwan utility model M612210.) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 298.89 Tm (2018) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 298.89 Tm (Rhombic dodecahedron puzzle and multiple rhombic dodecahedron puzzle) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 285.59 Tm (Taiwan utility model M566100; US Patent 10,722,782.) Tj ET
+0.330 0.400 0.440 rg BT /F2 8.30 Tf 1 0 0 1 49 268.19 Tm (2017) Tj ET
+0.090 0.180 0.240 rg BT /F2 9.15 Tf 1 0 0 1 132 268.19 Tm (Hexagonal prismatic packing puzzle) Tj ET
+0.330 0.400 0.440 rg BT /F1 8.60 Tf 1 0 0 1 132 254.89 Tm (Taiwan utility model M548578; US Patent 10,322,337.) Tj ET
+0.090 0.180 0.240 rg BT /F1 8.65 Tf 1 0 0 1 49 240.19 Tm (All listed patents co-invented with Wen-Liang Hung.) Tj ET
+0.820 0.870 0.880 RG 0.60 w 49 37 m 546.28 37 l S
+0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 49 24 Tm (KU-YU FAN | ACADEMIC CV) Tj ET
+0.330 0.400 0.440 rg BT /F1 7.80 Tf 1 0 0 1 468.28 24 Tm (3 / 3 | OCT 2026) Tj ET
 endstream
 endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R /Annots [33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R] >>
+endobj
 12 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R /Annots [35 0 R 36 0 R 37 0 R] >>
+<< /Type /Annot /Subtype /Link /Rect [49 744.89 210 758.89] /Border [0 0 0] /A << /S /URI /URI (mailto:abc940605@gmail.com) >> >>
 endobj
 13 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 377.50 391.80 392.50] /Border [0 0 0] /A << /S /URI /URI (https://www.sciencedirect.com/science/article/pii/S002186932600339X?via%3Dihub) >> >>
+<< /Type /Annot /Subtype /Link /Rect [428.28 744.89 546.28 758.89] /Border [0 0 0] /A << /S /URI /URI (https://kuyufan.github.io/) >> >>
 endobj
 14 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 427 438.81 442] /Border [0 0 0] /A << /S /URI /URI (https://link.springer.com/article/10.1007/s00209-026-04138-w) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 472.49 405.48 487.64] /Border [0 0 0] /A << /S /URI /URI (https://doi.org/10.1007/s00209-026-04138-w) >> >>
 endobj
 15 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 297 459 312] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2609.02346) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 440.79 360.01 455.94] /Border [0 0 0] /A << /S /URI /URI (https://doi.org/10.1016/j.jalgebra.2026.06.006) >> >>
 endobj
 16 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 258.50 450.21 273.50] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2607.04086) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 383.09 437.96 398.24] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2609.02346) >> >>
 endobj
 17 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 220 353.67 235] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2603.22923) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 353.39 412.80 368.54] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2607.04086) >> >>
 endobj
 18 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 139.50 419.61 154.50] /Border [0 0 0] /A << /S /URI /URI (https://www.math.sinica.edu.tw/mathmedia/journals/4658) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 323.69 324.32 338.84] /Border [0 0 0] /A << /S /URI /URI (https://arxiv.org/abs/2603.22923) >> >>
 endobj
 19 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 739 419.10 754] /Border [0 0 0] /A << /S /URI /URI (https://ncts.ntu.edu.tw/events_1_detail.php?nid=3179) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 268.99 394.41 284.14] /Border [0 0 0] /A << /S /URI /URI (https://www.math.sinica.edu.tw/mathmedia/journals/4658) >> >>
 endobj
 20 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 700.50 482.76 715.50] /Border [0 0 0] /A << /S /URI /URI (https://www.mathsoc.jp/activity/meeting/kobe26sept/index.html) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 720.19 389.19 735.34] /Border [0 0 0] /A << /S /URI /URI (https://ncts.ntu.edu.tw/events_1_detail.php?nid=3179) >> >>
 endobj
 21 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 662 471.18 677] /Border [0 0 0] /A << /S /URI /URI (https://multizetacafe.github.io/changsha2026/) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 689.49 457 704.64] /Border [0 0 0] /A << /S /URI /URI (https://www.mathsoc.jp/activity/meeting/kobe26sept/index.html) >> >>
 endobj
 22 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 612.50 525.49 627.50] /Border [0 0 0] /A << /S /URI /URI (https://hiro2.pm.tokushima-u.ac.jp/~hiroki/hiroshima26.html) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 658.79 447.94 673.94] /Border [0 0 0] /A << /S /URI /URI (https://multizetacafe.github.io/changsha2026/) >> >>
 endobj
 23 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 561.30 474.34 576.30] /Border [0 0 0] /A << /S /URI /URI (https://www.math.ntnu.no/acpms/) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 628.09 538.25 643.24] /Border [0 0 0] /A << /S /URI /URI (https://hiro2.pm.tokushima-u.ac.jp/~hiroki/hiroshima26.html) >> >>
 endobj
 24 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 522.80 351.21 537.80] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/hawaii-mzv-2026/home-page?) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 597.39 451.14 612.54] /Border [0 0 0] /A << /S /URI /URI (https://www.math.ntnu.no/acpms/) >> >>
 endobj
 25 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 473.30 440.54 488.30] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/math-graduate/home?authuser=0) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 566.69 324.32 581.84] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/hawaii-mzv-2026/home-page) >> >>
 endobj
 26 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 434.80 398.13 449.80] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/rimsmzv2025/) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 535.99 407.95 551.14] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/math-graduate/home) >> >>
 endobj
 27 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 396.30 398.13 411.30] /Border [0 0 0] /A << /S /URI /URI (https://www.mathsoc.jp/activity/meeting/nagoya25sept/index.html) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 505.29 372.82 520.44] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/rimsmzv2025/) >> >>
 endobj
 28 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 357.80 398.13 372.80] /Border [0 0 0] /A << /S /URI /URI (https://multizetacafe.github.io/shanghai2025/) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 474.59 372.82 489.74] /Border [0 0 0] /A << /S /URI /URI (https://www.mathsoc.jp/activity/meeting/nagoya25sept/index.html) >> >>
 endobj
 29 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 319.30 446.07 334.30] /Border [0 0 0] /A << /S /URI /URI (https://www.math.kindai.ac.jp/laboratory/tasaka/2ndKindaiWS/) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 443.89 372.82 459.04] /Border [0 0 0] /A << /S /URI /URI (https://multizetacafe.github.io/shanghai2025/) >> >>
 endobj
 30 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 280.80 438.81 295.80] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/monthly-meeting-mzv/%E9%81%8E%E5%8E%BB%E3%81%AE%E8%AC%9B%E6%BC%94?authuser=0) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 413.19 360.01 428.34] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/monthly-meeting-mzv/) >> >>
 endobj
 31 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 200.30 504.19 215.30] /Border [0 0 0] /A << /S /URI /URI (https://www.koryu.or.jp/Portals/0/taipei/2023/1018/%E6%B7%BB%E4%BB%98%E2%91%A0.pdf) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 382.49 415.91 397.64] /Border [0 0 0] /A << /S /URI /URI (https://www.math.kindai.ac.jp/laboratory/tasaka/2ndKindaiWS/) >> >>
 endobj
 32 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 161.80 362 176.80] /Border [0 0 0] /A << /S /URI /URI (https://www.math.nthu.edu.tw/app/pages.php?PageID=HCLai_Scholarship) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 351.79 405.48 366.94] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/monthly-meeting-mzv/) >> >>
 endobj
 33 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 161.50 525.63 176.50] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/zetawakate19) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 521.09 341.71 536.24] /Border [0 0 0] /A << /S /URI /URI (https://www.koryu.or.jp/Portals/0/taipei/2023/1018/%E6%B7%BB%E4%BB%98%E2%91%A0.pdf) >> >>
 endobj
 34 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 97.60 493 112.60] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/monthly-meeting-mzv/) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 488.39 335.30 503.54] /Border [0 0 0] /A << /S /URI /URI (https://www.math.nthu.edu.tw/app/pages.php?PageID=HCLai_Scholarship) >> >>
 endobj
 35 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 739 509.36 754] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/TWM612210U/en) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 429.69 448.12 444.84] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/zetawakate19) >> >>
 endobj
 36 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 687.80 470.85 702.80] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/US10722782B2/en) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 385.29 345.64 400.44] /Border [0 0 0] /A << /S /URI /URI (https://sites.google.com/view/monthly-meeting-mzv/) >> >>
 endobj
 37 0 obj
-<< /Type /Annot /Subtype /Link /Rect [158 649.30 314.99 664.30] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/US10322337B2/en) >> >>
+<< /Type /Annot /Subtype /Link /Rect [131 326.59 469.35 341.74] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/TWM612210U/en) >> >>
+endobj
+38 0 obj
+<< /Type /Annot /Subtype /Link /Rect [131 295.89 432.75 311.04] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/US10722782B2/en) >> >>
+endobj
+39 0 obj
+<< /Type /Annot /Subtype /Link /Rect [131 265.19 281.77 280.34] /Border [0 0 0] /A << /S /URI /URI (https://patents.google.com/patent/US10322337B2/en) >> >>
 endobj
 xref
-0 38
+0 40
 0000000000 65535 f 
-0000000041 00000 n 
-0000000090 00000 n 
-0000000167 00000 n 
-0000000264 00000 n 
-0000000366 00000 n 
-0000005139 00000 n 
-0000005333 00000 n 
-0000010989 00000 n 
-0000011239 00000 n 
-0000016444 00000 n 
-0000016611 00000 n 
-0000018200 00000 n 
-0000018375 00000 n 
-0000018577 00000 n 
-0000018755 00000 n 
-0000018902 00000 n 
-0000019058 00000 n 
-0000019208 00000 n 
-0000019386 00000 n 
-0000019556 00000 n 
-0000019741 00000 n 
-0000019904 00000 n 
-0000020087 00000 n 
-0000020242 00000 n 
-0000020422 00000 n 
-0000020605 00000 n 
-0000020771 00000 n 
-0000020958 00000 n 
-0000021127 00000 n 
-0000021311 00000 n 
-0000021541 00000 n 
-0000021747 00000 n 
-0000021935 00000 n 
-0000022101 00000 n 
-0000022271 00000 n 
-0000022436 00000 n 
-0000022609 00000 n 
+0000000035 00000 n 
+0000000108 00000 n 
+0000000178 00000 n 
+0000000275 00000 n 
+0000000377 00000 n 
+0000000482 00000 n 
+0000005407 00000 n 
+0000005625 00000 n 
+0000010697 00000 n 
+0000010950 00000 n 
+0000016205 00000 n 
+0000016418 00000 n 
+0000016564 00000 n 
+0000016717 00000 n 
+0000016883 00000 n 
+0000017053 00000 n 
+0000017209 00000 n 
+0000017365 00000 n 
+0000017521 00000 n 
+0000017699 00000 n 
+0000017875 00000 n 
+0000018057 00000 n 
+0000018226 00000 n 
+0000018409 00000 n 
+0000018564 00000 n 
+0000018743 00000 n 
+0000018915 00000 n 
+0000019081 00000 n 
+0000019268 00000 n 
+0000019437 00000 n 
+0000019611 00000 n 
+0000019795 00000 n 
+0000019969 00000 n 
+0000020175 00000 n 
+0000020366 00000 n 
+0000020532 00000 n 
+0000020706 00000 n 
+0000020877 00000 n 
+0000021050 00000 n 
 trailer
-<< /Size 38 /Root 1 0 R >>
+<< /Size 40 /Root 1 0 R >>
 startxref
-22782
+21223
 %%EOF

@@ -26,6 +26,16 @@ The repository deliberately contains no client-side PDF generation code. All thr
 ### Format
 A4, modern restrained academic PDF with a date column, linkable publications and talk records, sections for education, publications, preprints, selected talks, fellowships, teaching, academic service and selected patents. Source data must remain grounded in the website and verified academic records.
 
+**Layout conventions (October 2026 update):**
+- Three-page English CV: page 1 covers research interests, education, publications, preprints and exposition; page 2 covers selected research talks; page 3 covers teaching, fellowships, academic service and patents.
+- Use a restrained navy/teal/grey palette, clear hierarchy, generous whitespace, date gutter, consistent running headers and page numbers; do not introduce decorative images.
+- Write degree/institution as the first line. Put departmental detail and **Advisor: ...** on identically formatted separate lines for Ph.D. and M.Sc. degrees; do not inline the Master's advisor while separating the Ph.D. advisor.
+- Use **2024–present** for ongoing Ph.D. education and state **Expected September 2027** explicitly. Do not append an unexplained asterisk to `2024–2027`.
+- Aggregate repeated TA assignments by university and course, listing **all semesters**, rather than repeating the university and TA role 15 times. Preserve current and earlier teaching terms.
+- Standardize `p-adic` (no extra spaces), scholarly title capitalization, concise journal citations and clickable DOI/arXiv/talk/patent URLs.
+- Include the **March 24, 2025 blackboard presentation at Monthly Meeting** in the Selected Research Talks listing (it is an actual presentation despite having no slides).
+- Keep a separate expository-publication category; retain two refereed papers, three preprints, both scholarships, the two academic organizing roles and three patent families.
+
 ## Research meeting naming and academic role
 
 The meeting at https://sites.google.com/view/monthly-meeting-mzv/ is officially named **Monthly Meeting** in English and **月齢報告会** (not 月例報告会) in Japanese; use **月齡報告會** in Chinese. The organizer's official site lists Ku-Yu Fan (范) as **representative from September 2024 to present**. Represent this as **Organizer and Representative (September 2024–present)** in English, **組織者兼代表（2024 年 9 月至今）** in Chinese, and **運営・代表（2024 年 9 月～現在）** in Japanese. Use the same names when linking past talks and useful research activities. Keep the static PDF synchronized.
