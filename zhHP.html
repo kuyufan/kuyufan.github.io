@@ -2330,12 +2330,19 @@
 })();
 </script>
 <script>
-/* 近況照片：依訪客數選一張（001~020） */
+/* 近況照片：依訪客數選一張（001~029） */
 (function () {
-  const MAX = 28;                                // 你目前有 20 張
+  const MAX = 29;                                // 001–029 張，依訪客數輪流選取
   const img = document.getElementById('news-photo-img');
   if (!img) return;
 
+  // 新檔案尚未上傳時暫時顯示 028；上傳 029.jpg 後無須更改程式。
+  img.addEventListener('error', () => {
+    if (img.getAttribute('src') === 'photo/029.jpg') {
+      img.src = 'photo/028.jpg';
+      img.alt = "近況照片（第 28 張，共 29 張）";
+    }
+  });
   const pad  = n => String(n).padStart(3, '0');
   const pick = n => ((Number(n) - 1) % MAX + MAX) % MAX + 1;  // 轉成 1..MAX
   function showBy(n){
