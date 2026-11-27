@@ -2,7 +2,7 @@
 
 Canonical downloaded PDF: `files/CV_KuYuFan.pdf`
 Canonical source of academic records: `enHP.html` (mirrored in `zhHP.html` and `jaHP.html`).
-Current PDF update: 2026-11-14.
+Current PDF update: 2026-11-27.
 
 ## Required whenever editing the website
 
@@ -34,7 +34,7 @@ A4, modern restrained academic PDF with a date column, linkable publications and
 - Aggregate repeated TA assignments by university and course, listing **all semesters**, rather than repeating the university and TA role 15 times. Preserve current and earlier teaching terms.
 - Standardize `p-adic` (no extra spaces), scholarly title capitalization, concise journal citations and clickable DOI/arXiv/talk/patent URLs.
 - Include the **March 24, 2025 blackboard presentation at Monthly Meeting** in the Selected Research Talks listing (it is an actual presentation despite having no slides).
-- Keep a separate expository-publication category; retain two refereed papers, four preprints, both scholarships, the two academic organizing roles and three patent families.
+- Keep a separate expository-publication category; retain two refereed papers, all current preprints, both scholarships, the two academic organizing roles and three patent families.
 
 ## Research meeting naming and academic role
 
